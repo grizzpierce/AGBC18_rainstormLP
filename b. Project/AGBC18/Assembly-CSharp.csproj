@@ -152,34 +152,34 @@
      <None Include="Assets\Demigiant\DemiLib\Core\DemiLib.xml" />
      <None Include="Assets\Demigiant\readme_DOTweenPro.txt" />
  <Reference Include="Unity.ProBuilder.AddOns.Editor">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VectorGraphics">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Library/ScriptAssemblies/Unity.VectorGraphics.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Library/ScriptAssemblies/Unity.VectorGraphics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.StandardEvents">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Library/ScriptAssemblies/UnityEditor.StandardEvents.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.PackageManagerUI.Editor">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Postprocessing.Editor">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Library/ScriptAssemblies/Unity.Postprocessing.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.VectorGraphics.Editor">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Library/ScriptAssemblies/Unity.VectorGraphics.Editor.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Library/ScriptAssemblies/Unity.VectorGraphics.Editor.dll</HintPath>
  </Reference>
  <Reference Include="Unity.Postprocessing.Runtime">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Library/ScriptAssemblies/Unity.Postprocessing.Runtime.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.vectorgraphics">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Library/ScriptAssemblies/com.unity.vectorgraphics.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Library/ScriptAssemblies/com.unity.vectorgraphics.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.AIModule">
  <HintPath>/Applications/Unity/Hub/Editor/2018.2.2f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
@@ -380,19 +380,19 @@
  <HintPath>/Applications/Unity/Hub/Editor/2018.2.2f1/Unity.app/Contents/UnityExtensions/Unity/UnitySpatialTracking/RuntimeEditor/UnityEngine.SpatialTracking.dll</HintPath>
  </Reference>
  <Reference Include="DOTweenPro">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Assets/Demigiant/DOTweenPro/DOTweenPro.dll</HintPath>
  </Reference>
  <Reference Include="DemiLib">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Assets/Demigiant/DemiLib/Core/DemiLib.dll</HintPath>
  </Reference>
  <Reference Include="DOTween">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Assets/Demigiant/DOTween/DOTween.dll</HintPath>
  </Reference>
  <Reference Include="Rewired_Core">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
  </Reference>
  <Reference Include="Rewired_OSX_Lib">
- <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18/b. Project/AGBC18/Assets/Rewired/Internal/Libraries/Runtime/Rewired_OSX_Lib.dll</HintPath>
+ <HintPath>/Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/b. Project/AGBC18/Assets/Rewired/Internal/Libraries/Runtime/Rewired_OSX_Lib.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine.Analytics">
  <HintPath>/Users/jakegrizzlypierce/Library/Unity/cache/packages/packages.unity.com/com.unity.analytics@2.0.16/UnityEngine.Analytics.dll</HintPath>

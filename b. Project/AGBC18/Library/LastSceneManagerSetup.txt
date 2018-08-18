@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/0. Game Assets/Scenes/SampleScene.unity
+- path: Assets/0. Game Assets/Scenes/Font Demo.unity
   isLoaded: 1
   isActive: 1
