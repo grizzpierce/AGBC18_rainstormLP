@@ -3,33 +3,51 @@ guid: d3a09044990c0496a87ca0baf58163a1
 SketchUpImporter:
   generateBackFace: 0
   mergeCoplanarFaces: 0
-  selectedNodes: 000000000100000002000000
+  selectedNodes: 0000000001000000020000000300000004000000
   assetHash:
     serializedVersion: 2
-    Hash: aea5ef36a55f01c32a70e424f7cb702e
+    Hash: e41d3272402c6af8d2cf9e92dc8d93b8
   longitude: -105.242139
   latitude: 40.018309
   northCorrection: -0
   fileUnit: 0
   sketchUpImportData:
     defaultCamera:
-      position: {x: 7.2074428, y: 5.785125, z: -3.9164753}
-      lookAt: {x: 2.388769, y: 0.27168763, z: 1.4540123}
-      up: {x: -0.40548012, y: 0.7945814, z: 0.45191395}
+      position: {x: -0.44922006, y: 8.542538, z: -10.378255}
+      lookAt: {x: 1.1695293, y: -0.44825408, z: 1.1264895}
+      up: {x: 0.08527154, y: 0.7908502, z: 0.6060402}
       fov: 45
       aspectRatio: 0
-      orthoSize: 194.02876
+      orthoSize: 237.36386
       isPerspective: 0
     scenes: []
   serializedVersion: 23
   fileIDToRecycleName:
     100000: //RootNode
     100002: Face
+    100004: Face 1
     400000: //RootNode
     400002: Face
+    400004: Face 1
     2100000: _defaultMat
+    2100002: _6
+    2100004: _10
+    2100006: _5
+    2100008: _8
+    2100010: _3
+    2100012: _2
+    2100014: _1
+    2100016: _7
+    2100018: _17
+    2100020: _14
+    2100022: _16
+    2100024: _15
+    2100026: _11
+    2100028: _13
     2300000: Face
+    2300002: Face 1
     3300000: Face
+    3300002: Face 1
     4300000: Mesh Face
   externalObjects: {}
   materials:

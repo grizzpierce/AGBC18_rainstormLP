@@ -1,15 +1,22 @@
 Base path: /Applications/Unity/Hub/Editor/2018.2.2f1/Unity.app/Contents
 Cmd: initializeCompiler
 Cmd: compileComputeKernel
-  api=14 insize=2134 outsize=789 ok=1
+  api=14 insize=414 outsize=753 ok=1
 Cmd: translateComputeKernel
-  api=14 insize=2149 outsize=3977 ok=1
-Cmd: compileComputeKernel
-  api=14 insize=5188 outsize=10537 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=5397 outsize=7573 ok=1
-Cmd: translateComputeKernel
-  api=14 insize=9705 outsize=16577 ok=1
+  api=14 insize=753 outsize=789 ok=1
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
+Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler
 Cmd: initializeCompiler

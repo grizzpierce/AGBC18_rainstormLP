@@ -6,19 +6,19 @@ SketchUpImporter:
   selectedNodes: 0000000001000000020000000300000004000000
   assetHash:
     serializedVersion: 2
-    Hash: e88d5b97f5127cb558a501165e8f001e
+    Hash: ded994042175e2f4627e3dbf8d7cf1f7
   longitude: -105.242139
   latitude: 40.018309
   northCorrection: -0
   fileUnit: 0
   sketchUpImportData:
     defaultCamera:
-      position: {x: 5.897965, y: 6.683606, z: -3.5422926}
-      lookAt: {x: 1.5181764, y: 0.24588436, z: 1.2446042}
-      up: {x: -0.47545543, y: 0.70986354, z: 0.51964974}
+      position: {x: -0.44922006, y: 8.542538, z: -10.378255}
+      lookAt: {x: 1.1695293, y: -0.44825408, z: 1.1264895}
+      up: {x: 0.08527154, y: 0.7908502, z: 0.6060402}
       fov: 45
       aspectRatio: 0
-      orthoSize: 155.94862
+      orthoSize: 237.36386
       isPerspective: 0
     scenes: []
   serializedVersion: 23
@@ -38,6 +38,12 @@ SketchUpImporter:
     2100012: _2
     2100014: _1
     2100016: _7
+    2100018: _17
+    2100020: _14
+    2100022: _16
+    2100024: _15
+    2100026: _11
+    2100028: _13
     2300000: Face
     2300002: Face 1
     3300000: Face

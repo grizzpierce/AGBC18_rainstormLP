@@ -69,6 +69,7 @@
      <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTextMeshPro.cs" />
      <Compile Include="Assets\Demigiant\DOTweenPro\DOTweenTk2d.cs" />
      <Compile Include="Assets\interactable.cs" />
+     <Compile Include="Assets\IntroInteraction.cs" />
      <Compile Include="Assets\ProceduralUIImage\Scripts\Attributes\ModifierID.cs" />
      <Compile Include="Assets\ProceduralUIImage\Scripts\EmptySprite.cs" />
      <Compile Include="Assets\ProceduralUIImage\Scripts\MaterialHelper.cs" />
@@ -141,6 +142,7 @@
      <Compile Include="Assets\Rewired\Internal\Scripts\Misc\ExternalTools.cs" />
      <Compile Include="Assets\Rewired\Internal\Scripts\Platforms\Ouya\OuyaInputSource.cs" />
      <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
+     <None Include="Assets\0. Game Assets\Scripts\Custom Shaders\DepthMask.shader" />
      <None Include="Assets\ProceduralUIImage\Shaders\ProceduralImageRuntime.shader" />
      <None Include="Assets\Rewired\Documentation\licences.txt" />
      <None Include="Assets\Rewired\Documentation\ReadMe.txt" />
