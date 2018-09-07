@@ -6,8 +6,8 @@ public class interactable : MonoBehaviour {
 
 
 
-     void OnMouseOver()
+     void OnMouseDown()
      {
-         
+         Debug.Log("Test");
      }
 }
