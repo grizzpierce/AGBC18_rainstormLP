@@ -1,8 +1,8 @@
 
 b. Project/AGBC18/Assets/FMODStudioCache.asset
 b. Project/AGBC18/Assets/FMODStudioCache.asset
-b. Project/AGBC18/Temp/
-b. Project/AGBC18/Library/
+b. Project/AGBC18/Temp/*
+b. Project/AGBC18/Library/*
 
 # =============== #
 # Unity generated #
