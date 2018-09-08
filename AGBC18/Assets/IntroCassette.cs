@@ -33,19 +33,12 @@ public class IntroCassette : MonoBehaviour {
 	 IEnumerator IntroAnimation() {
 
 
-
-
-
 		cartridge.transform.DORotate(new Vector3(-90, 0, 0), 5f);
 		cartridge.transform.DOMove(new Vector3(0, 27.5f, 0), 5f);
 
-        yield return new WaitForSeconds(4.5f);
+        yield return new WaitForSeconds(7f);
 
-		cartridge.transform.DOScale(6f, 2f).SetEase(Ease.InOutQuart);
-
-        yield return new WaitForSeconds(1.5f);
-
-		cartridge.transform.DOMove(Vector3.zero, 3f).SetEase(Ease.InOutBack);
+		cartridge.transform.DOMove(Vector3.zero, 2f).SetEase(Ease.InBack);
 
 		yield return new WaitForSeconds(2f);
 
