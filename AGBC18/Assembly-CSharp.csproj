@@ -58,6 +58,7 @@
      <Compile Include="Assets\0. Game Assets\Scripts\Renderscale.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\TimeCapture.cs" />
      <Compile Include="Assets\CartridgeRotator.cs" />
+     <Compile Include="Assets\CassetteBar.cs" />
      <Compile Include="Assets\CassetteSelector.cs" />
      <Compile Include="Assets\CassetteUI.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />

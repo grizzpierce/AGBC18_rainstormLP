@@ -52,7 +52,6 @@ public class CassetteSelector : MonoBehaviour {
 		SetState(SELECTOR_STATE.IDLE);
 
 		SetStartPositions();
-		ShiftLeft();
 	}
 	
 	void Update()
