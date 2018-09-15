@@ -6501,9 +6501,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cassetteRevolver: {fileID: 1382154162}
   DEBUG_CLICKACTION: 
-  raisedCount: 0
-  idleTime: 0
-  timer: 20
 --- !u!114 &345691162
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20606,7 +20603,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 2
   _slowRotationSpeed: 5
-  _fastRotationSpeed: 30
+  _fastRotationSpeed: 65
   _rotateAroundAxis: 2
   _relativeTo: 1
   _reverse: 0
@@ -20637,10 +20634,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 2
   _slowRotationSpeed: 5
-  _fastRotationSpeed: 25
+  _fastRotationSpeed: 50
   _rotateAroundAxis: 1
   _relativeTo: 1
-  _reverse: 0
+  _reverse: 1
 --- !u!114 &1644698771
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20654,7 +20651,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 2
   _slowRotationSpeed: 5
-  _fastRotationSpeed: 20
+  _fastRotationSpeed: 35
   _rotateAroundAxis: 0
   _relativeTo: 1
   _reverse: 0
