@@ -14,6 +14,9 @@ public class CassetteSelector : MonoBehaviour {
 	SELECTOR_STATE currState = SELECTOR_STATE.INVALID;
 	public string DEBUG_STATE = "";
 
+	Ease shiftEase = Ease.OutBack;
+	Ease hoverEase = Ease.OutBack;
+
 	void SetState(SELECTOR_STATE state) {
 		currState = state;
 		DEBUG_STATE = state.ToString();
@@ -186,16 +189,16 @@ public class CassetteSelector : MonoBehaviour {
 		switch(side) {
 			case -1:
 			Debug.Log("LEFT");
-			leftNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(-95, 40, 0), .5f);			
+			leftNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(-95, 47, 0), .5f).SetEase(hoverEase);			
 			break;
 
 			case 0:
-			// THIS IS FOR CENTER HOVER
+			activeSlot.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, 53, 0), .5f).SetEase(hoverEase);
 			break;
 
 			case 1:
 			Debug.Log("RIGHT");
-			rightNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(95, 40, 0), .5f);
+			rightNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(95, 47, 0), .5f).SetEase(hoverEase);
 			break;
 
 			default:
@@ -205,8 +208,9 @@ public class CassetteSelector : MonoBehaviour {
 	}
 
 	public void resetHovers() {
-		leftNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(-95, 15, 0), .5f);
-		rightNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(95, 15, 0), .5f);
+		leftNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(-95, 40, 0), .5f);
+		rightNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(95, 40, 0), .5f);
+		activeSlot.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, 48, 0), .5f);
 	}
 
 	int calculateWrap(int num, int dir) {
@@ -245,22 +249,22 @@ public class CassetteSelector : MonoBehaviour {
 		}
 
 		cassettes[order[0]].transform.SetParent(leftQueue.transform);
-		cassettes[order[0]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f);
+		cassettes[order[0]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f).SetEase(shiftEase);
 		
 		cassettes[order[1]].transform.SetParent(leftNext.transform);
-		cassettes[order[1]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f);
+		cassettes[order[1]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f).SetEase(shiftEase);
 		cassettes[order[1]].GetComponent<RawImage>().DOFade(.5f, .5f);
 
 		cassettes[order[2]].transform.SetParent(activeSlot.transform);
-		cassettes[order[2]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f);
+		cassettes[order[2]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f).SetEase(shiftEase);
 		cassettes[order[2]].GetComponent<RawImage>().DOFade(1f, .5f);
 
 		cassettes[order[3]].transform.SetParent(rightNext.transform);
-		cassettes[order[3]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f);
+		cassettes[order[3]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f).SetEase(shiftEase);
 		cassettes[order[3]].GetComponent<RawImage>().DOFade(.5f, .5f);
 
 		cassettes[order[4]].transform.SetParent(rightQueue.transform);
-		cassettes[order[4]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f);
+		cassettes[order[4]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f).SetEase(shiftEase);
 
 		yield return new WaitForSeconds(1f);
 
