@@ -181,6 +181,34 @@ public class CassetteSelector : MonoBehaviour {
 		}
 	}
 
+	public void Hover(int side) {
+		resetHovers();
+		switch(side) {
+			case -1:
+			Debug.Log("LEFT");
+			leftNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(-95, 40, 0), .5f);			
+			break;
+
+			case 0:
+			// THIS IS FOR CENTER HOVER
+			break;
+
+			case 1:
+			Debug.Log("RIGHT");
+			rightNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(95, 40, 0), .5f);
+			break;
+
+			default:
+			Debug.Log("Invalid Selection");
+			break;
+		}
+	}
+
+	public void resetHovers() {
+		leftNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(-95, 15, 0), .5f);
+		rightNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(95, 15, 0), .5f);
+	}
+
 	int calculateWrap(int num, int dir) {
 
 		int calc = num + dir;
@@ -210,6 +238,8 @@ public class CassetteSelector : MonoBehaviour {
 
 	IEnumerator Shift(int[] inactive, int[] order) {
 
+		resetHovers();
+
 		for(int i = 0; i < inactive.Length; ++i) {
 			resetPosition(cassettes[inactive[i]], inactiveSlot);
 		}
@@ -219,13 +249,15 @@ public class CassetteSelector : MonoBehaviour {
 		
 		cassettes[order[1]].transform.SetParent(leftNext.transform);
 		cassettes[order[1]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f);
+		cassettes[order[1]].GetComponent<RawImage>().DOFade(.5f, .5f);
 
 		cassettes[order[2]].transform.SetParent(activeSlot.transform);
 		cassettes[order[2]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f);
+		cassettes[order[2]].GetComponent<RawImage>().DOFade(1f, .5f);
 
 		cassettes[order[3]].transform.SetParent(rightNext.transform);
-		cassettes[order[3]].GetComponent<RawImage>().DOFade(.75f, 1f);
 		cassettes[order[3]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f);
+		cassettes[order[3]].GetComponent<RawImage>().DOFade(.5f, .5f);
 
 		cassettes[order[4]].transform.SetParent(rightQueue.transform);
 		cassettes[order[4]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f);
