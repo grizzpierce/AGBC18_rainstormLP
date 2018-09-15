@@ -6,12 +6,17 @@ using DG.Tweening;
 
 public class UIModes : MonoBehaviour {
 
-	public GameObject timeUI, cassetteUI, dialogUI;
+	public GameObject cursorUI, timeUI, cassetteUI, dialogUI, cassetteBar;
 
 	public void LaunchMain() {
 		timeUI.SetActive(true);
 		cassetteUI.SetActive(true);
 		dialogUI.SetActive(false);
+		cassetteBar.SetActive(true);
+	}
+
+	public void cursorActive(bool isActive) {
+		cursorUI.GetComponent<Image>().enabled = isActive;
 	}
 
 }

@@ -77,106 +77,108 @@ public class CassetteSelector : MonoBehaviour {
 	}
 
 	public void ShiftRight() {
+		if(currState == SELECTOR_STATE.IDLE) {
+			currState = SELECTOR_STATE.SHIFT;
 
-		currState = SELECTOR_STATE.SHIFT;
+			// CALCULATE NEW CASSETTES
+			int[] _active = new int[5];
+			int _prevActive = int.Parse(activeSlot.transform.GetChild(0).name);
+			//Debug.Log("NEW ACTIVE");
+			int _newActive = calculateWrap(_prevActive, -1);
 
-		// CALCULATE NEW CASSETTES
-		int[] _active = new int[5];
-		int _prevActive = int.Parse(activeSlot.transform.GetChild(0).name);
-		//Debug.Log("NEW ACTIVE");
-		int _newActive = calculateWrap(_prevActive, -1);
+			//Debug.Log("NEW LEFT");
+			int _newLeft = calculateWrap(_newActive, - 1);
+			//Debug.Log("NEW LEFTQ");
+			int _leftQ = calculateWrap(_newActive - 1, - 1);
 
-		//Debug.Log("NEW LEFT");
-		int _newLeft = calculateWrap(_newActive, - 1);
-		//Debug.Log("NEW LEFTQ");
-		int _leftQ = calculateWrap(_newActive - 1, - 1);
+			int _newRight = _prevActive;
+			//Debug.Log("NEW RIGHTQ");
+			int _rightQ = calculateWrap(_prevActive, 1);
 
-		int _newRight = _prevActive;
-		//Debug.Log("NEW RIGHTQ");
-		int _rightQ = calculateWrap(_prevActive, 1);
+			_active[0] = _leftQ;
+			_active[1] = _newLeft;
+			_active[2] = _newActive;
+			_active[3] = _newRight;
+			_active[4] = _rightQ;
 
-		_active[0] = _leftQ;
-		_active[1] = _newLeft;
-		_active[2] = _newActive;
-		_active[3] = _newRight;
-		_active[4] = _rightQ;
+			Debug.Log(_leftQ + "  >>>  " + _newLeft + "  >>>  " + _newActive + "  >>>  " + _newRight + "  >>>  " + _rightQ);
 
-		Debug.Log(_leftQ + "  >>>  " + _newLeft + "  >>>  " + _newActive + "  >>>  " + _newRight + "  >>>  " + _rightQ);
+			// CALCULATE INACTIVE CASSETTES
+			int[] _inactive = new int[cassetteStock];
 
-		// CALCULATE INACTIVE CASSETTES
-		int[] _inactive = new int[cassetteStock];
+			int temp = _rightQ;
+			for (int i = 0 ; i < cassetteStock; ++i) {
+				temp = ++temp;
 
-		int temp = _rightQ;
-		for (int i = 0 ; i < cassetteStock; ++i) {
-			temp = ++temp;
+				if (temp > cassettes.Count - 1) {
+					temp = 0;
+				}
 
-			if (temp > cassettes.Count - 1) {
-				temp = 0;
+				if(temp < 0) {
+					temp = cassettes.Count - 1;
+				}
+
+				_inactive[i] = temp;
+
+				//print(_inactive[i].ToString());
 			}
 
-			if(temp < 0) {
-				temp = cassettes.Count - 1;
-			}
-
-			_inactive[i] = temp;
-
-			//print(_inactive[i].ToString());
+			StartCoroutine(Shift(_inactive, _active));
 		}
-
-		StartCoroutine(Shift(_inactive, _active));
 	}
 
 	public void ShiftLeft() {
+		if(currState ==SELECTOR_STATE.IDLE) {
+			currState = SELECTOR_STATE.SHIFT;
 
-		currState = SELECTOR_STATE.SHIFT;
+			// CALCULATE NEW CASSETTES
+			int[] _active = new int[5];
+			int _prevActive = int.Parse(activeSlot.transform.GetChild(0).name);
+			//Debug.Log("NEW ACTIVE");
+			int _newActive = calculateWrap(_prevActive, 1);
 
-		// CALCULATE NEW CASSETTES
-		int[] _active = new int[5];
-		int _prevActive = int.Parse(activeSlot.transform.GetChild(0).name);
-		//Debug.Log("NEW ACTIVE");
-		int _newActive = calculateWrap(_prevActive, 1);
+			//Debug.Log("NEW LEFT");
+			int _newRight = calculateWrap(_newActive, 1);
+			//Debug.Log("NEW LEFTQ");
+			int _rightQ = calculateWrap(_newActive + 1, 1);
 
-		//Debug.Log("NEW LEFT");
-		int _newRight = calculateWrap(_newActive, 1);
-		//Debug.Log("NEW LEFTQ");
-		int _rightQ = calculateWrap(_newActive + 1, 1);
+			int _newLeft = _prevActive;
+			//Debug.Log("NEW RIGHTQ");
+			int _leftQ = calculateWrap(_prevActive, -1);
 
-		int _newLeft = _prevActive;
-		//Debug.Log("NEW RIGHTQ");
-		int _leftQ = calculateWrap(_prevActive, -1);
+			_active[0] = _leftQ;
+			_active[1] = _newLeft;
+			_active[2] = _newActive;
+			_active[3] = _newRight;
+			_active[4] = _rightQ;
 
-		_active[0] = _leftQ;
-		_active[1] = _newLeft;
-		_active[2] = _newActive;
-		_active[3] = _newRight;
-		_active[4] = _rightQ;
-
-		Debug.Log(_leftQ + "  <<<  " + _newLeft + "  <<<  " + _newActive + "  <<<  " + _newRight + "  <<<  " + _rightQ);
+			Debug.Log(_leftQ + "  <<<  " + _newLeft + "  <<<  " + _newActive + "  <<<  " + _newRight + "  <<<  " + _rightQ);
 
 
-		// 8  |  0  |  1  |  2  |  3
+			// 8  |  0  |  1  |  2  |  3
 
-		// CALCULATE INACTIVE CASSETTES
-		int[] _inactive = new int[cassetteStock];
+			// CALCULATE INACTIVE CASSETTES
+			int[] _inactive = new int[cassetteStock];
 
-		int temp = _rightQ;
-		for (int i = 0 ; i < cassetteStock; ++i) {
-			temp = ++temp;
+			int temp = _rightQ;
+			for (int i = 0 ; i < cassetteStock; ++i) {
+				temp = ++temp;
 
-			if (temp > cassettes.Count - 1) {
-				temp = 0;
+				if (temp > cassettes.Count - 1) {
+					temp = 0;
+				}
+
+				if(temp < 0) {
+					temp = cassettes.Count - 1;
+				}
+
+				_inactive[i] = temp;
+
+				//print(_inactive[i].ToString());
 			}
 
-			if(temp < 0) {
-				temp = cassettes.Count - 1;
-			}
-
-			_inactive[i] = temp;
-
-			//print(_inactive[i].ToString());
+			StartCoroutine(Shift(_inactive, _active));
 		}
-
-		StartCoroutine(Shift(_inactive, _active));
 	}
 
 	int calculateWrap(int num, int dir) {
@@ -207,8 +209,6 @@ public class CassetteSelector : MonoBehaviour {
 	}
 
 	IEnumerator Shift(int[] inactive, int[] order) {
-
-		yield return new WaitForSeconds(2f);
 
 		for(int i = 0; i < inactive.Length; ++i) {
 			resetPosition(cassettes[inactive[i]], inactiveSlot);
