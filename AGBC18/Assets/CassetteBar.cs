@@ -82,7 +82,7 @@ public class CassetteBar : MonoBehaviour {
 	}
 
 	void interactionsMode() {
-		Debug.Log(Input.mousePosition);
+		//Debug.Log(Input.mousePosition);
 
 		// MORE POLISH FOR SHOWING WHAT CASSETTE IS BEING CURRENTLY HOVERED (COLOR AND MORE MOTION POSSIBLY?)
 
