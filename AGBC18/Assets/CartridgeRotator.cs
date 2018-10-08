@@ -76,6 +76,19 @@ public class CartridgeRotator : MonoBehaviour {
 		}
 	}
 
+	public void Play() {
+		if(currRState == ROTATION_STATE.IDLE) {
+			SetStates(currRState, ROTATION_STATE.PLAY);
+
+			Vector3 _rotation = new Vector3(
+			transform.rotation.eulerAngles.x + (axisDirection[0] * 360),
+			transform.rotation.eulerAngles.y + (axisDirection[1] * 360),
+			transform.rotation.eulerAngles.z + (axisDirection[2] * 360));
+
+			rotTween = gameObject.transform.DORotate(_rotation, cycleDuration, RotateMode.FastBeyond360).SetLoops(-1).SetEase(mainEase);
+		}		
+	}
+
 	public void TogglePause() {
 		Debug.Log("Toggling Pause");
 		if (currRState == ROTATION_STATE.PAUSE) {
