@@ -58,8 +58,10 @@
      <Compile Include="Assets\0. Game Assets\Scripts\Renderscale.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\TimeCapture.cs" />
      <Compile Include="Assets\AudioNotification.cs" />
+     <Compile Include="Assets\CartridgeData.cs" />
      <Compile Include="Assets\CartridgeRotator.cs" />
      <Compile Include="Assets\CassetteBar.cs" />
+     <Compile Include="Assets\CassetteManagement.cs" />
      <Compile Include="Assets\CassetteSelector.cs" />
      <Compile Include="Assets\CassetteShowcase.cs" />
      <Compile Include="Assets\CassetteUI.cs" />
@@ -81,6 +83,7 @@
      <Compile Include="Assets\interactable.cs" />
      <Compile Include="Assets\IntroCassette.cs" />
      <Compile Include="Assets\IntroInteraction.cs" />
+     <Compile Include="Assets\PopupManager.cs" />
      <Compile Include="Assets\ProceduralUIImage\Scripts\Attributes\ModifierID.cs" />
      <Compile Include="Assets\ProceduralUIImage\Scripts\EmptySprite.cs" />
      <Compile Include="Assets\ProceduralUIImage\Scripts\MaterialHelper.cs" />

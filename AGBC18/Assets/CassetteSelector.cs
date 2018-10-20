@@ -188,7 +188,7 @@ public class CassetteSelector : MonoBehaviour {
 		resetHovers();
 		switch(side) {
 			case -1:
-			Debug.Log("LEFT");
+			//Debug.Log("LEFT");
 			leftNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(-95, 47, 0), .5f).SetEase(hoverEase);			
 			break;
 
@@ -197,12 +197,12 @@ public class CassetteSelector : MonoBehaviour {
 			break;
 
 			case 1:
-			Debug.Log("RIGHT");
+			//Debug.Log("RIGHT");
 			rightNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(95, 47, 0), .5f).SetEase(hoverEase);
 			break;
 
 			default:
-			Debug.Log("Invalid Selection");
+			//Debug.Log("Invalid Selection");
 			break;
 		}
 	}

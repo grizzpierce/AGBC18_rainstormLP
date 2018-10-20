@@ -65,6 +65,7 @@ public class CartridgeRotator : MonoBehaviour {
 
 	public void Play(float duration, int loops) {
 		if(currRState == ROTATION_STATE.IDLE) {
+			//Debug.Log("Now Playing...");
 			SetStates(currRState, ROTATION_STATE.PLAY);
 
 			Vector3 _rotation = new Vector3(
@@ -74,20 +75,14 @@ public class CartridgeRotator : MonoBehaviour {
 
 			rotTween = gameObject.transform.DORotate(_rotation, duration, RotateMode.FastBeyond360).SetLoops(loops).SetEase(mainEase);
 		}
+
+
 	}
 
-	public void Play() {
-		if(currRState == ROTATION_STATE.IDLE) {
-			SetStates(currRState, ROTATION_STATE.PLAY);
-
-			Vector3 _rotation = new Vector3(
-			transform.rotation.eulerAngles.x + (axisDirection[0] * 360),
-			transform.rotation.eulerAngles.y + (axisDirection[1] * 360),
-			transform.rotation.eulerAngles.z + (axisDirection[2] * 360));
-
-			rotTween = gameObject.transform.DORotate(_rotation, cycleDuration, RotateMode.FastBeyond360).SetLoops(-1).SetEase(mainEase);
-		}		
+	public void playGeneric() {
+		Play(cycleDuration, -1);
 	}
+
 
 	public void TogglePause() {
 		Debug.Log("Toggling Pause");
@@ -113,9 +108,9 @@ public class CartridgeRotator : MonoBehaviour {
 	}
 
 	IEnumerator StopRotation() {
-		rotTween.SmoothRewind();
-
-		yield return new WaitForSeconds(5f);
+		rotTween.Kill();
+		gameObject.transform.DORotate(new Vector3(-90, 0, 0), .5f, RotateMode.FastBeyond360).SetLoops(1).SetEase(mainEase);		
+		yield return new WaitForSeconds(.5f);
 
 		SetStates(currRState, ROTATION_STATE.IDLE);
 	}

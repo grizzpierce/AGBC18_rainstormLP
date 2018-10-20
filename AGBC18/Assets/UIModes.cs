@@ -17,8 +17,8 @@ public class UIModes : MonoBehaviour {
 
 	public void LaunchMain() {
 		activateTimeUI(true);
-		//cassetteUI.SetActive(true);
-		dialogUI.SetActive(false);
+		cassetteUI.GetComponent<AudioNotification>().Launch();
+		dialogUI.SetActive(true);
 		cassetteBar.SetActive(true);
 	}
 
@@ -28,7 +28,7 @@ public class UIModes : MonoBehaviour {
 
 	void activateTimeUI(bool isActivating) {
 		if(isActivating) {
-			timeUI.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, 300, 0), 1f);
+			timeUI.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, 260, 0), 1f);
 		}
 		else {
 			timeUI.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, 340, 0), 0f);

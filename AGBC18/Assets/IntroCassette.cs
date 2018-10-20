@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public class IntroCassette : MonoBehaviour {
 
-	public GameObject cartridge, cameraRig, canvas;
+	public GameObject cartridge, cameraRig, canvas, manager;
 
 	bool isLaunched = false;
 
@@ -32,7 +32,6 @@ public class IntroCassette : MonoBehaviour {
 
 	 IEnumerator IntroAnimation() {
 
-
 		cartridge.transform.DORotate(new Vector3(-90, 0, 0), 5f);
 		cartridge.transform.DOMove(new Vector3(0, 27.5f, 0), 5f);
 
@@ -50,5 +49,6 @@ public class IntroCassette : MonoBehaviour {
 
 		cameraRig.GetComponent<MapRotator>().enabled = true;
 		canvas.GetComponent<UIModes>().LaunchMain();
+		manager.GetComponent<CassetteManagement>().Launch();
 	}
 }

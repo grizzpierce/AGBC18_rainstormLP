@@ -18,7 +18,8 @@ public class CassetteBar : MonoBehaviour {
 	float timer = 25f;
 	bool showcasing = false;
 
-	bool isPlaying = false;
+	public CassetteManagement manager;
+	
 
 	void resetCursorStatus() {
 		clickAction = -2;
@@ -152,21 +153,6 @@ public class CassetteBar : MonoBehaviour {
 	}
 
 	void centerClick() {
-		if(!isPlaying) {
-			isPlaying = true;
-			Play();
-		}
-		else {
-			isPlaying = false;
-			Stop();
-		}
-	}
-
-	void Play() {
-
-	}
-
-	void Stop() {
-		
+		manager.assess();
 	}
 }
