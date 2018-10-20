@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -12,6 +13,10 @@ public class CartridgeData : MonoBehaviour {
 
 	RawImage ui;
 	public Text text;
+
+    [FMODUnity.EventRef]
+    [SerializeField] public string trackAudioEvent;
+
 
 	void Start() {
 		ui = gameObject.GetComponent<RawImage>();

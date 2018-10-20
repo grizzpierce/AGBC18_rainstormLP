@@ -13,13 +13,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114576159809570444}
-  - {fileID: 114208279225765414}
+  - {fileID: 114904756202961446}
+  - {fileID: 114980258184374378}
   EditorEvents:
-  - {fileID: 114089910268636350}
-  MasterBankRef: {fileID: 114208279225765414}
+  - {fileID: 114208620201554312}
+  - {fileID: 114195332812414680}
+  - {fileID: 114478778116467908}
+  - {fileID: 114181764169203574}
+  - {fileID: 114140127317056054}
+  - {fileID: 114013572096728490}
+  - {fileID: 114928145313739150}
+  - {fileID: 114175817658871814}
+  MasterBankRef: {fileID: 114904756202961446}
   StringsBankRef: {fileID: 114576159809570444}
-  stringsBankWriteTime: 636719453800000000
+  stringsBankWriteTime: 636756404190000000
   cacheVersion: 2
+--- !u!114 &114013572096728490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/music/track_optimismTime
+  guid: 754b14a008769c4db467dab9dba75d51
+  Banks:
+  - {fileID: 114980258184374378}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 135288
 --- !u!114 &114079069837632000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -52,8 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/Dummy
   guid: 11b5db0a0845c24b97d7a4d4b7bb452b
-  Banks:
-  - {fileID: 114208279225765414}
+  Banks: []
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -61,6 +90,28 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114140127317056054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/music/track_blimps2
+  guid: 5c898eaad5ff5a469bf938518bdb6f91
+  Banks:
+  - {fileID: 114980258184374378}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 166739
 --- !u!114 &114169438189986382
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -80,6 +131,72 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12474
   Exists: 1
+--- !u!114 &114175817658871814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/music/track_blimps1
+  guid: a31df04c0bdc59419923f18376665d9e
+  Banks:
+  - {fileID: 114980258184374378}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 90723
+--- !u!114 &114181764169203574
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/music/track_celestialWhiner
+  guid: 5ac7fd6e476d9d4b8d8a50f53a412bc1
+  Banks:
+  - {fileID: 114980258184374378}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 120000
+--- !u!114 &114195332812414680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/music/track_90palisades
+  guid: 1e74503d4f818641807c425c6a229afc
+  Banks:
+  - {fileID: 114980258184374378}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 168071
 --- !u!114 &114208279225765414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,7 +215,29 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 13116
-  Exists: 1
+  Exists: 0
+--- !u!114 &114208620201554312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/music/track_noiseWave
+  guid: 053ed0b91d1bd7469592d1ee5e5bbcd8
+  Banks:
+  - {fileID: 114980258184374378}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 237818
 --- !u!114 &114211166417639686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -194,6 +333,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 672
   Exists: 1
+--- !u!114 &114478778116467908
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/music/track_churchWhistler
+  guid: 24e21b1359975246a436a86f8df566b8
+  Banks:
+  - {fileID: 114980258184374378}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 413500
 --- !u!114 &114575160909848596
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -225,11 +386,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_Assets/Desktop/Master Bank.strings.bank
-  lastModified: 636719453800000000
+  lastModified: 636756404190000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 716
+    Value: 1098
   Exists: 1
 --- !u!114 &114696059791428064
 MonoBehaviour:
@@ -288,6 +449,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12474
   Exists: 1
+--- !u!114 &114904756202961446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/jacobmumford/Desktop/RAINSTORM_LP/AGBC18_rainstormLP/AGBC18/FMOD_Assets/Desktop/Master
+    Bank.bank
+  lastModified: 636756404190000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 12474
+  Exists: 1
 --- !u!114 &114920496663524392
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -306,6 +486,46 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 672
+  Exists: 1
+--- !u!114 &114928145313739150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/music/track_weeHours
+  guid: 92bc02294d4cbb4ba0867bdab31f31d9
+  Banks:
+  - {fileID: 114980258184374378}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 154618
+--- !u!114 &114980258184374378
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/jacobmumford/Desktop/RAINSTORM_LP/AGBC18_rainstormLP/AGBC18/FMOD_Assets/Desktop/music.bank
+  lastModified: 636756404190000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 19638592
   Exists: 1
 --- !u!114 &114998883741472164
 MonoBehaviour:

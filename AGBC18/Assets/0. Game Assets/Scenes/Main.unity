@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.25814605, g: 0.26651317, b: 0.6541467, a: 1}
+  m_IndirectSpecularColor: {r: 0.25814605, g: 0.2665132, b: 0.65414673, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5244,6 +5244,7 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   isUnknown: 1
   text: {fileID: 0}
+  trackAudioEvent: 
 --- !u!1 &105183841
 GameObject:
   m_ObjectHideFlags: 0
@@ -5879,6 +5880,7 @@ MonoBehaviour:
   color: {r: 1, g: 0, b: 0, a: 1}
   isUnknown: 1
   text: {fileID: 0}
+  trackAudioEvent: event:/music/track_blimps2
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -6075,6 +6077,7 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   isUnknown: 1
   text: {fileID: 0}
+  trackAudioEvent: 
 --- !u!1001 &190806475
 Prefab:
   m_ObjectHideFlags: 0
@@ -13278,6 +13281,7 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   isUnknown: 1
   text: {fileID: 0}
+  trackAudioEvent: 
 --- !u!1 &675208930
 GameObject:
   m_ObjectHideFlags: 0
@@ -18608,6 +18612,7 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   isUnknown: 1
   text: {fileID: 0}
+  trackAudioEvent: 
 --- !u!213 &782410704
 Sprite:
   m_ObjectHideFlags: 0
@@ -19518,6 +19523,7 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   isUnknown: 1
   text: {fileID: 0}
+  trackAudioEvent: 
 --- !u!1 &954939128
 GameObject:
   m_ObjectHideFlags: 0
@@ -19988,6 +19994,7 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   isUnknown: 1
   text: {fileID: 0}
+  trackAudioEvent: 
 --- !u!1 &1033979576
 GameObject:
   m_ObjectHideFlags: 0
@@ -21703,6 +21710,7 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   isUnknown: 0
   text: {fileID: 0}
+  trackAudioEvent: event:/music/track_churchWhistler
 --- !u!1 &1394861935
 GameObject:
   m_ObjectHideFlags: 0
@@ -21866,6 +21874,7 @@ MonoBehaviour:
   color: {r: 1, g: 1, b: 1, a: 1}
   isUnknown: 1
   text: {fileID: 0}
+  trackAudioEvent: 
 --- !u!1 &1411468506
 GameObject:
   m_ObjectHideFlags: 0
