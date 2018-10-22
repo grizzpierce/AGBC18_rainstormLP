@@ -61,18 +61,26 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\0. Game Assets\Scripts\AudioBin.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\AudioManager.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\AudioNotification.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\CartridgeData.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\CartridgeRotator.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\CassetteBar.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\CassetteManagement.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\CassetteSelector.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\CassetteShowcase.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\CassetteUI.cs" />
     <Compile Include="Assets\0. Game Assets\Scripts\CustomCursor.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\interactable.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\IntroCassette.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\IntroInteraction.cs" />
     <Compile Include="Assets\0. Game Assets\Scripts\MapRotator.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\PopupManager.cs" />
     <Compile Include="Assets\0. Game Assets\Scripts\Renderscale.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\SelectorActions.cs" />
     <Compile Include="Assets\0. Game Assets\Scripts\TimeCapture.cs" />
-    <Compile Include="Assets\AudioNotification.cs" />
-    <Compile Include="Assets\CartridgeData.cs" />
-    <Compile Include="Assets\CartridgeRotator.cs" />
-    <Compile Include="Assets\CassetteBar.cs" />
-    <Compile Include="Assets\CassetteManagement.cs" />
-    <Compile Include="Assets\CassetteSelector.cs" />
-    <Compile Include="Assets\CassetteShowcase.cs" />
-    <Compile Include="Assets\CassetteUI.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\UIModes.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
     <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
@@ -88,10 +96,6 @@
     <Compile Include="Assets\FMOD Resources\GoogleVR\Scripts\Audio\FmodGvrAudioRoom.cs" />
     <Compile Include="Assets\FMOD Resources\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
     <Compile Include="Assets\FMOD Resources\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
-    <Compile Include="Assets\interactable.cs" />
-    <Compile Include="Assets\IntroCassette.cs" />
-    <Compile Include="Assets\IntroInteraction.cs" />
-    <Compile Include="Assets\PopupManager.cs" />
     <Compile Include="Assets\ProceduralUIImage\Scripts\Attributes\ModifierID.cs" />
     <Compile Include="Assets\ProceduralUIImage\Scripts\EmptySprite.cs" />
     <Compile Include="Assets\ProceduralUIImage\Scripts\MaterialHelper.cs" />
@@ -163,8 +167,6 @@
     <Compile Include="Assets\Rewired\Internal\Scripts\InputManager.cs" />
     <Compile Include="Assets\Rewired\Internal\Scripts\Misc\ExternalTools.cs" />
     <Compile Include="Assets\Rewired\Internal\Scripts\Platforms\Ouya\OuyaInputSource.cs" />
-    <Compile Include="Assets\SelectorActions.cs" />
-    <Compile Include="Assets\UIModes.cs" />
     <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
     <None Include="Assets\0. Game Assets\Scripts\Custom Shaders\DepthMask.shader" />
     <None Include="Assets\ProceduralUIImage\Shaders\ProceduralImageRuntime.shader" />
