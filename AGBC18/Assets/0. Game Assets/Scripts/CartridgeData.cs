@@ -7,19 +7,18 @@ using DG.Tweening;
 
 public class CartridgeData : MonoBehaviour {
 
-	public Color color;
-	Color unkownColor = new Color32(75, 75, 75, 255);
+    public CartridgeDataHolder dataHolder;
+
+    Color unknownColor = new Color32(75, 75, 75, 255);
 	public bool isUnknown = false;
 
 	RawImage ui;
 	public Text text;
 
-    [FMODUnity.EventRef]
-    [SerializeField] public string trackAudioEvent;
-
 
 	void Start() {
 		ui = gameObject.GetComponent<RawImage>();
+                                     
 		if(transform.childCount > 0) {
 			text = transform.GetChild(0).GetComponent<Text>();
 		}
@@ -39,12 +38,12 @@ public class CartridgeData : MonoBehaviour {
 	}
 
     void Hide() {
-		ui.DOColor(unkownColor, .25f);
+		ui.DOColor(unknownColor, .25f);
 		text.DOFade(1f, .25f);
 	}
 
     void Reveal() {
-		ui.DOColor(color, .5f);
+        ui.DOColor(dataHolder.color, .5f);
 		text.DOFade(0f, .5f);
 	}
 }

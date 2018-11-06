@@ -7,6 +7,8 @@ public class AudioManager : MonoBehaviour {
     public AudioBin audioBin;
     private FMOD.Studio.EventInstance rainAmbiance;
 
+    public 
+
 	void Start () {
         if(audioBin == null) {
             audioBin = GetComponentInParent<AudioBin>();

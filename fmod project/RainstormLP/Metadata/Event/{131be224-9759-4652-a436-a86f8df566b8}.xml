@@ -53,7 +53,7 @@
             <destination>{9390cdf4-0b58-44f3-a3da-b0dd37f27387}</destination>
         </relationship>
         <relationship name="output">
-            <destination>{9ea6c63b-de11-454c-a577-4aa6d9452171}</destination>
+            <destination>{53bec2a1-755b-4ab2-ad0a-dbe55c3b7db6}</destination>
         </relationship>
     </object>
     <object class="EventAutomatableProperties" id="{8047f7a4-e936-42ff-bf9c-3c3f17a5ae0d}"/>
@@ -72,6 +72,9 @@
         </relationship>
     </object>
     <object class="EventMixerMaster" id="{94c8b77a-f0dc-446b-bf9d-514421951e8a}">
+        <relationship name="modulators">
+            <destination>{02015b24-00d8-4e3a-9b35-153058b6672e}</destination>
+        </relationship>
         <relationship name="effectChain">
             <destination>{bcbd4aaf-e134-4b63-b459-080f705eb783}</destination>
         </relationship>
@@ -113,8 +116,26 @@
             <destination>{94c8b77a-f0dc-446b-bf9d-514421951e8a}</destination>
         </relationship>
     </object>
+    <object class="ADSRModulator" id="{02015b24-00d8-4e3a-9b35-153058b6672e}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>volume</value>
+        </property>
+        <property name="initialValue">
+            <value>-80</value>
+        </property>
+        <property name="attackTime">
+            <value>180</value>
+        </property>
+        <property name="releaseTime">
+            <value>1400</value>
+        </property>
+        <property name="releaseShape">
+            <value>1</value>
+        </property>
+    </object>
     <object class="MixerBusEffectChain" id="{bcbd4aaf-e134-4b63-b459-080f705eb783}">
         <relationship name="effects">
+            <destination>{19eea2a7-756a-458d-91da-95e99c4cf373}</destination>
             <destination>{e59d2bf9-0b19-48ac-8f7e-0b30abe03542}</destination>
         </relationship>
     </object>
@@ -126,6 +147,40 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{e9b69c54-e583-428d-b610-4ab9865276ef}"/>
+    <object class="PitchShifterEffect" id="{19eea2a7-756a-458d-91da-95e99c4cf373}">
+        <property name="bypass">
+            <value>true</value>
+        </property>
+        <property name="fftSize">
+            <value>1500</value>
+        </property>
+        <property name="overlap">
+            <value>4.4000001</value>
+        </property>
+        <relationship name="modulators">
+            <destination>{832b2ba2-072c-4ad7-88f1-798e9bb04588}</destination>
+        </relationship>
+    </object>
     <object class="MixerBusFader" id="{e59d2bf9-0b19-48ac-8f7e-0b30abe03542}"/>
     <object class="MixerBusFader" id="{7e5b86b6-ecd6-4013-8b75-587beddc3a3b}"/>
+    <object class="ADSRModulator" id="{832b2ba2-072c-4ad7-88f1-798e9bb04588}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>pitch</value>
+        </property>
+        <property name="attackShape">
+            <value>-1.00000048</value>
+        </property>
+        <property name="peakValue">
+            <value>30</value>
+        </property>
+        <property name="sustainValue">
+            <value>30</value>
+        </property>
+        <property name="releaseTime">
+            <value>1200</value>
+        </property>
+        <property name="releaseShape">
+            <value>-0.0641936883</value>
+        </property>
+    </object>
 </objects>

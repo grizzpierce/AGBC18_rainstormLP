@@ -117,6 +117,7 @@ public class CassetteBar : MonoBehaviour {
 				break;
 
 			case 0:
+                //Debug.Log("DEBUG: Assessing Selected cassette...");
                 manager.Assess();
 				resetCursorStatus();
 				break;

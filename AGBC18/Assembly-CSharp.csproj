@@ -65,6 +65,7 @@
     <Compile Include="Assets\0. Game Assets\Scripts\AudioManager.cs" />
     <Compile Include="Assets\0. Game Assets\Scripts\AudioNotification.cs" />
     <Compile Include="Assets\0. Game Assets\Scripts\CartridgeData.cs" />
+    <Compile Include="Assets\0. Game Assets\Scripts\CartridgeDataHolder.cs" />
     <Compile Include="Assets\0. Game Assets\Scripts\CartridgeRotator.cs" />
     <Compile Include="Assets\0. Game Assets\Scripts\CassetteBar.cs" />
     <Compile Include="Assets\0. Game Assets\Scripts\CassetteManagement.cs" />

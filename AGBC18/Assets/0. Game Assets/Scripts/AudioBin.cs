@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEditor;
 
-public class AudioBin : MonoBehaviour {
+public class AudioBin : MonoBehaviour
+{
 
-    [Header("Tracks")]
-    [FMODUnity.EventRef]
-    public string SFX_track1;
+    //[Header("Tracks")]
+    //[FMODUnity.EventRef]
+    //public string SFX_track1;
 
     [Header("Cartridge Audio Events")]
     [FMODUnity.EventRef]
@@ -79,10 +81,29 @@ public class AudioBin : MonoBehaviour {
     public string SFX_textScroll;
 
 
-	void Start () {
-		
-	}
-	void Update () {
-		
-	}
+    void Start()
+    {
+
+    }
+    void Update()
+    {
+
+    }
 }
+
+//[CustomEditor(typeof(AudioBin))]
+//public class AudioBinEditor : Editor {
+
+//    private bool showTracks;
+//    private bool showCartridgeEvents;
+//    private bool showAmbianceEvents;
+//    private bool showInteractEvents;
+//    private bool showUIEvents;
+
+//    public override void OnInspectorGUI()
+//    {
+//        AudioBin audioBin = (AudioBin)target;
+
+//        //showTracks = EditorGUI.Foldout(new Rect(3,3,
+//    }
+//}

@@ -5245,10 +5245,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaa4aba7213743e08cd19f553825435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 1, b: 1, a: 1}
+  dataHolder: {fileID: 0}
   isUnknown: 1
   text: {fileID: 0}
-  trackAudioEvent: 
 --- !u!4 &78946073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 60368631773dc4aac8290651b72388b8,
@@ -5723,6 +5722,50 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cassette: {fileID: 573445280}
   ui: {fileID: 0}
+--- !u!1 &131574013
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 131574014}
+  - component: {fileID: 131574015}
+  m_Layer: 0
+  m_Name: Noise Wave
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &131574014
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 131574013}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1604503714}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &131574015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 131574013}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7a9d55b39054abeb17c8e621a5dd09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  text: {fileID: 0}
+  fadeOutTime: 0
+  trackAudioEvent: event:/music/track_noiseWave
 --- !u!1 &144198276
 GameObject:
   m_ObjectHideFlags: 0
@@ -5886,10 +5929,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaa4aba7213743e08cd19f553825435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 0, b: 0, a: 1}
+  dataHolder: {fileID: 1830836829}
   isUnknown: 1
   text: {fileID: 0}
-  trackAudioEvent: event:/music/track_blimps2
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -6083,10 +6125,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaa4aba7213743e08cd19f553825435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 1, b: 1, a: 1}
+  dataHolder: {fileID: 0}
   isUnknown: 1
   text: {fileID: 0}
-  trackAudioEvent: 
 --- !u!1001 &190806475
 Prefab:
   m_ObjectHideFlags: 0
@@ -6210,11 +6251,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 400000, guid: 554e848ec90a444d28954673e6f39a11, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 3
+      value: 2.3
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 554e848ec90a444d28954673e6f39a11, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.75000024
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 554e848ec90a444d28954673e6f39a11, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7454,6 +7495,50 @@ Transform:
   m_Father: {fileID: 144198277}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &443255212
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 443255213}
+  - component: {fileID: 443255214}
+  m_Layer: 0
+  m_Name: 90 Pallisades
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &443255213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 443255212}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1604503714}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &443255214
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 443255212}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7a9d55b39054abeb17c8e621a5dd09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  text: {fileID: 0}
+  fadeOutTime: 0
+  trackAudioEvent: event:/music/track_90palisades
 --- !u!4 &460857774 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 5cd81b81847d14bab8387c9ab81453a2,
@@ -12495,6 +12580,50 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cd81b81847d14bab8387c9ab81453a2, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &549539081
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 549539082}
+  - component: {fileID: 549539083}
+  m_Layer: 0
+  m_Name: Blimps 1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &549539082
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 549539081}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1604503714}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &549539083
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 549539081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7a9d55b39054abeb17c8e621a5dd09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  text: {fileID: 0}
+  fadeOutTime: 0
+  trackAudioEvent: event:/music/track_blimps1
 --- !u!1 &550390194
 GameObject:
   m_ObjectHideFlags: 0
@@ -13303,10 +13432,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaa4aba7213743e08cd19f553825435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 1, b: 1, a: 1}
+  dataHolder: {fileID: 0}
   isUnknown: 1
   text: {fileID: 0}
-  trackAudioEvent: 
 --- !u!1 &675208930
 GameObject:
   m_ObjectHideFlags: 0
@@ -18638,10 +18766,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaa4aba7213743e08cd19f553825435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 1, b: 1, a: 1}
+  dataHolder: {fileID: 0}
   isUnknown: 1
   text: {fileID: 0}
-  trackAudioEvent: 
 --- !u!213 &782410704
 Sprite:
   m_ObjectHideFlags: 0
@@ -19549,10 +19676,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaa4aba7213743e08cd19f553825435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 1, b: 1, a: 1}
+  dataHolder: {fileID: 0}
   isUnknown: 1
   text: {fileID: 0}
-  trackAudioEvent: 
 --- !u!1 &954939128
 GameObject:
   m_ObjectHideFlags: 0
@@ -20020,10 +20146,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaa4aba7213743e08cd19f553825435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 1, b: 1, a: 1}
+  dataHolder: {fileID: 0}
   isUnknown: 1
   text: {fileID: 0}
-  trackAudioEvent: 
 --- !u!1 &1033979576
 GameObject:
   m_ObjectHideFlags: 0
@@ -21770,10 +21895,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaa4aba7213743e08cd19f553825435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 1, b: 1, a: 1}
+  dataHolder: {fileID: 1749741795}
   isUnknown: 0
   text: {fileID: 0}
-  trackAudioEvent: event:/music/track_churchWhistler
 --- !u!1 &1394861935
 GameObject:
   m_ObjectHideFlags: 0
@@ -21934,10 +22058,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ecaa4aba7213743e08cd19f553825435, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  color: {r: 1, g: 1, b: 1, a: 1}
+  dataHolder: {fileID: 0}
   isUnknown: 1
   text: {fileID: 0}
-  trackAudioEvent: 
 --- !u!1 &1411468506
 GameObject:
   m_ObjectHideFlags: 0
@@ -22134,6 +22257,50 @@ Transform:
   m_Father: {fileID: 609685165}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1460853252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1460853253}
+  - component: {fileID: 1460853254}
+  m_Layer: 0
+  m_Name: Optimism Time
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1460853253
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1460853252}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1604503714}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1460853254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1460853252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7a9d55b39054abeb17c8e621a5dd09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  text: {fileID: 0}
+  fadeOutTime: 0
+  trackAudioEvent: event:/music/track_optimismTime
 --- !u!4 &1495118500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0eba66b40c055483cb462ef0d510b311,
@@ -22415,7 +22582,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8024516b014e4692af31bcc55c4c080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SFX_track1: 
   SFX_cartridgeLoad: 
   SFX_cartridgePlay: 
   SFX_cartridgeStop: 
@@ -22458,10 +22624,62 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -1.668457, y: 1.8525391, z: 1.1289062}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 443255213}
+  - {fileID: 549539082}
+  - {fileID: 1830836830}
+  - {fileID: 1640135120}
+  - {fileID: 1749741794}
+  - {fileID: 131574014}
+  - {fileID: 1460853253}
+  - {fileID: 1764492723}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1640135119
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1640135120}
+  - component: {fileID: 1640135121}
+  m_Layer: 0
+  m_Name: Celestial Whiner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1640135120
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1640135119}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1604503714}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1640135121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1640135119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7a9d55b39054abeb17c8e621a5dd09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  text: {fileID: 0}
+  fadeOutTime: 0
+  trackAudioEvent: event:/music/track_celestialWhiner
 --- !u!1 &1644698766
 GameObject:
   m_ObjectHideFlags: 0
@@ -22927,6 +23145,94 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0eba66b40c055483cb462ef0d510b311, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &1749741793
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1749741794}
+  - component: {fileID: 1749741795}
+  m_Layer: 0
+  m_Name: Church Whistler
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1749741794
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1749741793}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1604503714}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1749741795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1749741793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7a9d55b39054abeb17c8e621a5dd09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0.8026134, g: 0.5807227, b: 0.8490566, a: 1}
+  text: {fileID: 0}
+  fadeOutTime: 0
+  trackAudioEvent: event:/music/track_churchWhistler
+--- !u!1 &1764492722
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1764492723}
+  - component: {fileID: 1764492724}
+  m_Layer: 0
+  m_Name: Wee Hours
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1764492723
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1764492722}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1604503714}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1764492724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1764492722}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7a9d55b39054abeb17c8e621a5dd09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0, g: 0, b: 0, a: 0}
+  text: {fileID: 0}
+  fadeOutTime: 0
+  trackAudioEvent: event:/music/track_weeHours
 --- !u!21 &1774199453
 Material:
   serializedVersion: 6
@@ -23143,6 +23449,50 @@ Material:
     - _Width: 200
     m_Colors:
     - _Radius: {r: 100, g: 100, b: 100, a: 100}
+--- !u!1 &1830836828
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1830836830}
+  - component: {fileID: 1830836829}
+  m_Layer: 0
+  m_Name: Blimps 2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1830836829
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1830836828}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2d7a9d55b39054abeb17c8e621a5dd09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  color: {r: 0.9433962, g: 0.32484868, b: 0.32484868, a: 1}
+  text: {fileID: 0}
+  fadeOutTime: 0
+  trackAudioEvent: event:/music/track_blimps2
+--- !u!4 &1830836830
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1830836828}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1604503714}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1838826224
 Prefab:
   m_ObjectHideFlags: 0
