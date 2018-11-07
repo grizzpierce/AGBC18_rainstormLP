@@ -18,17 +18,18 @@ public class PopupManager : MonoBehaviour {
 	public Image textContainer;
 	public RawImage cassetteUI;
 	public GameObject readyUI;
+    public CassetteSelector cassetteRotor;
 
 	POPUP_STATE current = POPUP_STATE.INVALID;
 	public string DEBUG_STATE = "INVALID";
 
 	string dialog = "No text was entered. Please use Pop(string text);";
 	Color cassetteColor;
-	public CartridgeData cassette;
+	public CartridgeDataHolder cassette;
 
-	void SetState(POPUP_STATE state) {
-		current = state;
-		DEBUG_STATE = state.ToString();
+    void SetState(POPUP_STATE _state) {
+		current = _state;
+		DEBUG_STATE = _state.ToString();
 	}
 	public bool GetIfAvailable() {
 		if (current == POPUP_STATE.INACTIVE)
@@ -57,34 +58,36 @@ public class PopupManager : MonoBehaviour {
 		if(current == POPUP_STATE.INACTIVE) {
 			textUI.text = "";
 			SetState(POPUP_STATE.LOADING);
-			StartCoroutine(Popup());
+			StartCoroutine(Popup(null));
 		}
 	}
 
-	public void Pop(string text, Color color) {
-		dialog = text;
-		cassetteColor = color;
+    public void Pop(string _text, Color _color) {
+		dialog = _text;
+		cassetteColor = _color;
 
 		if(current == POPUP_STATE.INACTIVE) {
 			textUI.text = "";
 			SetState(POPUP_STATE.LOADING);
-			StartCoroutine(Popup());
+			StartCoroutine(Popup(null));
 		}
 	}
 
-	public void Pop(string text, Color color, CartridgeData cartridge) {
-		dialog = text;
-		cassetteColor = color;
-		cassette = cartridge;
+    public void Pop(string _text, Color _color, CartridgeDataHolder _cartridge) {
+        dialog = _text;
+		cassetteColor = _color;
+		cassette = _cartridge;
 
 		if(current == POPUP_STATE.INACTIVE) {
 			textUI.text = "";
 			SetState(POPUP_STATE.LOADING);
-			StartCoroutine(Popup());
+            StartCoroutine(Popup(_cartridge));
 		}
 	}
 
-	IEnumerator Popup() {
+    IEnumerator Popup(CartridgeDataHolder _cartridge) {
+        CartridgeData uiCartridgeToFill;
+
 		transform.DOMove(new Vector3(Screen.width/2, Screen.height/2, 0), 1f, false);
 		textContainer.DOFade(.3f, 1f);
 		textUI.DOFade(1f, 0f);
@@ -101,9 +104,10 @@ public class PopupManager : MonoBehaviour {
 		cassetteUI.DOColor(cassetteColor, 1f);
 		yield return new WaitForSeconds(1f);
 
-		if(cassette != null)
-			cassette.SetUnknown(false);
-
+        if (cassette != null) {
+            uiCartridgeToFill = cassetteRotor.ReturnNextUnknownCassette();
+            uiCartridgeToFill.SetKnown(cassette);
+        }
 		readyUI.SetActive(true);
 		SetState(POPUP_STATE.IDLE);
 	}

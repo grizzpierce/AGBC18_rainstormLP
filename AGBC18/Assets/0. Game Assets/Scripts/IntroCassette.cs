@@ -13,11 +13,12 @@ public class IntroCassette : MonoBehaviour {
 	void Start() {
 		if(cartridge == null)
 			Destroy(this);
+
 	}
 
-     void OnMouseDown()
-     {
-		 if(!isLaunched) {
+    void OnMouseDown()
+    {
+        if(!isLaunched) {
 			Destroy(gameObject.GetComponent<BoxCollider>());
 			cartridge.transform.parent = null;
 
@@ -26,11 +27,11 @@ public class IntroCassette : MonoBehaviour {
 		}
 		
 
-		// UNPARENT THE CARTRIDGE MESH, TRIGGER A COROUTINE TO SEND IT DOWN, AND THEN ONCE DELETED ROTATE THE SCREEN IN PLACE.
-		// ALSO TRY AS HARD AS POSSIBLE TO NOT USE ROTATEAROUNDAXIS, AS I HAVE NO WAY OF MANIPULATING THE OBJECT.
-     }
+	    // UNPARENT THE CARTRIDGE MESH, TRIGGER A COROUTINE TO SEND IT DOWN, AND THEN ONCE DELETED ROTATE THE SCREEN IN PLACE.
+	    // ALSO TRY AS HARD AS POSSIBLE TO NOT USE ROTATEAROUNDAXIS, AS I HAVE NO WAY OF MANIPULATING THE OBJECT.
+    }
 
-	 IEnumerator IntroAnimation() {
+	IEnumerator IntroAnimation() {
 
 		cartridge.transform.DORotate(new Vector3(-90, 0, 0), 5f);
 		cartridge.transform.DOMove(new Vector3(0, 27.5f, 0), 5f);

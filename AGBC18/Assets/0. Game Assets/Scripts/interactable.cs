@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class interactable : MonoBehaviour {
 
     public PopupManager manager;
-    public CartridgeData cassetteFound;
+    public CartridgeDataHolder cassetteFound;
     Color cassetteColor;
 
     public string preDialog;
@@ -19,7 +19,7 @@ public class interactable : MonoBehaviour {
             cassetteColor = new Color(0, 0, 0, 0);
         }
         else {
-            cassetteColor = new Color(cassetteFound.dataHolder.color.r, cassetteFound.dataHolder.color.g, cassetteFound.dataHolder.color.b, 1f);
+            cassetteColor = new Color(cassetteFound.color.r, cassetteFound.color.g, cassetteFound.color.b, 1f);
         }
     }
 

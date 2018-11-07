@@ -24,9 +24,10 @@ MonoBehaviour:
   - {fileID: 114013572096728490}
   - {fileID: 114928145313739150}
   - {fileID: 114175817658871814}
+  - {fileID: 114362007497559770}
   MasterBankRef: {fileID: 114904756202961446}
   StringsBankRef: {fileID: 114576159809570444}
-  stringsBankWriteTime: 636756404190000000
+  stringsBankWriteTime: 636771912460000000
   cacheVersion: 2
 --- !u!114 &114013572096728490
 MonoBehaviour:
@@ -174,7 +175,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 120000
+  Length: 110000
 --- !u!114 &114195332812414680
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +238,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 237818
+  Length: 235000
 --- !u!114 &114211166417639686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +277,28 @@ MonoBehaviour:
   - Name: Desktop
     Value: 672
   Exists: 1
+--- !u!114 &114362007497559770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/ambiances/sfx_rain
+  guid: e9e1ded94f58384382b89490f93d2aff
+  Banks:
+  - {fileID: 114904756202961446}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 164000
 --- !u!114 &114373653431906546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -386,11 +409,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_Assets/Desktop/Master Bank.strings.bank
-  lastModified: 636756404190000000
+  lastModified: 636771912460000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 1098
+    Value: 1234
   Exists: 1
 --- !u!114 &114696059791428064
 MonoBehaviour:
@@ -462,11 +485,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/jacobmumford/Desktop/RAINSTORM_LP/AGBC18_rainstormLP/AGBC18/FMOD_Assets/Desktop/Master
     Bank.bank
-  lastModified: 636756404190000000
+  lastModified: 636771912460000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 12474
+    Value: 2241376
   Exists: 1
 --- !u!114 &114920496663524392
 MonoBehaviour:
@@ -508,7 +531,7 @@ MonoBehaviour:
   Parameters: []
   MinDistance: 0
   MaxDistance: 0
-  Length: 154618
+  Length: 150000
 --- !u!114 &114980258184374378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -521,11 +544,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: /Users/jacobmumford/Desktop/RAINSTORM_LP/AGBC18_rainstormLP/AGBC18/FMOD_Assets/Desktop/music.bank
-  lastModified: 636756404190000000
+  lastModified: 636771912460000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 19638592
+    Value: 19639264
   Exists: 1
 --- !u!114 &114998883741472164
 MonoBehaviour:

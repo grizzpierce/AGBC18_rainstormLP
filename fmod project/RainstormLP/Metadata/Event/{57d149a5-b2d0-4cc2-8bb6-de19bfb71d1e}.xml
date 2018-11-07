@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{57d149a5-b2d0-4cc2-8bb6-de19bfb71d1e}">
         <property name="name">
-            <value>sfx_lamp</value>
+            <value>sfx_lampInteract</value>
         </property>
         <property name="outputFormat">
             <value>2</value>
         </property>
         <relationship name="folder">
-            <destination>{b205da72-6bf4-4702-afbd-26d47911ef24}</destination>
+            <destination>{5d2c8450-af51-411a-a0df-c8a611d1ea9d}</destination>
         </relationship>
         <relationship name="mixer">
             <destination>{5944803e-c7a6-463c-a346-fafeae69efbf}</destination>

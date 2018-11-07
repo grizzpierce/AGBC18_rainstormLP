@@ -5,8 +5,9 @@ using UnityEngine.UI;
 using DG.Tweening;
 
 public class CassetteManagement : MonoBehaviour {
-
-	public GameObject activeSlot, first;
+    
+    public GameObject activeSlot, firstCassetteObject;
+    public CartridgeDataHolder firstData;
 
 	public GameObject playing;
     public bool IsPlaying { get; private set; }
@@ -27,8 +28,10 @@ public class CassetteManagement : MonoBehaviour {
 	}
 
 	public void Launch() {
-		playing = first;
-        var audioEvent = first.GetComponent<CartridgeData>().dataHolder.trackAudioEvent;
+		playing = firstCassetteObject;
+        CartridgeData cartridgeData = firstCassetteObject.GetComponent<CartridgeData>();
+        cartridgeData.SetKnown(firstData);
+        var audioEvent = cartridgeData.GetDataHolder().trackAudioEvent;
         if (audioEvent == null)
         {
             Debug.Log("No Track Event Data Found");
@@ -38,7 +41,7 @@ public class CassetteManagement : MonoBehaviour {
             playingTrack = FMODUnity.RuntimeManager.CreateInstance(audioEvent);
             playingTrack.start();
 
-            notifier.Play(first.GetComponent<RawImage>().color);
+            notifier.Play(firstCassetteObject.GetComponent<RawImage>().color);
         }
 	}
 
@@ -72,7 +75,7 @@ public class CassetteManagement : MonoBehaviour {
 		GameObject pressed = activeSlot.transform.GetChild(0).gameObject;
 
         // Check if cartridge is discovered
-		if(!pressed.GetComponent<CartridgeData>().isUnknown) {
+		if(!pressed.GetComponent<CartridgeData>().startsUnknown) {
             // Check to see if the pressed cartridge is currently playing; if so, stops it.
             if (pressed == playing) {
                 StartCoroutine(TapeStop(playing));
@@ -107,7 +110,7 @@ public class CassetteManagement : MonoBehaviour {
         playingTrack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
 
         // fades out for time defined per track 
-        yield return new WaitForSeconds(_playing.GetComponent<CartridgeData>().dataHolder.fadeOutTime);
+        yield return new WaitForSeconds(_playing.GetComponent<CartridgeData>().GetDataHolder().fadeOutTime);
         IsStopping = false;
 
         // TODO pitch shift track down over fadeout?
@@ -118,7 +121,7 @@ public class CassetteManagement : MonoBehaviour {
         // TODO play cartridge start
         // TODO wait for reel up
 
-        var audioEvent = _pressed.GetComponent<CartridgeData>().dataHolder.trackAudioEvent;
+        var audioEvent = _pressed.GetComponent<CartridgeData>().GetDataHolder().trackAudioEvent;
         // only proceed to new track if there is a new track event available
         if (audioEvent == null)
         {

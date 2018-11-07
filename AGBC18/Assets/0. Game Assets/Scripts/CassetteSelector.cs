@@ -270,4 +270,15 @@ public class CassetteSelector : MonoBehaviour {
 
 		SetState(SELECTOR_STATE.IDLE);
 	}
+
+    public CartridgeData ReturnNextUnknownCassette() {
+        CartridgeData data;
+        for (int i = 0; i <= cassettes.Count; i++) {
+            data = cassettes[i].GetComponent<CartridgeData>();
+            if (!data.IsKnown()) {
+                return data;
+            }
+        }
+        return null;
+    }
 }

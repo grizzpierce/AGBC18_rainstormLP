@@ -7,7 +7,8 @@ public class CartridgeDataHolder : MonoBehaviour {
 
     public Color color;
 
-    public Text text;
+    public string unknownText = "???";
+    public string revealedText;
 
     public int fadeOutTime;
 
@@ -15,7 +16,7 @@ public class CartridgeDataHolder : MonoBehaviour {
     [SerializeField] public string trackAudioEvent;
 
 	void Start () {
-        if (fadeOutTime.Equals(null)) {
+        if (fadeOutTime.Equals(0)) {
             fadeOutTime = 1;
         }
 	}
