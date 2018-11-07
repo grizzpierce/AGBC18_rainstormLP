@@ -13,8 +13,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114576159809570444}
-  - {fileID: 114904756202961446}
-  - {fileID: 114980258184374378}
+  - {fileID: 114325010421551958}
+  - {fileID: 114621835075454006}
   EditorEvents:
   - {fileID: 114208620201554312}
   - {fileID: 114195332812414680}
@@ -25,9 +25,9 @@ MonoBehaviour:
   - {fileID: 114928145313739150}
   - {fileID: 114175817658871814}
   - {fileID: 114362007497559770}
-  MasterBankRef: {fileID: 114904756202961446}
+  MasterBankRef: {fileID: 114325010421551958}
   StringsBankRef: {fileID: 114576159809570444}
-  stringsBankWriteTime: 636771912460000000
+  stringsBankWriteTime: 636772000150000000
   cacheVersion: 2
 --- !u!114 &114013572096728490
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
   Path: event:/music/track_optimismTime
   guid: 754b14a008769c4db467dab9dba75d51
   Banks:
-  - {fileID: 114980258184374378}
+  - {fileID: 114621835075454006}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -105,7 +105,7 @@ MonoBehaviour:
   Path: event:/music/track_blimps2
   guid: 5c898eaad5ff5a469bf938518bdb6f91
   Banks:
-  - {fileID: 114980258184374378}
+  - {fileID: 114621835075454006}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -146,7 +146,7 @@ MonoBehaviour:
   Path: event:/music/track_blimps1
   guid: a31df04c0bdc59419923f18376665d9e
   Banks:
-  - {fileID: 114980258184374378}
+  - {fileID: 114621835075454006}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -168,7 +168,7 @@ MonoBehaviour:
   Path: event:/music/track_celestialWhiner
   guid: 5ac7fd6e476d9d4b8d8a50f53a412bc1
   Banks:
-  - {fileID: 114980258184374378}
+  - {fileID: 114621835075454006}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -190,7 +190,7 @@ MonoBehaviour:
   Path: event:/music/track_90palisades
   guid: 1e74503d4f818641807c425c6a229afc
   Banks:
-  - {fileID: 114980258184374378}
+  - {fileID: 114621835075454006}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -231,7 +231,7 @@ MonoBehaviour:
   Path: event:/music/track_noiseWave
   guid: 053ed0b91d1bd7469592d1ee5e5bbcd8
   Banks:
-  - {fileID: 114980258184374378}
+  - {fileID: 114621835075454006}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -277,6 +277,25 @@ MonoBehaviour:
   - Name: Desktop
     Value: 672
   Exists: 1
+--- !u!114 &114325010421551958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/AGBC18/FMOD_Assets/Desktop/Master
+    Bank.bank
+  lastModified: 636772000150000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 2241376
+  Exists: 1
 --- !u!114 &114362007497559770
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -291,7 +310,7 @@ MonoBehaviour:
   Path: event:/sfx/ambiances/sfx_rain
   guid: e9e1ded94f58384382b89490f93d2aff
   Banks:
-  - {fileID: 114904756202961446}
+  - {fileID: 114325010421551958}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -370,7 +389,7 @@ MonoBehaviour:
   Path: event:/music/track_churchWhistler
   guid: 24e21b1359975246a436a86f8df566b8
   Banks:
-  - {fileID: 114980258184374378}
+  - {fileID: 114621835075454006}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
@@ -409,11 +428,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_Assets/Desktop/Master Bank.strings.bank
-  lastModified: 636771912460000000
+  lastModified: 636772000150000000
   LoadResult: 0
   FileSizes:
   - Name: 
     Value: 1234
+  Exists: 1
+--- !u!114 &114621835075454006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: /Users/jakegrizzlypierce/Desktop/AGBC18_rainstormLP/AGBC18/FMOD_Assets/Desktop/music.bank
+  lastModified: 636772000150000000
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 19639264
   Exists: 1
 --- !u!114 &114696059791428064
 MonoBehaviour:
@@ -524,7 +561,7 @@ MonoBehaviour:
   Path: event:/music/track_weeHours
   guid: 92bc02294d4cbb4ba0867bdab31f31d9
   Banks:
-  - {fileID: 114980258184374378}
+  - {fileID: 114621835075454006}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1

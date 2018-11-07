@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.25814605, g: 0.2665132, b: 0.65414673, a: 1}
+  m_IndirectSpecularColor: {r: 0.25814605, g: 0.26651317, b: 0.6541467, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5247,6 +5247,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unknownText: ???
   startsUnknown: 1
+  textLabel: {fileID: 0}
 --- !u!4 &78946073 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 60368631773dc4aac8290651b72388b8,
@@ -5931,6 +5932,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unknownText: ???
   startsUnknown: 1
+  textLabel: {fileID: 0}
 --- !u!1 &170076733
 GameObject:
   m_ObjectHideFlags: 0
@@ -6126,6 +6128,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unknownText: ???
   startsUnknown: 1
+  textLabel: {fileID: 0}
 --- !u!1001 &190806475
 Prefab:
   m_ObjectHideFlags: 0
@@ -6879,7 +6882,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.8, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 112, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &331980039
 MonoBehaviour:
@@ -6979,7 +6982,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &345691159
 RectTransform:
   m_ObjectHideFlags: 0
@@ -13304,7 +13307,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.8, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 112, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &574356768
 MonoBehaviour:
@@ -13520,6 +13523,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unknownText: ???
   startsUnknown: 1
+  textLabel: {fileID: 0}
 --- !u!1 &675208930
 GameObject:
   m_ObjectHideFlags: 0
@@ -18500,7 +18504,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.8000183, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 112, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &719915726
 MonoBehaviour:
@@ -18853,6 +18857,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unknownText: ???
   startsUnknown: 1
+  textLabel: {fileID: 0}
 --- !u!213 &782410704
 Sprite:
   m_ObjectHideFlags: 0
@@ -19546,7 +19551,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.8000183, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 112, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &918575905
 MonoBehaviour:
@@ -19864,6 +19869,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unknownText: ???
   startsUnknown: 1
+  textLabel: {fileID: 0}
 --- !u!1 &954939128
 GameObject:
   m_ObjectHideFlags: 0
@@ -20162,7 +20168,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.8, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 112, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1012661171
 MonoBehaviour:
@@ -20333,6 +20339,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unknownText: ???
   startsUnknown: 1
+  textLabel: {fileID: 0}
 --- !u!1 &1033979576
 GameObject:
   m_ObjectHideFlags: 0
@@ -20907,7 +20914,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.8, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 112, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1168532223
 MonoBehaviour:
@@ -20982,7 +20989,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.8, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 112, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1215158867
 MonoBehaviour:
@@ -22251,6 +22258,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unknownText: ???
   startsUnknown: 0
+  textLabel: {fileID: 331980039}
 --- !u!1 &1394861935
 GameObject:
   m_ObjectHideFlags: 0
@@ -22413,6 +22421,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   unknownText: ???
   startsUnknown: 1
+  textLabel: {fileID: 0}
 --- !u!1 &1411468506
 GameObject:
   m_ObjectHideFlags: 0
@@ -22446,7 +22455,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.8000183, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 112, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1411468508
 MonoBehaviour:
@@ -24022,7 +24031,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 3.8, y: 0}
-  m_SizeDelta: {x: 160, y: 30}
+  m_SizeDelta: {x: 112, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1849134644
 MonoBehaviour:

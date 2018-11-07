@@ -21,10 +21,10 @@ public class CartridgeData : MonoBehaviour {
 	public bool startsUnknown = false;
 
 	RawImage ui;
-    Text textLabel;
+    public Text textLabel;
 
 
-	void Start() {
+	void Awake() {
 		ui = gameObject.GetComponent<RawImage>();
                                      
 		if(transform.childCount > 0) {
@@ -52,6 +52,7 @@ public class CartridgeData : MonoBehaviour {
 
     // Called from PopupManager
     public void SetKnown(CartridgeDataHolder _dataHolder) {
+        Debug.Log("Data Holder: " + _dataHolder.GetComponent<CartridgeDataHolder>().revealedText);
         if (_dataHolder == null) {
             Debug.Log("No cartridge data supplied");
         } else {
@@ -68,13 +69,19 @@ public class CartridgeData : MonoBehaviour {
 	}
 
     IEnumerator Reveal() {
-        if (dataHolder.revealedText.Equals(null)) {
+        Debug.Log("Revealing..");
+        if (dataHolder.revealedText == "") {
+            Debug.Log("Revealed Text is Null");
             textLabel.DOFade(0f, .5f);
             ui.DOColor(dataHolder.color, .5f);
         } else {
+            Debug.Log("Revealed Text is not null");
             textLabel.DOFade(0f, .5f);
             //yield return new WaitForSeconds(.5f);
-            textLabel.text = dataHolder.revealedText;
+
+            string temp = dataHolder.revealedText;
+            textLabel.text = temp;
+
             ui.DOColor(dataHolder.color, .1f);
             textLabel.DOFade(1f, .5f);
         }
