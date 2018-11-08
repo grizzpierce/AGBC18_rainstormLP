@@ -75,7 +75,7 @@ public class CassetteManagement : MonoBehaviour {
 		GameObject pressed = activeSlot.transform.GetChild(0).gameObject;
 
         // Check if cartridge is discovered
-		if(!pressed.GetComponent<CartridgeData>().startsUnknown) {
+		if(pressed.GetComponent<CartridgeData>().IsKnown()) {
             // Check to see if the pressed cartridge is currently playing; if so, stops it.
             if (pressed == playing) {
                 StartCoroutine(TapeStop(playing));
