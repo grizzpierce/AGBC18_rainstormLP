@@ -11,6 +11,7 @@ public class IntroCassette : MonoBehaviour {
 	bool isLaunched = false;
 
 	void Start() {
+
 		if(cartridge == null)
 			Destroy(this);
 
