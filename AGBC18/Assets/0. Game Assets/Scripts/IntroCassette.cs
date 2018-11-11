@@ -45,8 +45,8 @@ public class IntroCassette : MonoBehaviour {
 
 		Destroy(cartridge);
 		cameraRig.transform.DORotate(new Vector3(0, 30, 0), 3f);
-		cameraRig.transform.DOMove(Vector3.zero, 3f);
-
+		cameraRig.transform.DOMove(new Vector3(0, -2, 0), 3f);
+		
 		yield return new WaitForSeconds(3f);
 
 		cameraRig.GetComponent<MapRotator>().enabled = true;

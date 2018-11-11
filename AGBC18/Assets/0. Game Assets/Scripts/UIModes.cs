@@ -6,7 +6,7 @@ using DG.Tweening;
 
 public class UIModes : MonoBehaviour {
 
-	public GameObject cursorUI, timeUI, cassetteUI, dialogUI, cassetteBar;
+	public GameObject cursorUI, timeUI, cassetteUI, dialogUI, cassetteBar, prespectiveUI;
 
 	void Start() {
 		if(cursorUI == null || timeUI == null || cassetteBar == null) {
@@ -20,6 +20,7 @@ public class UIModes : MonoBehaviour {
 		cassetteUI.GetComponent<AudioNotification>().Launch();
 		dialogUI.SetActive(true);
 		cassetteBar.SetActive(true);
+		prespectiveUI.SetActive(true);
 	}
 
 	public void cursorActive(bool isActive) {
@@ -28,10 +29,10 @@ public class UIModes : MonoBehaviour {
 
 	void activateTimeUI(bool isActivating) {
 		if(isActivating) {
-			timeUI.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, 260, 0), 1f);
+			timeUI.GetComponent<RectTransform>().DOAnchorPos(new Vector3(0, -40), 1f);
 		}
 		else {
-			timeUI.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, 340, 0), 0f);
+			timeUI.GetComponent<RectTransform>().DOAnchorPos(new Vector3(0, 30), 0f);
 		}
 	}
 }

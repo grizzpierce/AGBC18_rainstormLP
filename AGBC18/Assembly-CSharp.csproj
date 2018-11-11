@@ -91,6 +91,7 @@
      <Compile Include="Assets\FMOD Resources\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
      <Compile Include="Assets\FMOD Resources\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
      <Compile Include="Assets\InteractableBlock.cs" />
+     <Compile Include="Assets\PerspectiveToggle.cs" />
      <Compile Include="Assets\ProceduralUIImage\Scripts\Attributes\ModifierID.cs" />
      <Compile Include="Assets\ProceduralUIImage\Scripts\EmptySprite.cs" />
      <Compile Include="Assets\ProceduralUIImage\Scripts\MaterialHelper.cs" />
@@ -162,6 +163,7 @@
      <Compile Include="Assets\Rewired\Internal\Scripts\InputManager.cs" />
      <Compile Include="Assets\Rewired\Internal\Scripts\Misc\ExternalTools.cs" />
      <Compile Include="Assets\Rewired\Internal\Scripts\Platforms\Ouya\OuyaInputSource.cs" />
+     <Compile Include="Assets\ToggleAnimation.cs" />
      <Compile Include="Assets\WindowManager.cs" />
      <None Include="Assets\Demigiant\DOTweenPro\readme.txt" />
      <None Include="Assets\0. Game Assets\Scripts\Custom Shaders\DepthMask.shader" />
