@@ -67,7 +67,6 @@
      <Compile Include="Assets\0. Game Assets\Scripts\CustomCursor.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\interactable.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\IntroCassette.cs" />
-     <Compile Include="Assets\0. Game Assets\Scripts\IntroInteraction.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\MapRotator.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\PopupManager.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\Renderscale.cs" />
