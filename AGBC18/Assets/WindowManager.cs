@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class WindowManager : MonoBehaviour {
 
+	int canvasSize = 640;
+
 	// Use this for initialization
 	void Start () {
-		Screen.SetResolution(640, 640, FullScreenMode.Windowed);		
+		Screen.SetResolution(canvasSize, canvasSize, FullScreenMode.Windowed);		
 	}
 	
 	void FixedUpdate () {
-		if(Screen.width != 640 || Screen.height != 640) {
-			Screen.SetResolution(640, 640, FullScreenMode.Windowed);			
+		if(Screen.width != canvasSize || Screen.height != canvasSize) {
+			Screen.SetResolution(canvasSize, canvasSize, FullScreenMode.Windowed);			
 		}
 	}
 }
