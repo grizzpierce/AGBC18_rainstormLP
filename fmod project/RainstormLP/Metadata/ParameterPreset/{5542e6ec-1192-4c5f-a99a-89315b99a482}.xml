@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{5542e6ec-1192-4c5f-a99a-89315b99a482}">
+        <property name="name">
+            <value>TapeStart</value>
+        </property>
+        <relationship name="folder">
+            <destination>{f2cd3bf4-8a65-4c70-9ae8-9fb6b3eca739}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{59f78e04-39a1-49a2-8546-3d11eef80c13}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{59f78e04-39a1-49a2-8546-3d11eef80c13}">
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+        <property name="isExposedRecursively">
+            <value>false</value>
+        </property>
+    </object>
+</objects>

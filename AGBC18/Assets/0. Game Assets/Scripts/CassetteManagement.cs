@@ -12,6 +12,7 @@ public class CassetteManagement : MonoBehaviour {
 	public GameObject playing;
     public bool IsPlaying { get; private set; }
     private bool IsStopping = false;
+    private bool IsStarting = false;
 
 	public AudioNotification notifier;
 	public Camera mainCam;
@@ -22,27 +23,36 @@ public class CassetteManagement : MonoBehaviour {
     FMOD.Studio.EventInstance playingTrack;
     public AudioManager audioManager;
 
+    [Range(0f,10f)]
+    public float fadeInTimeOnStart = 1;
+    [Range(0f,10f)]
+    public float fadeOutTimeOnStop = 1;
+
 	void Start() {
 		camPos = mainCam.transform.localPosition;
 		shake = mainCam.DOShakePosition(0, 0, 0, 0, true);
 	}
 
 	public void Launch() {
-		playing = firstCassetteObject;
         CartridgeData cartridgeData = firstCassetteObject.GetComponent<CartridgeData>();
         cartridgeData.SetKnown(firstData);
-        var audioEvent = cartridgeData.GetDataHolder().trackAudioEvent;
-        if (audioEvent == null)
-        {
-            Debug.Log("No Track Event Data Found");
-        }
-        else
-        {
-            playingTrack = FMODUnity.RuntimeManager.CreateInstance(audioEvent);
-            playingTrack.start();
 
-            notifier.Play(firstCassetteObject.GetComponent<RawImage>().color);
-        }
+        playing = firstCassetteObject;
+        StartCoroutine(TapeStart(playing));
+        
+        // var audioEvent = cartridgeData.GetDataHolder().trackAudioEvent;
+        // if (audioEvent == null)
+        // {
+        //     Debug.Log("No Track Event Data Found");
+        // }
+        // else
+        // {
+        //     playingTrack = FMODUnity.RuntimeManager.CreateInstance(audioEvent);
+        //     playingTrack.start();
+        //     //audioManager.setMusicPlaying();
+
+        //     notifier.Play(firstCassetteObject.GetComponent<RawImage>().color);
+        // }
 	}
 
 	void Update() {
@@ -61,6 +71,7 @@ public class CassetteManagement : MonoBehaviour {
             if(playbackState == FMOD.Studio.PLAYBACK_STATE.STOPPED) {
                 //Debug.Log("DEBUG: Releasing stopped track.");
                 playingTrack.release();
+                //audioManager.setMusicIdle();
                 IsStopping = false;
                 //TODO play cartridge finish playing
                 playing = null;
@@ -101,19 +112,28 @@ public class CassetteManagement : MonoBehaviour {
     IEnumerator TapeChange(GameObject _playing, GameObject _pressed) {
 
         yield return StartCoroutine(TapeStop(_playing));
+        // TODO: Cassette Shift
         yield return StartCoroutine(TapeStart(_pressed));
         yield return null;
     }
 
     IEnumerator TapeStop(GameObject _playing) {
         IsStopping = true;
-        playingTrack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-
         // fades out for time defined per track 
-        yield return new WaitForSeconds(_playing.GetComponent<CartridgeData>().GetDataHolder().fadeOutTime);
+        //playingTrack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        //yield return new WaitForSeconds(_playing.GetComponent<CartridgeData>().GetDataHolder().fadeOutTime);
+        
+        float t = 0.0f;
+        float value;
+        while (t < fadeOutTimeOnStop) {
+            t += Time.deltaTime;
+            value = Mathf.Lerp(1, 0, t/fadeOutTimeOnStop);
+            playingTrack.setParameterValue("TapeStart", value);
+            yield return null;
+        }
+        playingTrack.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        
         IsStopping = false;
-
-        // TODO pitch shift track down over fadeout?
         yield return null;
     }
 
@@ -135,6 +155,16 @@ public class CassetteManagement : MonoBehaviour {
 
             notifier.Play(_pressed.GetComponent<RawImage>().color);
             playing = _pressed;
+
+            float t = 0.0f;
+            float value;
+            while (t < fadeInTimeOnStart) {
+                t += Time.deltaTime;
+                value = Mathf.Lerp(0, 1, t/fadeInTimeOnStart);
+                //Debug.Log("Lerp Value: " + value);
+                playingTrack.setParameterValue("TapeStart", value);
+                yield return null;
+            }
         }
 
         yield return null;

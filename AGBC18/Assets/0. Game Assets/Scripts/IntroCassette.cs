@@ -6,9 +6,21 @@ using DG.Tweening;
 
 public class IntroCassette : MonoBehaviour {
 
-	public GameObject cartridge, cameraRig, canvas, manager;
+	public GameObject cartridge, cameraRig, canvas, cassetteManager, environment;
+	public AudioManager audioManager;
+
+	[FMODUnity.EventRef]
+	public string cassetteInteractAudio;
+
+	[FMODUnity.EventRef]
+	public string cassetteStartAudio;
+
 
 	bool isLaunched = false;
+
+	void Awake() {
+		//environment.SetActive(false);
+	}
 
 	void Start() {
 
@@ -22,6 +34,14 @@ public class IntroCassette : MonoBehaviour {
         if(!isLaunched) {
 			Destroy(gameObject.GetComponent<BoxCollider>());
 			cartridge.transform.parent = null;
+
+			if(cassetteInteractAudio != "") {
+				FMODUnity.RuntimeManager.PlayOneShot(cassetteInteractAudio);
+			} else if (audioManager.audioBin.cartridgeRattle != "") {
+				FMODUnity.RuntimeManager.PlayOneShot(audioManager.audioBin.cartridgeRattle);
+			} else {
+				Debug.Log("No FMOD Event data for intro cassette interact");
+			}
 
 			StartCoroutine(IntroAnimation());
 			isLaunched = true;
@@ -41,16 +61,29 @@ public class IntroCassette : MonoBehaviour {
 
 		cartridge.transform.DOMove(Vector3.zero, 2f).SetEase(Ease.InBack);
 
-		yield return new WaitForSeconds(2f);
+		yield return new WaitForSeconds(1.5f);
 
-		Destroy(cartridge);
+		if(cassetteStartAudio != "") {
+			FMODUnity.RuntimeManager.PlayOneShot(cassetteStartAudio);
+		} else if (audioManager.audioBin.cartridgeLoad != "") {
+			FMODUnity.RuntimeManager.PlayOneShot(audioManager.audioBin.cartridgeLoad);
+		} else {
+			Debug.Log("No FMOD Event data for intro cassette load");
+		}
+
+		yield return new WaitForSeconds(0.5f);
+
+		Destroy(cartridge);				
+		//environment.SetActive(true);
+
 		cameraRig.transform.DORotate(new Vector3(0, 30, 0), 3f);
 		cameraRig.transform.DOMove(new Vector3(0, -2, 0), 3f);
 		
 		yield return new WaitForSeconds(3f);
-
+		
 		cameraRig.GetComponent<MapRotator>().enabled = true;
 		canvas.GetComponent<UIModes>().LaunchMain();
-		manager.GetComponent<CassetteManagement>().Launch();
+		cassetteManager.GetComponent<CassetteManagement>().Launch();
+
 	}
 }

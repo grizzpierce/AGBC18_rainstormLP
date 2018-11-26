@@ -5,105 +5,73 @@ using UnityEditor;
 
 public class AudioBin : MonoBehaviour
 {
-
-    //[Header("Tracks")]
-    //[FMODUnity.EventRef]
-    //public string SFX_track1;
-
     [Header("Cartridge Audio Events")]
     [FMODUnity.EventRef]
-    public string SFX_cartridgeLoad;
+    public string cartridgeLoad;
 
     [FMODUnity.EventRef]
-    public string SFX_cartridgePlay;
+    public string cartridgePlay;
 
     [FMODUnity.EventRef]
-    public string SFX_cartridgeStop;
+    public string cartridgeStop;
 
     [FMODUnity.EventRef]
-    public string SFX_cartridgeFinishPlaying;
+    public string cartridgeFinishPlaying;
 
     [FMODUnity.EventRef]
-    public string SFX_cartridgeRattle;
+    public string cartridgeRattle;
 
     [Space]
     [Header("Ambiance Events")]
     [FMODUnity.EventRef]
-    public string SFX_rainAmbiance;
+    public string rainAmbiance;
 
     [FMODUnity.EventRef]
-    public string SFX_lampAmbiance;
+    public string lampAmbiance;
 
     [FMODUnity.EventRef]
-    public string SFX_vendingMachineAmbiance;
+    public string vendingMachineAmbiance;
 
     [FMODUnity.EventRef]
-    public string SFX_vendingMachineFlicker;
+    public string vendingMachineFlicker;
 
     [FMODUnity.EventRef]
-    public string SFX_grassAmbiance;
+    public string grassAmbiance;
 
     [Space]
     [Header("Interaction Audio Events")]
     [FMODUnity.EventRef]
-    public string SFX_vendingMachineInteract;
+    public string vendingMachineInteract;
 
     [FMODUnity.EventRef]
-    public string SFX_lampInteract;
+    public string lampInteract;
 
     [FMODUnity.EventRef]
-    public string SFX_binInteract;
+    public string binInteract;
 
     [FMODUnity.EventRef]
-    public string SFX_pylonInteract;
+    public string pylonInteract;
 
     [FMODUnity.EventRef]
-    public string SFX_bikeRackInteract;
+    public string bikeRackInteract;
 
     [FMODUnity.EventRef]
-    public string SFX_cupInteract;
+    public string cupInteract;
 
     [FMODUnity.EventRef]
-    public string SFX_grassInteract;
+    public string grassInteract;
 
     [FMODUnity.EventRef]
-    public string SFX_flyerInteract;
+    public string flyerInteract;
 
     [FMODUnity.EventRef]
-    public string SFX_graffitiInteract;
+    public string graffitiInteract;
 
     [FMODUnity.EventRef]
-    public string SFX_dudInteract;
+    public string dudInteract;
 
     [Space]
     [Header("UI Audio Events")]
     [FMODUnity.EventRef]
-    public string SFX_textScroll;
-
-
-    void Start()
-    {
-
-    }
-    void Update()
-    {
-
-    }
+    public string textScroll;
 }
-
-//[CustomEditor(typeof(AudioBin))]
-//public class AudioBinEditor : Editor {
-
-//    private bool showTracks;
-//    private bool showCartridgeEvents;
-//    private bool showAmbianceEvents;
-//    private bool showInteractEvents;
-//    private bool showUIEvents;
-
-//    public override void OnInspectorGUI()
-//    {
-//        AudioBin audioBin = (AudioBin)target;
-
-//        //showTracks = EditorGUI.Foldout(new Rect(3,3,
-//    }
-//}

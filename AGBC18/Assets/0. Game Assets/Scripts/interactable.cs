@@ -35,4 +35,8 @@ public class interactable : MonoBehaviour {
             }
          }
      }
+
+    //  void OnDrawGizmos() {
+    //      Gizmos.DrawIcon(transform.position, "test_icon2.png", true);
+    //  }
 }

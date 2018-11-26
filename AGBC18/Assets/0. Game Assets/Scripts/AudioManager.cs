@@ -4,34 +4,61 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour {
 
+    public enum MUSIC_STATE {
+        INTRO,
+        PLAYING,
+        IDLE
+    }
+
     public AudioBin audioBin;
+    public GameObject cameraRig;
+    private Transform cameraRigTransform;
     private FMOD.Studio.EventInstance rainAmbiance;
 
-    public 
+    MUSIC_STATE currentState = MUSIC_STATE.INTRO;
 
 	void Start () {
         if(audioBin == null) {
             audioBin = GetComponentInParent<AudioBin>();
         }
 
-        var audioString = audioBin.SFX_rainAmbiance;
+        cameraRigTransform = cameraRig.GetComponent<Transform>();
+        var audioString = audioBin.rainAmbiance;
         if(audioString == "") {
             Debug.Log("No FMOD Event Data for Rain Ambiance");
         }
         else 
         {
-            rainAmbiance = FMODUnity.RuntimeManager.CreateInstance(audioBin.SFX_rainAmbiance);
+            rainAmbiance = FMODUnity.RuntimeManager.CreateInstance(audioBin.rainAmbiance);
             rainAmbiance.start();
+            // FMODUnity.RuntimeManager.AttachInstanceToGameObject(rainAmbiance, cameraRig.GetComponent<Transform>(), cameraRig.GetComponentInChildren<Rigidbody>());
         }
 
 	}
-	
-	void Update () {
-		
-	}
 
-    private void OnDestroy()
+    void Update() {
+        //  rainAmbiance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(cameraRigTransform));
+        rainAmbiance.setParameterValue("Elevation_User", cameraRigTransform.position.y);
+    }
+	
+    void OnDestroy()
     {
         rainAmbiance.release();
+    }
+
+    public bool isMusicPlaying() {
+        if (currentState == MUSIC_STATE.PLAYING) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    public void setMusicPlaying() {
+        currentState = MUSIC_STATE.PLAYING;
+    }
+
+    public void setMusicIdle() {
+        currentState = MUSIC_STATE.IDLE;
     }
 }
