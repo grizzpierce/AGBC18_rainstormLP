@@ -10,15 +10,16 @@ public class CartridgeDataHolder : MonoBehaviour {
     public string unknownText = "???";
     public string revealedText;
 
-    public int fadeOutTime;
+    [Range(0, 10)]
+    public float fadeInTimeOnStart = 1.0f;
+    [Range(0, 10)]
+    public float fadeOutTimeOnStop = 1.0f;
 
     [FMODUnity.EventRef]
     [SerializeField] public string trackAudioEvent;
 
 	void Start () {
-        if (fadeOutTime.Equals(0)) {
-            fadeOutTime = 1;
-        }
+        
 	}
 	
 	void Update () {

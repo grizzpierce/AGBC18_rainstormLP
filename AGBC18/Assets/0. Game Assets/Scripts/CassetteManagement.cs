@@ -23,36 +23,19 @@ public class CassetteManagement : MonoBehaviour {
     FMOD.Studio.EventInstance playingTrack;
     public AudioManager audioManager;
 
-    [Range(0f,10f)]
-    public float fadeInTimeOnStart = 1;
-    [Range(0f,10f)]
-    public float fadeOutTimeOnStop = 1;
 
 	void Start() {
 		camPos = mainCam.transform.localPosition;
 		shake = mainCam.DOShakePosition(0, 0, 0, 0, true);
 	}
 
+    // Called from Intro Interaction animation
 	public void Launch() {
         CartridgeData cartridgeData = firstCassetteObject.GetComponent<CartridgeData>();
         cartridgeData.SetKnown(firstData);
 
         playing = firstCassetteObject;
         StartCoroutine(TapeStart(playing));
-        
-        // var audioEvent = cartridgeData.GetDataHolder().trackAudioEvent;
-        // if (audioEvent == null)
-        // {
-        //     Debug.Log("No Track Event Data Found");
-        // }
-        // else
-        // {
-        //     playingTrack = FMODUnity.RuntimeManager.CreateInstance(audioEvent);
-        //     playingTrack.start();
-        //     //audioManager.setMusicPlaying();
-
-        //     notifier.Play(firstCassetteObject.GetComponent<RawImage>().color);
-        // }
 	}
 
 	void Update() {
@@ -71,9 +54,9 @@ public class CassetteManagement : MonoBehaviour {
             if(playbackState == FMOD.Studio.PLAYBACK_STATE.STOPPED) {
                 //Debug.Log("DEBUG: Releasing stopped track.");
                 playingTrack.release();
-                //audioManager.setMusicIdle();
-                IsStopping = false;
-                //TODO play cartridge finish playing
+
+
+
                 playing = null;
                 notifier.Stop();
             }
@@ -89,18 +72,16 @@ public class CassetteManagement : MonoBehaviour {
 		if(pressed.GetComponent<CartridgeData>().IsKnown()) {
             // Check to see if the pressed cartridge is currently playing; if so, stops it.
             if (pressed == playing) {
-                StartCoroutine(TapeStop(playing));
+                StartCoroutine(TapeStop());
             } else {
                 // Check to see if there is a currently playing cartridge at all; if so, stops it.
-                if (playing != null)
-                {
-                    StartCoroutine(TapeChange(playing, pressed));
+                if (!IsStopping || !IsStarting) {
+                    if (playing != null) {
+                        StartCoroutine(TapeChange(pressed));
+                    } else {
+                        StartCoroutine(TapeStart(pressed));
+                    }
                 }
-                else
-                {
-                    StartCoroutine(TapeStart(pressed));
-                }
-
 			}
 		} else {
             // unknown cassette
@@ -109,27 +90,30 @@ public class CassetteManagement : MonoBehaviour {
 		}
 	}
 
-    IEnumerator TapeChange(GameObject _playing, GameObject _pressed) {
+    IEnumerator TapeChange(GameObject _pressed) {
 
-        yield return StartCoroutine(TapeStop(_playing));
-        // TODO: Cassette Shift
+        yield return StartCoroutine(TapeStop());
         yield return StartCoroutine(TapeStart(_pressed));
         yield return null;
     }
 
-    IEnumerator TapeStop(GameObject _playing) {
+    IEnumerator TapeStop() {
         IsStopping = true;
-        // fades out for time defined per track 
-        //playingTrack.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
-        //yield return new WaitForSeconds(_playing.GetComponent<CartridgeData>().GetDataHolder().fadeOutTime);
         
+        FMODUnity.RuntimeManager.PlayOneShot(audioManager.audioBin.cartridgeStop);
+
         float t = 0.0f;
+        float targetT = playing.GetComponent<CartridgeData>().GetDataHolder().fadeOutTimeOnStop;
         float value;
-        while (t < fadeOutTimeOnStop) {
-            t += Time.deltaTime;
-            value = Mathf.Lerp(1, 0, t/fadeOutTimeOnStop);
-            playingTrack.setParameterValue("TapeStart", value);
-            yield return null;
+
+        // if we're dividing by zero, skip the lerp and the math error
+        if (targetT != t) {
+            while (t < targetT) {
+                t += Time.deltaTime;
+                value = Mathf.Lerp(1, 0, t/targetT);
+                playingTrack.setParameterValue("TapeStart", value);
+                yield return null;
+            }
         }
         playingTrack.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         
@@ -137,18 +121,32 @@ public class CassetteManagement : MonoBehaviour {
         yield return null;
     }
 
+    IEnumerator TapeFinish() {
+        IsStopping = true;
+        yield return StartCoroutine(PlayOneShot(audioManager.audioBin.cartridgeFinishPlaying));
+        IsStopping = false;
+        yield return null;
+    }
+
     IEnumerator TapeStart(GameObject _pressed) {
         // TODO play cartridge start
         // TODO wait for reel up
+        IsStarting = true;
+        yield return StartCoroutine(PlayOneShot(audioManager.audioBin.cartridgeLoad));
 
         var audioEvent = _pressed.GetComponent<CartridgeData>().GetDataHolder().trackAudioEvent;
+
+        
         // only proceed to new track if there is a new track event available
         if (audioEvent == null)
         {
+            yield return StartCoroutine(PlayOneShot(audioManager.audioBin.cartridgePlay));
             Debug.Log("No Track Event Data for selected track!");
+            yield return StartCoroutine(PlayOneShot(audioManager.audioBin.cartridgeFinishPlaying));
         }
         else
         {
+            FMODUnity.RuntimeManager.PlayOneShot(audioManager.audioBin.cartridgePlay);
             if (playingTrack.isValid()) playingTrack.release();
             playingTrack = FMODUnity.RuntimeManager.CreateInstance(audioEvent);
             playingTrack.start();
@@ -157,16 +155,40 @@ public class CassetteManagement : MonoBehaviour {
             playing = _pressed;
 
             float t = 0.0f;
+            float targetT = _pressed.GetComponent<CartridgeData>().GetDataHolder().fadeInTimeOnStart;
             float value;
-            while (t < fadeInTimeOnStart) {
-                t += Time.deltaTime;
-                value = Mathf.Lerp(0, 1, t/fadeInTimeOnStart);
-                //Debug.Log("Lerp Value: " + value);
-                playingTrack.setParameterValue("TapeStart", value);
-                yield return null;
+            
+            // if we're dividing by zero, skip the lerp and the math error
+            if (targetT != t) {
+                while (t < targetT) {
+                    t += Time.deltaTime;
+                    value = Mathf.Lerp(0, 1, t/targetT);
+                    //Debug.Log("Lerp Value: " + value);
+                    playingTrack.setParameterValue("TapeStart", value);
+                    yield return null;
+                }
             }
         }
-
+        IsStarting = false;
         yield return null;
+    }
+    
+    FMOD.Studio.EventInstance playingOneShot;
+
+    IEnumerator PlayOneShot(string audioEvent) {
+        if (audioEvent != "") {
+            playingOneShot = FMODUnity.RuntimeManager.CreateInstance(audioEvent);
+            playingOneShot.start();
+
+            FMOD.Studio.PLAYBACK_STATE playbackState;
+            playingOneShot.getPlaybackState(out playbackState);
+            if (playbackState == FMOD.Studio.PLAYBACK_STATE.STOPPED) {
+                playingOneShot.release();
+                playingOneShot.clearHandle();
+                yield return null;
+            }
+        } else {
+            Debug.Log("No Event Data for Selected OneShot");
+        }
     }
 }

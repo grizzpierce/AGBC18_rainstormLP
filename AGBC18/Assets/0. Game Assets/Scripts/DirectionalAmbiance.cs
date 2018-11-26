@@ -11,7 +11,7 @@ public class DirectionalAmbiance : MonoBehaviour {
 	FMOD.Studio.EventInstance _thisEvent;
 
 	void Start () {
-		_thisEvent = FMODUnity.RuntimeManager.CreateInstance(_eventReference);
+		//_thisEvent = FMODUnity.RuntimeManager.CreateInstance(_eventReference);
 	}
 	
 	void Update () {

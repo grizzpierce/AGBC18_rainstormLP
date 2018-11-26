@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class interactable : MonoBehaviour {
 
     public PopupManager manager;
+    public AudioManager audioManager;
     public CartridgeDataHolder cassetteFound;
     Color cassetteColor;
 
@@ -28,6 +29,12 @@ public class interactable : MonoBehaviour {
          if(manager.GetIfAvailable()) {
             if(!interactedWith) {
                 manager.Pop(preDialog, cassetteColor, cassetteFound);
+                if (audioManager != null) {
+                    FMODUnity.RuntimeManager.PlayOneShot(audioManager.audioBin.findTapeInteract);
+                } else {
+                    Debug.Log("Set the Audio Manager in Interactable!");
+                }
+
                 interactedWith = true;
             }
             else {

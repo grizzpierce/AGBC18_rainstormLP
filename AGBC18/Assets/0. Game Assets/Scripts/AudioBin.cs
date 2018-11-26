@@ -41,6 +41,8 @@ public class AudioBin : MonoBehaviour
     [Space]
     [Header("Interaction Audio Events")]
     [FMODUnity.EventRef]
+    public string findTapeInteract;
+    [FMODUnity.EventRef]
     public string vendingMachineInteract;
 
     [FMODUnity.EventRef]
