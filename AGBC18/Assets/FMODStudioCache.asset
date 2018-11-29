@@ -47,7 +47,7 @@ MonoBehaviour:
   - {fileID: 114234996468632868}
   MasterBankRef: {fileID: 114176079392331320}
   StringsBankRef: {fileID: 114576159809570444}
-  stringsBankWriteTime: 636787800790000000
+  stringsBankWriteTime: 636790158890000000
   cacheVersion: 2
 --- !u!114 &114013572096728490
 MonoBehaviour:
@@ -68,7 +68,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114956590911385200}
+  - {fileID: 114508977290591826}
   MinDistance: 0
   MaxDistance: 0
   Length: 135288
@@ -231,6 +231,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114102753233447164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114111374233928344
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -310,10 +325,25 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114288421624763992}
+  - {fileID: 114311782793648668}
   MinDistance: 0
   MaxDistance: 0
   Length: 166739
+--- !u!114 &114145359468000338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Elevation_User
+  Min: -2
+  Max: 25
+  Default: 25
 --- !u!114 &114160941591353088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -382,7 +412,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114983046152315784}
+  - {fileID: 114872545333319876}
   MinDistance: 0
   MaxDistance: 0
   Length: 90723
@@ -399,11 +429,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/jacobmumford/Desktop/RAINSTORM_LP/AGBC18_rainstormLP/AGBC18/FMOD_Assets/Desktop/Master
     Bank.bank
-  lastModified: 636787800790000000
+  lastModified: 636790158890000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 2271808
+    Value: 2711040
   Exists: 1
 --- !u!114 &114181764169203574
 MonoBehaviour:
@@ -424,10 +454,25 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114915589059993892}
+  - {fileID: 114182191356053034}
   MinDistance: 0
   MaxDistance: 0
   Length: 98000
+--- !u!114 &114182191356053034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114187521455866840
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -469,7 +514,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114160941591353088}
+  - {fileID: 114252166529348836}
   MinDistance: 0
   MaxDistance: 0
   Length: 168071
@@ -526,7 +571,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114389738355323446}
+  - {fileID: 114688539056792670}
   MinDistance: 0
   MaxDistance: 0
   Length: 235000
@@ -580,16 +625,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: event:/sfx/ambiances/sfx_vendingMachineAmbiance
-  guid: 69864e44d7124c40be1ae821329f6bea
+  guid: c616a6786a93b84d9b219d9efaa73f14
   Banks:
   - {fileID: 114176079392331320}
-  IsStream: 0
+  IsStream: 1
   Is3D: 0
-  IsOneShot: 1
-  Parameters: []
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 114102753233447164}
   MinDistance: 0
   MaxDistance: 0
-  Length: 0
+  Length: 40000
 --- !u!114 &114244308689779504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -634,6 +680,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114252166529348836
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114275165953145764
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -695,6 +756,21 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114306398252997892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114311782793648668
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -792,7 +868,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114894190308431992}
+  - {fileID: 114145359468000338}
   MinDistance: 0
   MaxDistance: 0
   Length: 164000
@@ -931,7 +1007,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: /Users/jacobmumford/Desktop/RAINSTORM_LP/AGBC18_rainstormLP/AGBC18/FMOD_Assets/Desktop/music.bank
-  lastModified: 636787800800000000
+  lastModified: 636790158890000000
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -1046,7 +1122,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114989991825826926}
+  - {fileID: 114479419670820156}
   MinDistance: 0
   MaxDistance: 0
   Length: 413500
@@ -1065,6 +1141,21 @@ MonoBehaviour:
   Min: -2
   Max: 25
   Default: 25
+--- !u!114 &114479419670820156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114487170641596522
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,6 +1193,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114508977290591826
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114526429086648250
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1200,13 +1306,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_Assets/Desktop/Master Bank.strings.bank
-  lastModified: 636787800790000000
+  lastModified: 636790158890000000
   LoadResult: 0
   FileSizes:
   - Name: 
     Value: 2228
   Exists: 1
 --- !u!114 &114582534537700362
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 0
+--- !u!114 &114602094057821870
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1372,6 +1493,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114688539056792670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114696059791428064
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1540,6 +1676,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114872545333319876
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114874131939631942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1567,7 +1718,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: event:/sfx/one shots/interaction/sfx_vendingMachineInteract
-  guid: c616a6786a93b84d9b219d9efaa73f14
+  guid: 69864e44d7124c40be1ae821329f6bea
   Banks:
   - {fileID: 114176079392331320}
   IsStream: 0
@@ -1686,7 +1837,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114306398252997892}
+  - {fileID: 114602094057821870}
   MinDistance: 0
   MaxDistance: 0
   Length: 146000

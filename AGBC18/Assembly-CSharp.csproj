@@ -65,7 +65,6 @@
      <Compile Include="Assets\0. Game Assets\Scripts\CassetteShowcase.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\CassetteUI.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\CustomCursor.cs" />
-     <Compile Include="Assets\0. Game Assets\Scripts\DirectionalAmbiance.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\fadeIn.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\interactable.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\InteractableBlock.cs" />
@@ -79,6 +78,7 @@
      <Compile Include="Assets\0. Game Assets\Scripts\ToggleAnimation.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\UIModes.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\WindowManager.cs" />
+     <Compile Include="Assets\0. Game Assets\Tools\DirectionalAmbiance\Scripts\DirectionalAmbiance.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />

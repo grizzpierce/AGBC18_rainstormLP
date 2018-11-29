@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{170c5b79-3f6d-4dc0-9758-18b54c76b232}">
+        <property name="name">
+            <value>Event Cone Angle</value>
+        </property>
+        <relationship name="folder">
+            <destination>{f2cd3bf4-8a65-4c70-9ae8-9fb6b3eca739}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{a783e0d0-c7a9-43fd-989b-ce04c7040116}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{a783e0d0-c7a9-43fd-989b-ce04c7040116}">
+        <property name="parameterType">
+            <value>4</value>
+        </property>
+        <property name="maximum">
+            <value>180</value>
+        </property>
+        <property name="initialValue">
+            <value>0</value>
+        </property>
+        <property name="isExposedRecursively">
+            <value>false</value>
+        </property>
+    </object>
+</objects>

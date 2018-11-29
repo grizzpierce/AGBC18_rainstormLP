@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{444e8669-12d7-404c-be1a-e821329f6bea}">
         <property name="name">
-            <value>sfx_vendingMachineAmbiance</value>
+            <value>sfx_vendingMachineInteract</value>
         </property>
         <property name="outputFormat">
             <value>0</value>
         </property>
         <relationship name="folder">
-            <destination>{25ddae0b-3f99-40ec-9e8d-627b1e295a71}</destination>
+            <destination>{5d2c8450-af51-411a-a0df-c8a611d1ea9d}</destination>
         </relationship>
         <relationship name="mixer">
             <destination>{9be5639a-cb27-437a-92d4-9c2822df4ad3}</destination>
