@@ -11,11 +11,17 @@ public class AudioManager : MonoBehaviour {
     }
 
     public AudioBin audioBin;
-    public GameObject cameraRig;
+    public Camera cameraRig;
     private Transform cameraRigTransform;
     private FMOD.Studio.EventInstance rainAmbiance;
 
     MUSIC_STATE currentState = MUSIC_STATE.INTRO;
+
+    void Awake () {
+        if (cameraRig == null) {
+            cameraRig = Camera.main;
+        }
+    }
 
 	void Start () {
         if(audioBin == null) {

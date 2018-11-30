@@ -48,9 +48,10 @@ public class DirectionalAmbianceInspector : Editor {
         EditorGUILayout.LabelField("Directional Data", EditorStyles.boldLabel);
 		EditorGUILayout.BeginVertical("box");
 
-		_myTarget._orientation = EditorGUILayout.Slider("Orientation", _myTarget._orientation, -180, 180);
-		_myTarget._spread = EditorGUILayout.Slider("Spread", _myTarget._spread, 0, 90);
-		_myTarget._width = EditorGUILayout.Slider("Width", _myTarget._width, 0, 90);
+		//_myTarget._orientation = EditorGUILayout.Slider("Orientation", _myTarget._orientation, -180, 180);
+		EditorGUILayout.LabelField("Orientation: ", _myTarget._orientationAngle.ToString());
+		_myTarget._widthAngleToAdd = EditorGUILayout.Slider("Spread", _myTarget._widthAngleToAdd, 0f, 90f);
+		_myTarget._fadeSpreadAngleToAdd = EditorGUILayout.Slider("Width", _myTarget._fadeSpreadAngleToAdd, 0f, 90f);
 
 		EditorGUILayout.EndVertical();
     }
@@ -60,10 +61,12 @@ public class DirectionalAmbianceInspector : Editor {
 		EditorGUILayout.LabelField("Levels", EditorStyles.boldLabel);
 		EditorGUILayout.BeginVertical("box");
 
-		EditorGUILayout.LabelField("High dB: ", _myTarget._maxVolume.ToString());
-        EditorGUILayout.LabelField("Low dB: ", _myTarget._minVolume.ToString());
+		EditorGUILayout.LabelField("High dB: ", _myTarget._maxDB > -80f ? _myTarget._maxDB.ToString() : "-∞");
+        EditorGUILayout.LabelField("Low dB: ", _myTarget._minDB > -80f ? _myTarget._minDB.ToString() : "-∞");
 
-		EditorGUILayout.MinMaxSlider(ref _myTarget._minVolume, ref _myTarget._maxVolume, -75, 0);
+		EditorGUILayout.MinMaxSlider(ref _myTarget._minVolumeForSlider, ref _myTarget._maxVolumeForSlider, 0.0001f, 1f);
+		_myTarget._minDB = Mathf.Log10(_myTarget._minVolumeForSlider) * 20f;
+		_myTarget._maxDB = Mathf.Log10(_myTarget._maxVolumeForSlider) * 20f;
 
 		EditorGUILayout.EndVertical();
     }
