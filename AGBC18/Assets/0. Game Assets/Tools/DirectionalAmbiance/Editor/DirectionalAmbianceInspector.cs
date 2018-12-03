@@ -39,8 +39,15 @@ public class DirectionalAmbianceInspector : Editor {
     
 	private void DrawEventDataGUI()
     {
+		EditorGUILayout.LabelField("Event Data", EditorStyles.boldLabel);
+		EditorGUILayout.BeginVertical("box");
+
 		EditorGUILayout.PropertyField (_serializedEventData);
 		_mySerializedObject.ApplyModifiedProperties();
+
+		_myTarget._fmodParameter = EditorGUILayout.TextField("Parameter Name", _myTarget._fmodParameter);
+
+		EditorGUILayout.EndVertical();
     }
 
     private void DrawDirectionalDataGUI()
@@ -48,10 +55,27 @@ public class DirectionalAmbianceInspector : Editor {
         EditorGUILayout.LabelField("Directional Data", EditorStyles.boldLabel);
 		EditorGUILayout.BeginVertical("box");
 
-		//_myTarget._orientation = EditorGUILayout.Slider("Orientation", _myTarget._orientation, -180, 180);
 		EditorGUILayout.LabelField("Orientation: ", _myTarget._orientationAngle.ToString());
-		_myTarget._widthAngleToAdd = EditorGUILayout.Slider("Spread", _myTarget._widthAngleToAdd, 0f, 90f);
-		_myTarget._fadeSpreadAngleToAdd = EditorGUILayout.Slider("Width", _myTarget._fadeSpreadAngleToAdd, 0f, 90f);
+
+		float tempInput;
+		tempInput = EditorGUILayout.Slider("Width", _myTarget._widthAngleToAdd, 0f, 180f);
+		if(_myTarget._fadeSpreadAngleToAdd + tempInput < 180f) {
+			_myTarget._widthAngleToAdd = tempInput;
+		} else {
+			// Destructively encroaches on Fade
+			_myTarget._widthAngleToAdd = tempInput;
+			_myTarget._fadeSpreadAngleToAdd = 180f - _myTarget._widthAngleToAdd;
+
+			// Does not encroach on Fade
+			//_myTarget._widthAngleToAdd = 180f - _myTarget._fadeSpreadAngleToAdd;
+		}
+
+		tempInput = EditorGUILayout.Slider("Fade", _myTarget._fadeSpreadAngleToAdd, 0f, 180f);
+		if(_myTarget._widthAngleToAdd + tempInput < 180f) {
+			_myTarget._fadeSpreadAngleToAdd = tempInput;
+		} else {
+			_myTarget._fadeSpreadAngleToAdd = 180f - _myTarget._widthAngleToAdd;
+		}
 
 		EditorGUILayout.EndVertical();
     }

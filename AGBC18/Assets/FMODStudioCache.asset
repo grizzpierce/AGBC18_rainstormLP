@@ -47,7 +47,7 @@ MonoBehaviour:
   - {fileID: 114234996468632868}
   MasterBankRef: {fileID: 114176079392331320}
   StringsBankRef: {fileID: 114576159809570444}
-  stringsBankWriteTime: 636790158890000000
+  stringsBankWriteTime: 636791311560000000
   cacheVersion: 2
 --- !u!114 &114013572096728490
 MonoBehaviour:
@@ -393,6 +393,21 @@ MonoBehaviour:
   - Name: Desktop
     Value: 12474
   Exists: 1
+--- !u!114 &114175302488928072
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114175817658871814
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -429,7 +444,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/jacobmumford/Desktop/RAINSTORM_LP/AGBC18_rainstormLP/AGBC18/FMOD_Assets/Desktop/Master
     Bank.bank
-  lastModified: 636790158890000000
+  lastModified: 636791311560000000
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -632,7 +647,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114102753233447164}
+  - {fileID: 114175302488928072}
   MinDistance: 0
   MaxDistance: 0
   Length: 40000
@@ -868,7 +883,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114145359468000338}
+  - {fileID: 114542595117001262}
   MinDistance: 0
   MaxDistance: 0
   Length: 164000
@@ -921,6 +936,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114403944351975930
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Elevation_User
+  Min: -2
+  Max: 25
+  Default: 25
 --- !u!114 &114405045493756782
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1223,6 +1253,21 @@ MonoBehaviour:
   Min: -2
   Max: 25
   Default: 25
+--- !u!114 &114542595117001262
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Elevation_User
+  Min: -2
+  Max: 25
+  Default: 25
 --- !u!114 &114552713464960590
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1306,7 +1351,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_Assets/Desktop/Master Bank.strings.bank
-  lastModified: 636790158890000000
+  lastModified: 636791311560000000
   LoadResult: 0
   FileSizes:
   - Name: 
