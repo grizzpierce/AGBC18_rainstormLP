@@ -151,7 +151,7 @@ public class CassetteManagement : MonoBehaviour {
             playingTrack = FMODUnity.RuntimeManager.CreateInstance(audioEvent);
             playingTrack.start();
 
-            notifier.Play(_pressed.GetComponent<RawImage>().color);
+            notifier.Play(_pressed.GetComponent<RawImage>().color, "Need To Grab Track Title");
             playing = _pressed;
 
             float t = 0.0f;

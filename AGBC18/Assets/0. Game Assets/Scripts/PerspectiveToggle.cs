@@ -19,6 +19,7 @@ public class PerspectiveToggle : MonoBehaviour {
 	}
 
 	public GameObject perspective, orthographic;
+	public float uiH, uiX, perY, orthY = 0;
 	public Camera mainCamera;
 
 	public string debug_state, debug_cursor = "";
@@ -28,6 +29,12 @@ public class PerspectiveToggle : MonoBehaviour {
 	void Start () {
 		mainCamera = Camera.main;
 		selected = VIEW_STATES.ORTHOGRAPHIC;
+
+		uiX = perspective.GetComponent<RectTransform>().anchoredPosition.x;
+		uiH = perspective.GetComponent<RectTransform>().sizeDelta.y;
+
+		perY = perspective.GetComponent<RectTransform>().anchoredPosition.y;
+		orthY = orthographic.GetComponent<RectTransform>().anchoredPosition.y;
 	}
 	
 	// Update is called once per frame
@@ -76,13 +83,13 @@ public class PerspectiveToggle : MonoBehaviour {
 
 
 	void assessCursor() {
-		if(Input.mousePosition.y > 570 && Input.mousePosition.y < 600) {
-			//debug_cursor = "perspective";
+		if(Input.mousePosition.y > (Screen.height - (32 + (2 * uiH))) && Input.mousePosition.y < (Screen.height - (28 + uiH))) {
+			debug_cursor = "perspective";
 			hovered = VIEW_STATES.PERSPECTIVE;
 			debug_state = hovered.ToString();
 		}
-		else if(Input.mousePosition.y > 603 && Input.mousePosition.y < 633) {
-			//debug_cursor = "orthographic";		
+		else if(Input.mousePosition.y > (Screen.height - (14 + uiH)) && Input.mousePosition.y < (Screen.height - 10)) {
+			debug_cursor = "orthographic";		
 			hovered = VIEW_STATES.ORTHOGRAPHIC;
 			debug_state = hovered.ToString();
 		}
@@ -95,21 +102,21 @@ public class PerspectiveToggle : MonoBehaviour {
 
 
 	IEnumerator drop() {
-		perspective.GetComponent<RectTransform>().DOAnchorPos(new Vector2(232, 574), 1, false).SetEase(Ease.OutBack);
+		perspective.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, perY), 1, false).SetEase(Ease.OutBack);
 		
 		yield return new WaitForSeconds(.1f);
 
-		orthographic.GetComponent<RectTransform>().DOAnchorPos(new Vector2(232, -8), 1, false).SetEase(Ease.OutBack);
+		orthographic.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, orthY), 1, false).SetEase(Ease.OutBack);
 
 		yield return new WaitForSeconds(1f);
 	}
 
 	IEnumerator raise() {
-		orthographic.GetComponent<RectTransform>().DOAnchorPos(new Vector2(232, 66), 1, false).SetEase(Ease.OutBack);
+		orthographic.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, orthY + 120), 1, false).SetEase(Ease.OutBack);
 		
 		yield return new WaitForSeconds(.1f);
 
-		perspective.GetComponent<RectTransform>().DOAnchorPos(new Vector2(232, 650), 1, false).SetEase(Ease.OutBack);
+		perspective.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, perY + 120), 1, false).SetEase(Ease.OutBack);
 
 		yield return new WaitForSeconds(1f);
 	}
