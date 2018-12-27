@@ -18,6 +18,8 @@ public class CassetteBar : MonoBehaviour {
 	float timer = 25f;
 	bool showcasing = false;
 
+	float cassetteUISize = 200;
+
     [SerializeField]
 	public CassetteManagement manager;
 	
@@ -61,7 +63,7 @@ public class CassetteBar : MonoBehaviour {
 
 		yield return new WaitForSeconds(.9f);
 
-		cassetteRevolver.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, -100, 0), .75f);
+		cassetteRevolver.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, -120, 0), .75f);
 		
 		idleTime = 0;
 
@@ -90,7 +92,8 @@ public class CassetteBar : MonoBehaviour {
 			}
 			*/	
 			//gameObject.transform.parent.GetComponent<UIModes>().cursorActive(false);
-			raising = cassetteRevolver.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, -30, 0), 1f).SetEase(Ease.OutBack);
+			raising = cassetteRevolver.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, -20, 0), 1f).SetEase(Ease.OutBack);
+			cassetteRevolver.GetComponent<CassetteSelector>().activeSlot.GetComponentInChildren<Text>().DOFade(1f, .25f);
 		}
 	}
 
@@ -104,8 +107,9 @@ public class CassetteBar : MonoBehaviour {
 			}
 		}
 		//gameObject.transform.parent.GetComponent<UIModes>().cursorActive(true);
-		lowering = cassetteRevolver.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, -100, 0), .5f);
-		
+		lowering = cassetteRevolver.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, -120, 0), .5f);
+		cassetteRevolver.GetComponent<CassetteSelector>().activeSlot.GetComponentInChildren<Text>().DOFade(0f, .25f);
+
 		resetCursorStatus();
     }
 
@@ -118,6 +122,7 @@ public class CassetteBar : MonoBehaviour {
 
 			case 0:
                 //Debug.Log("DEBUG: Assessing Selected cassette...");
+				cassetteRevolver.GetComponent<CassetteSelector>().centerSelected();				
                 manager.Assess();
 				resetCursorStatus();
 				break;
@@ -137,10 +142,10 @@ public class CassetteBar : MonoBehaviour {
 
 		prevClickAction = clickAction;	
 
-		if (Input.mousePosition.x < 252) {
+		if (Input.mousePosition.x < (Screen.width/2 - (cassetteUISize/2))) {
 			clickAction = -1;
 		}
-		else if (Input.mousePosition.x > 252 && Input.mousePosition.x < 392) {
+		else if (Input.mousePosition.x >= (Screen.width/2 - (cassetteUISize/2)) && Input.mousePosition.x <= (Screen.width/2 + (cassetteUISize/2))) {
 			clickAction = 0;
 			//DEBUG_CLICKACTION = "CENTER";
 		}

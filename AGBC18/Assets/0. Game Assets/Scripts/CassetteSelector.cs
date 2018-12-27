@@ -189,16 +189,18 @@ public class CassetteSelector : MonoBehaviour {
 		switch(side) {
 			case -1:
 			//Debug.Log("LEFT");
-			leftNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(-95, 47, 0), .5f).SetEase(hoverEase);			
+			leftNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(leftNext.transform.localPosition.x, 47, 0), .5f).SetEase(hoverEase);		
+			leftNext.transform.GetChild(0).GetChild(0).GetComponent<Text>().DOFade(.75f, .25f);
 			break;
 
 			case 0:
-			activeSlot.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, 53, 0), .5f).SetEase(hoverEase);
+			activeSlot.GetComponent<RectTransform>().DOLocalMove(new Vector3(activeSlot.transform.localPosition.x, 53, 0), .5f).SetEase(hoverEase);
 			break;
 
 			case 1:
 			//Debug.Log("RIGHT");
-			rightNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(95, 47, 0), .5f).SetEase(hoverEase);
+			rightNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(rightNext.transform.localPosition.x, 47, 0), .5f).SetEase(hoverEase);
+			rightNext.transform.GetChild(0).GetChild(0).GetComponent<Text>().DOFade(.75f, .25f);
 			break;
 
 			default:
@@ -208,9 +210,26 @@ public class CassetteSelector : MonoBehaviour {
 	}
 
 	public void resetHovers() {
-		leftNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(-95, 40, 0), .5f);
-		rightNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(95, 40, 0), .5f);
-		activeSlot.GetComponent<RectTransform>().DOLocalMove(new Vector3(0, 48, 0), .5f);
+		leftNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(leftNext.transform.localPosition.x, 40, 0), .5f);
+		leftNext.transform.GetChild(0).GetChild(0).GetComponent<Text>().DOFade(0f, .25f);
+
+		rightNext.GetComponent<RectTransform>().DOLocalMove(new Vector3(rightNext.transform.localPosition.x, 40, 0), .5f);
+		rightNext.transform.GetChild(0).GetChild(0).GetComponent<Text>().DOFade(0f, .25f);
+
+		activeSlot.GetComponent<RectTransform>().DOLocalMove(new Vector3(activeSlot.transform.localPosition.x, 48, 0), .5f);
+	}
+
+	public void centerSelected() {
+		if(activeSlot.GetComponentInChildren<CartridgeData>().IsKnown())
+			StartCoroutine(clicked());
+	}
+
+	IEnumerator clicked() {
+		activeSlot.GetComponentInChildren<RectTransform>().DOScale(1.05f, .25f).SetEase(Ease.InBack);
+		
+		yield return new WaitForSeconds(.25f);
+
+		activeSlot.GetComponentInChildren<RectTransform>().DOScale(1f, .1f);		
 	}
 
 	int calculateWrap(int num, int dir) {
@@ -258,6 +277,7 @@ public class CassetteSelector : MonoBehaviour {
 		cassettes[order[2]].transform.SetParent(activeSlot.transform);
 		cassettes[order[2]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f).SetEase(shiftEase);
 		cassettes[order[2]].GetComponent<RawImage>().DOFade(1f, .5f);
+		cassettes[order[2]].GetComponentInChildren<Text>().DOFade(1f, .25f);
 
 		cassettes[order[3]].transform.SetParent(rightNext.transform);
 		cassettes[order[3]].GetComponent<RectTransform>().DOLocalMove(Vector3.zero, 1f).SetEase(shiftEase);

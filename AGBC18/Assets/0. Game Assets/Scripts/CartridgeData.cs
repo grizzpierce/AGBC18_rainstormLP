@@ -34,7 +34,7 @@ public class CartridgeData : MonoBehaviour {
         if(startsUnknown) {
             STATE = CARTRIDGE_STATE.UNKNOWN;
             textLabel.text = unknownText;
-            Hide();
+            //Hide();
         }
 	}
 
@@ -65,7 +65,7 @@ public class CartridgeData : MonoBehaviour {
 
     void Hide() {
 		ui.DOColor(unknownColor, .25f);
-		textLabel.DOFade(1f, .25f);
+		textLabel.DOFade(.75f, .25f);
 	}
 
     IEnumerator Reveal() {
@@ -83,7 +83,7 @@ public class CartridgeData : MonoBehaviour {
             textLabel.text = temp;
 
             ui.DOColor(dataHolder.color, .1f);
-            textLabel.DOFade(1f, .5f);
+            //textLabel.DOFade(1f, .5f);
         }
         yield return null;
 	}

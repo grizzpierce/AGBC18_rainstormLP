@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WindowManager : MonoBehaviour {
 
-	int canvasSize = 640;
+	int canvasSize = 960;
 
 	// Use this for initialization
 	void Start () {
