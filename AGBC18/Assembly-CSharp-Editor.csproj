@@ -54,6 +54,8 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\0. Game Assets\Tools\DirectionalAmbiance\Editor\DirectionalAmbianceInspector.cs" />
+     <Compile Include="Assets\0. Game Assets\Tools\DirectionalAmbiance\Editor\ParameterDataInspector.cs" />
+     <Compile Include="Assets\0. Game Assets\Tools\RebuiltDirectionalAmbiance\Editor\DirectionalParameterControllerInspector.cs" />
      <Compile Include="Assets\Demigiant\DOTweenPro\Editor\DOTweenAnimationInspector.cs" />
      <Compile Include="Assets\FMOD Resources\Editor\FMODMigrationUtil.cs" />
      <Compile Include="Assets\FMOD Resources\GoogleVR\Editor\FmodGvrAudioRoomEditor.cs" />
