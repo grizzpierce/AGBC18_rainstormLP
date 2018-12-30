@@ -14,8 +14,11 @@ public class interactable : MonoBehaviour {
     public string postDialog; 
     public bool interactedWith = false;
 
+    Animator anim;
 
     void Start() {
+        anim = this.GetComponent<Animator>();
+
         if(cassetteFound == null) {
             cassetteColor = new Color(0, 0, 0, 0);
         }
@@ -41,8 +44,9 @@ public class interactable : MonoBehaviour {
                 manager.Pop(postDialog, new Color(0, 0, 0, 0));               
             }
          }
-     }
 
+        anim.Play("Pressed");
+     }
     //  void OnDrawGizmos() {
     //      Gizmos.DrawIcon(transform.position, "test_icon2.png", true);
     //  }

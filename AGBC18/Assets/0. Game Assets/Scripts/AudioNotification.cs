@@ -27,7 +27,16 @@ public class AudioNotification : MonoBehaviour {
 		Color alphaColor = new Color(colr.r, colr.g, colr.b, .25f);
 		cassette.playGeneric();
 		ui.DOColor(alphaColor, .5f);
-		trackTitle.DOFade(1, .5f);
+
+		StartCoroutine(resetText(track));
+	}
+
+	IEnumerator resetText(string track) {
+		trackTitle.DOFade(0, 1f);
+
+		yield return new WaitForSeconds(1f);
+		trackTitle.text = track;
+		trackTitle.DOFade(1, 1f);
 	}
 
 	public void Stop() {

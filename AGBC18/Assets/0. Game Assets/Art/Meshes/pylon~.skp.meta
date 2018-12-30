@@ -6,16 +6,16 @@ SketchUpImporter:
   selectedNodes: 0000000001000000
   assetHash:
     serializedVersion: 2
-    Hash: c1ba750f6677f230da419be573863011
+    Hash: 3c6eb3b2d8bc031bdd5f2e3037ce6a67
   longitude: -105.242139
   latitude: 40.018309
   northCorrection: -0
   fileUnit: 0
   sketchUpImportData:
     defaultCamera:
-      position: {x: -0.9509436, y: 0.8952034, z: 1.5416307}
-      lookAt: {x: 24.130688, y: -14.609616, z: -24.773111}
-      up: {x: 0.2706737, y: 0.9198318, z: -0.28398106}
+      position: {x: -0.99840254, y: 1.4379662, z: -0.31652194}
+      lookAt: {x: 25.214851, y: -25.617832, z: 11.633473}
+      up: {x: 0.6229092, y: 0.72893465, z: 0.2839694}
       fov: 30
       aspectRatio: 0
       orthoSize: 1
@@ -29,6 +29,8 @@ SketchUpImporter:
     2100002: _2
     2100004: _3
     2100006: _4
+    2100008: _6
+    2100010: _5
     2300000: //RootNode
     3300000: //RootNode
     4300000: Mesh pylon~
