@@ -10,61 +10,68 @@ public class interactable : MonoBehaviour {
     public CartridgeDataHolder cassetteFound;
     Color cassetteColor;
 
+    public bool cassetteOverride = false;
     public string preDialog;
     public string postDialog; 
     public bool interactedWith = false;
 
-    public float pressTimer = 0;
-    public bool recentlyPressed = false;
-    public float timerLimit = 240;
+    float pressTimer = 0;
+    bool recentlyPressed = false;
+    float timerLimit = 240;
 
     Animator anim;
 
     void Start() {
         anim = this.GetComponent<Animator>();
 
-        if(cassetteFound == null) {
-            cassetteColor = new Color(0, 0, 0, 0);
-        }
-        else {
-            cassetteColor = new Color(cassetteFound.color.r, cassetteFound.color.g, cassetteFound.color.b, 1f);
+        if(!cassetteOverride) {
+            if(cassetteFound == null) {
+                cassetteColor = new Color(0, 0, 0, 0);
+            }
+            else {
+                cassetteColor = new Color(cassetteFound.color.r, cassetteFound.color.g, cassetteFound.color.b, 1f);
+            }
         }
     }
 
     void FixedUpdate() {
-        if (recentlyPressed) {
-            pressTimer += Time.deltaTime;
+        if(!cassetteOverride) {
+            if (recentlyPressed) {
+                pressTimer += Time.deltaTime;
 
-            if (pressTimer >= timerLimit) {
-                pressTimer = 0;
-                recentlyPressed = false;
+                if (pressTimer >= timerLimit) {
+                    pressTimer = 0;
+                    recentlyPressed = false;
+                }
             }
         }
     }
 
      void OnMouseDown()
      {
-         if(!recentlyPressed) {
-            if(manager.GetIfAvailable()) {
+         if(!cassetteOverride) {
+            if(!recentlyPressed) {
+                if(manager.GetIfAvailable()) {
 
-                // LAUNCH CARTRIDGE DIALOG IF UNPRESSED BEFORE
-                if(!interactedWith) {
-                    manager.Pop(preDialog, cassetteColor, cassetteFound);
-                    
-                    if (audioManager != null) {
-                        FMODUnity.RuntimeManager.PlayOneShot(audioManager.audioBin.findTapeInteract);
-                    } 
-                    
-                    else {
-                        Debug.Log("Set the Audio Manager in Interactable!");
+                    // LAUNCH CARTRIDGE DIALOG IF UNPRESSED BEFORE
+                    if(!interactedWith) {
+                        manager.Pop(preDialog, cassetteColor, cassetteFound);
+                        
+                        if (audioManager != null) {
+                            FMODUnity.RuntimeManager.PlayOneShot(audioManager.audioBin.findTapeInteract);
+                        } 
+                        
+                        else {
+                            Debug.Log("Set the Audio Manager in Interactable!");
+                        }
+
+                        interactedWith = true;
                     }
 
-                    interactedWith = true;
-                }
-
-                // LAUNCH SECONDARY DIALOG IF PRESSED
-                else {
-                    manager.Pop(postDialog, new Color(0, 0, 0, 0));               
+                    // LAUNCH SECONDARY DIALOG IF PRESSED
+                    else {
+                        manager.Pop(postDialog, new Color(0, 0, 0, 0));               
+                    }
                 }
             }
          }

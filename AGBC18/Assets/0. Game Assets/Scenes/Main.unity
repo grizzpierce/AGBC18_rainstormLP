@@ -137,12 +137,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 5115065}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -2, y: 2.665, z: 2.4900002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1244440865}
-  m_Father: {fileID: 1152445612}
+  m_Father: {fileID: 70768086}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5115067
@@ -159,12 +159,10 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 549539083}
+  cassetteOverride: 0
   preDialog: Sign First
   postDialog: Sign Second
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!95 &5115068
 Animator:
   serializedVersion: 3
@@ -5335,6 +5333,43 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5cd81b81847d14bab8387c9ab81453a2, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &70768085
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 70768086}
+  m_Layer: 0
+  m_Name: -- CAS. CONTAINER --
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &70768086
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 70768085}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1329134579}
+  - {fileID: 1012209085}
+  - {fileID: 1728483241}
+  - {fileID: 1785561259}
+  - {fileID: 775486772}
+  - {fileID: 5115066}
+  - {fileID: 830631461}
+  - {fileID: 1998668644}
+  - {fileID: 919126662}
+  m_Father: {fileID: 1152445612}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &77160630
 GameObject:
   m_ObjectHideFlags: 0
@@ -5554,8 +5589,8 @@ Transform:
   m_LocalPosition: {x: -2.76, y: 0.51, z: -2.15}
   m_LocalScale: {x: 0.035, y: 1, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 1315878311}
-  m_RootOrder: 4
+  m_Father: {fileID: 2119992721}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &113741928
 Prefab:
@@ -6111,7 +6146,7 @@ GameObject:
   - component: {fileID: 170076735}
   - component: {fileID: 170076734}
   m_Layer: 0
-  m_Name: Directional Light
+  m_Name: MAIN LIGHT
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6127,7 +6162,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 0.4177198, g: 0.42875856, b: 0.5943396, a: 1}
-  m_Intensity: 0.5
+  m_Intensity: 0.25
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -6165,7 +6200,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1315878311}
-  m_RootOrder: 7
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &176201450
 GameObject:
@@ -6291,7 +6326,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e3929ca795db40efbebd3a85a3b140c, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e3929ca795db40efbebd3a85a3b140c, type: 3}
       propertyPath: m_LocalScale.x
@@ -6468,18 +6503,16 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 549539083}
+  cassetteOverride: 0
   preDialog: blimps 1 block
   postDialog: clicked bingche
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!1001 &222622626
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1315878311}
+    m_TransformParent: {fileID: 2119992721}
     m_Modifications:
     - target: {fileID: 400000, guid: 554e848ec90a444d28954673e6f39a11, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6511,7 +6544,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 554e848ec90a444d28954673e6f39a11, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 554e848ec90a444d28954673e6f39a11, type: 3}
       propertyPath: m_Materials.Array.data[2]
@@ -6524,6 +6557,10 @@ Prefab:
     - target: {fileID: 100000, guid: 554e848ec90a444d28954673e6f39a11, type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 554e848ec90a444d28954673e6f39a11, type: 3}
+      propertyPath: m_Name
+      value: WALL
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 554e848ec90a444d28954673e6f39a11, type: 3}
@@ -6631,15 +6668,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 239199620}
-  m_LocalRotation: {x: -0.258819, y: 0, z: 0, w: 0.9659259}
-  m_LocalPosition: {x: 0, y: 22.5, z: 0}
+  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 534669905}
   - {fileID: 1697240064}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: -30, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
 --- !u!114 &239199623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6978,10 +7015,10 @@ Transform:
   m_GameObject: {fileID: 292925054}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0.77, y: 2.2900002, z: 3.405}
-  m_LocalScale: {x: 0.57000047, y: 0.40000048, z: 0.20000024}
+  m_LocalScale: {x: 0.57000047, y: 0.40000072, z: 0.20000036}
   m_Children: []
-  m_Father: {fileID: 1152445612}
-  m_RootOrder: 6
+  m_Father: {fileID: 1680455152}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!65 &292925059
 BoxCollider:
@@ -7695,6 +7732,56 @@ Transform:
   m_Father: {fileID: 1785561259}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &394853279 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: a39f8eec0ce6c4618958228d306bf127,
+    type: 3}
+  m_PrefabInternal: {fileID: 681966886}
+--- !u!114 &394853280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394853279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3b7e89c7e0f0a41ac8aa07fbb3942ad9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spotLight: {fileID: 954939128}
+  areaLight: {fileID: 1256007868}
+  isLit: 1
+  isChanging: 0
+--- !u!65 &394853282
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394853279}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.35467795, y: 6, z: 0.5}
+  m_Center: {x: 0.17733897, y: 3, z: 0.2}
+--- !u!95 &394853284
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394853279}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 45caf9121cb9a41718f858d2faa543ee, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &395643415
 GameObject:
   m_ObjectHideFlags: 0
@@ -7792,7 +7879,7 @@ Transform:
   - {fileID: 465606275}
   - {fileID: 41551144}
   m_Father: {fileID: 1152445612}
-  m_RootOrder: 15
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &416959867
 GameObject:
@@ -13491,7 +13578,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &600291785
 Transform:
   m_ObjectHideFlags: 0
@@ -13508,8 +13595,8 @@ Transform:
   - {fileID: 1292711875}
   - {fileID: 1716191663}
   - {fileID: 2059503039}
-  m_Father: {fileID: 1315878311}
-  m_RootOrder: 1
+  m_Father: {fileID: 1152445612}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &609557013 stripped
 Transform:
@@ -13824,7 +13911,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a39f8eec0ce6c4618958228d306bf127, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a39f8eec0ce6c4618958228d306bf127, type: 3}
       propertyPath: m_LocalScale.x
@@ -13864,7 +13951,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: a39f8eec0ce6c4618958228d306bf127, type: 3}
       propertyPath: m_Name
-      value: Proto_Lamp
+      value: Lamp Post
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a39f8eec0ce6c4618958228d306bf127, type: 3}
@@ -19214,7 +19301,7 @@ Transform:
   m_LocalScale: {x: 0.125, y: 0.125, z: 0.125}
   m_Children:
   - {fileID: 78946073}
-  m_Father: {fileID: 1152445612}
+  m_Father: {fileID: 70768086}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &775486773
@@ -19231,12 +19318,10 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 1764492724}
+  cassetteOverride: 0
   preDialog: Cup First
   postDialog: Cup Second
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!95 &775486774
 Animator:
   serializedVersion: 3
@@ -19422,13 +19507,13 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 830631460}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.25, y: 0.33000022, z: -4.35}
+  m_LocalPosition: {x: 4.25, y: 0.33000022, z: -4.3500004}
   m_LocalScale: {x: 0.85, y: 0.85, z: 0.85}
   m_Children:
   - {fileID: 552889536}
   - {fileID: 35622874}
-  m_Father: {fileID: 1152445612}
-  m_RootOrder: 9
+  m_Father: {fileID: 70768086}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &830631462
 Animator:
@@ -19462,12 +19547,10 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 549539083}
+  cassetteOverride: 0
   preDialog: Manhole First
   postDialog: Manhole Second
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!65 &830631464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -19864,12 +19947,10 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 443255214}
+  cassetteOverride: 0
   preDialog: you clicked the first block!
   postDialog: hella baby its gone bb
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!114 &902074801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -19909,8 +19990,8 @@ Transform:
   - {fileID: 157912679}
   - {fileID: 308546162}
   - {fileID: 1981818880}
-  m_Father: {fileID: 1152445612}
-  m_RootOrder: 8
+  m_Father: {fileID: 2119992721}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &913984329
 Prefab:
@@ -20130,8 +20211,8 @@ Transform:
   m_LocalPosition: {x: -1.33, y: 0.8920002, z: 4.927}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1152445612}
-  m_RootOrder: 7
+  m_Father: {fileID: 70768086}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &919126663
 MonoBehaviour:
@@ -20147,12 +20228,10 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 443255214}
+  cassetteOverride: 0
   preDialog: Cellphone First
   postDialog: Cellphone Second
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!65 &919126664
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -20337,7 +20416,6 @@ GameObject:
   m_Component:
   - component: {fileID: 954939130}
   - component: {fileID: 954939129}
-  - component: {fileID: 954939131}
   m_Layer: 0
   m_Name: Spot Light
   m_TagString: Untagged
@@ -20354,10 +20432,10 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 0
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1.5
+  m_Color: {r: 0.9269424, g: 1, b: 0.3, a: 1}
+  m_Intensity: 6
   m_Range: 9.5
-  m_SpotAngle: 55
+  m_SpotAngle: 80
   m_CookieSize: 10
   m_Shadows:
     m_Type: 1
@@ -20377,7 +20455,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 2.49
+  m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
@@ -20395,24 +20473,6 @@ Transform:
   m_Father: {fileID: 609685165}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!95 &954939131
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 954939128}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bfffeb3d182864d28ac0cab9f5d8f8df, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &982632066
 Prefab:
   m_ObjectHideFlags: 0
@@ -20646,13 +20706,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1012209084}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 1.93, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 724644868}
   - {fileID: 996674028}
-  m_Father: {fileID: 1152445612}
+  m_Father: {fileID: 70768086}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1012209086
@@ -20699,12 +20759,10 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 131574015}
+  cassetteOverride: 0
   preDialog: Pylon First
   postDialog: Pylon Second
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!1 &1012661169
 GameObject:
   m_ObjectHideFlags: 0
@@ -21419,12 +21477,10 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 1640135121}
+  cassetteOverride: 0
   preDialog: celestial whiner block
   postDialog: lkjsdlkjdlkj
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!1001 &1149693775
 Prefab:
   m_ObjectHideFlags: 0
@@ -21560,26 +21616,17 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1329134579}
-  - {fileID: 1012209085}
-  - {fileID: 1728483241}
-  - {fileID: 1785561259}
-  - {fileID: 775486772}
-  - {fileID: 5115066}
-  - {fileID: 292925058}
-  - {fileID: 919126662}
-  - {fileID: 903021657}
-  - {fileID: 830631461}
+  - {fileID: 600291785}
+  - {fileID: 70768086}
+  - {fileID: 1680455152}
   - {fileID: 1552886917}
-  - {fileID: 1998668644}
-  - {fileID: 1883159517}
   - {fileID: 609685165}
   - {fileID: 1279509542}
   - {fileID: 406782114}
   - {fileID: 599978565}
   - {fileID: 1622121205}
   m_Father: {fileID: 1315878311}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1168532221
 GameObject:
@@ -22110,8 +22157,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 20
+  m_Color: {r: 0.4761443, g: 0.503, b: 0.249991, a: 1}
+  m_Intensity: 12
   m_Range: 5
   m_SpotAngle: 30
   m_CookieSize: 10
@@ -22167,7 +22214,7 @@ GameObject:
   - component: {fileID: 1270756503}
   - component: {fileID: 1270756502}
   m_Layer: 0
-  m_Name: Terrain
+  m_Name: GRASS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -22225,8 +22272,8 @@ Transform:
   m_LocalPosition: {x: -6, y: 0.7600002, z: 3.3000002}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1315878311}
-  m_RootOrder: 3
+  m_Father: {fileID: 2119992721}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1279509541
 GameObject:
@@ -22260,7 +22307,7 @@ Transform:
   - {fileID: 23636675}
   - {fileID: 639012485}
   m_Father: {fileID: 1152445612}
-  m_RootOrder: 14
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1280942623
 GameObject:
@@ -22800,12 +22847,10 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 131574015}
+  cassetteOverride: 0
   preDialog: noise block
   postDialog: fuck off im sleeping
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!1 &1315878310
 GameObject:
   m_ObjectHideFlags: 0
@@ -22831,15 +22876,9 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.24999976, z: -0.00000023841858}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1152445612}
-  - {fileID: 600291785}
-  - {fileID: 558053938}
-  - {fileID: 1270756504}
-  - {fileID: 105183845}
-  - {fileID: 2143488365}
-  - {fileID: 2045890217}
   - {fileID: 170076735}
-  - {fileID: 1826033645}
+  - {fileID: 2119992721}
+  - {fileID: 1152445612}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -22938,13 +22977,11 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 1830836829}
+  cassetteOverride: 0
   preDialog: Something rattles behind the vending machine. Maybe a mouse with a sweet
     tooth? Oh a cassette.
   postDialog: Like usual, you don't have any cash in your wallet.
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!4 &1329134579
 Transform:
   m_ObjectHideFlags: 0
@@ -22957,7 +22994,7 @@ Transform:
   m_Children:
   - {fileID: 1252072800}
   - {fileID: 1635649293}
-  m_Father: {fileID: 1152445612}
+  m_Father: {fileID: 70768086}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1329134580
@@ -24124,7 +24161,7 @@ Transform:
   - {fileID: 2084544405}
   - {fileID: 1357625695}
   m_Father: {fileID: 1152445612}
-  m_RootOrder: 10
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1572212930
 GameObject:
@@ -24819,6 +24856,36 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0e1c7d6c424c54507b730c2be7d62317,
     type: 3}
   m_PrefabInternal: {fileID: 1077878803}
+--- !u!1 &1680455151
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1680455152}
+  m_Layer: 0
+  m_Name: -- MICROS --
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1680455152
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1680455151}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 292925058}
+  - {fileID: 1883159517}
+  m_Father: {fileID: 1152445612}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1689927684
 GameObject:
   m_ObjectHideFlags: 0
@@ -24994,12 +25061,10 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 1460853254}
+  cassetteOverride: 0
   preDialog: optimism time
   postDialog: dik dik
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!1 &1728483240
 GameObject:
   m_ObjectHideFlags: 0
@@ -25024,14 +25089,14 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1728483240}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 3.203, y: 2.4908476, z: 3.41}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 31510356}
   - {fileID: 329414276}
   - {fileID: 1280942624}
-  m_Father: {fileID: 1152445612}
+  m_Father: {fileID: 70768086}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1728483242
@@ -25048,12 +25113,10 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 1460853254}
+  cassetteOverride: 0
   preDialog: Flyers First
   postDialog: Flyers Second
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!95 &1728483243
 Animator:
   serializedVersion: 3
@@ -25364,7 +25427,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe837b43d6699408fa1e7e227daa1dad, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe837b43d6699408fa1e7e227daa1dad, type: 3}
       propertyPath: m_LocalScale.x
@@ -25444,7 +25507,7 @@ Transform:
   - {fileID: 869610493}
   - {fileID: 393563305}
   - {fileID: 1068906366}
-  m_Father: {fileID: 1152445612}
+  m_Father: {fileID: 70768086}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1785561260
@@ -25461,12 +25524,10 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 1640135121}
+  cassetteOverride: 0
   preDialog: Garbage First
   postDialog: Garbage Second
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!95 &1785561261
 Animator:
   serializedVersion: 3
@@ -25766,8 +25827,8 @@ Transform:
   - {fileID: 1998602992}
   - {fileID: 14830935}
   - {fileID: 375949302}
-  m_Father: {fileID: 1315878311}
-  m_RootOrder: 8
+  m_Father: {fileID: 2119992721}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1830836828
 GameObject:
@@ -25820,7 +25881,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1315878311}
+    m_TransformParent: {fileID: 2119992721}
     m_Modifications:
     - target: {fileID: 400000, guid: 0c38cc0991e4647baa071aa71d2d45bd, type: 3}
       propertyPath: m_LocalPosition.x
@@ -25852,7 +25913,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0c38cc0991e4647baa071aa71d2d45bd, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 2300000, guid: 0c38cc0991e4647baa071aa71d2d45bd, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -25866,6 +25927,10 @@ Prefab:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 985ac5f8d372846f9a847f8850e272a6, type: 2}
+    - target: {fileID: 100000, guid: 0c38cc0991e4647baa071aa71d2d45bd, type: 3}
+      propertyPath: m_Name
+      value: GROUND
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c38cc0991e4647baa071aa71d2d45bd, type: 3}
   m_IsPrefabAsset: 0
@@ -26108,6 +26173,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1883159517}
+  - component: {fileID: 1883159520}
+  - component: {fileID: 1883159519}
+  - component: {fileID: 1883159518}
   m_Layer: 0
   m_Name: Parking Meter West
   m_TagString: Untagged
@@ -26126,9 +26194,57 @@ Transform:
   m_LocalScale: {x: 0.59999996, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 1409967224}
-  m_Father: {fileID: 1152445612}
-  m_RootOrder: 12
+  m_Father: {fileID: 1680455152}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1883159518
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1883159516}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 413dbdae6ded341d783f0596bf834fed, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1883159519
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1883159516}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.85, y: 3.75, z: 0.5}
+  m_Center: {x: 0.575, y: 0.4, z: 0.1}
+--- !u!114 &1883159520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1883159516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  manager: {fileID: 0}
+  audioManager: {fileID: 0}
+  cassetteFound: {fileID: 0}
+  cassetteOverride: 1
+  preDialog: 
+  postDialog: 
+  interactedWith: 0
 --- !u!1 &1884396344
 GameObject:
   m_ObjectHideFlags: 0
@@ -26749,13 +26865,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1998668643}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 4.55, y: 1.3800002, z: -0.77999973}
   m_LocalScale: {x: 0.6, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 390699619}
-  m_Father: {fileID: 1152445612}
-  m_RootOrder: 11
+  m_Father: {fileID: 70768086}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1998668645
 Animator:
@@ -26801,12 +26917,10 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 443255214}
+  cassetteOverride: 0
   preDialog: you clicked the first block!
   postDialog: hella baby its gone bb
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!1 &2027329770
 GameObject:
   m_ObjectHideFlags: 0
@@ -27157,12 +27271,10 @@ MonoBehaviour:
   manager: {fileID: 1884396348}
   audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 1764492724}
+  cassetteOverride: 0
   preDialog: wee hours
   postDialog: ass in my dick
   interactedWith: 0
-  pressTimer: 0
-  recentlyPressed: 0
-  timerLimit: 240
 --- !u!4 &2084544405 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 60368631773dc4aac8290651b72388b8,
@@ -27321,6 +27433,41 @@ Transform:
   m_Father: {fileID: 31510356}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 99.00699, y: 89.99999, z: 89.99999}
+--- !u!1 &2119992720
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2119992721}
+  m_Layer: 0
+  m_Name: -- STATIC --
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2119992721
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2119992720}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 105183845}
+  - {fileID: 2143488365}
+  - {fileID: 1270756504}
+  - {fileID: 2045890217}
+  - {fileID: 558053938}
+  - {fileID: 903021657}
+  - {fileID: 1826033645}
+  m_Father: {fileID: 1315878311}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2123351168
 GameObject:
   m_ObjectHideFlags: 0
@@ -27638,6 +27785,6 @@ Transform:
   m_LocalPosition: {x: 2.35, y: 0.51, z: -2.15}
   m_LocalScale: {x: 0.035, y: 1, z: 0.5}
   m_Children: []
-  m_Father: {fileID: 1315878311}
-  m_RootOrder: 5
+  m_Father: {fileID: 2119992721}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
