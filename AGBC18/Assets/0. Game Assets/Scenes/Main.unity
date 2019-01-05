@@ -6638,6 +6638,7 @@ GameObject:
   - component: {fileID: 239199621}
   - component: {fileID: 239199623}
   - component: {fileID: 239199624}
+  - component: {fileID: 239199625}
   m_Layer: 0
   m_Name: Camera Rig
   m_TagString: Untagged
@@ -6669,7 +6670,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 239199620}
   m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: -1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 534669905}
@@ -6701,6 +6702,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60ed6d765c64d47088f371c4dc078903, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!95 &239199625
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 239199620}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 0c1c95ffa37724009822a7ce24d144ab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &266280488
 Prefab:
   m_ObjectHideFlags: 0
@@ -12849,6 +12868,7 @@ GameObject:
   - component: {fileID: 534669906}
   - component: {fileID: 534669908}
   - component: {fileID: 534669907}
+  - component: {fileID: 534669909}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -13007,6 +13027,17 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &534669909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534669902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e52b905ad1cd045a9936f40ac282a910, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &545812841
 Prefab:
   m_ObjectHideFlags: 0
@@ -18866,6 +18897,7 @@ MonoBehaviour:
   mainCamera: {fileID: 534669904}
   debug_state: 
   debug_cursor: 
+  pixels: 8
 --- !u!114 &711676149
 MonoBehaviour:
   m_ObjectHideFlags: 0
