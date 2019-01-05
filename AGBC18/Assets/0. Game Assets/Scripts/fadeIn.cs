@@ -6,18 +6,25 @@ using DG.Tweening;
 
 public class fadeIn : MonoBehaviour {
 
+	public float waitTime, fadeDuration;
 	Tween fade;
 
 	void Start () {
-		fade = GetComponent<Image>().DOFade(0f, 5f).SetAutoKill(false);
+		StartCoroutine(fadeProcess());
+
 	}
 	
 	void Update () {
-		if(fade.IsComplete()) {
-			Destroy(gameObject);
+		if(fade != null) {
+			if(fade.IsComplete()) {
+				Destroy(gameObject);
+			}
 		}
-		else {
+	}
 
-		}
+	IEnumerator fadeProcess() {
+
+		yield return new WaitForSeconds(waitTime);
+		fade = GetComponent<Image>().DOFade(0f, fadeDuration).SetAutoKill(false);
 	}
 }
