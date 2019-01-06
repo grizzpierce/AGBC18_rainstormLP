@@ -6326,7 +6326,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e3929ca795db40efbebd3a85a3b140c, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 5e3929ca795db40efbebd3a85a3b140c, type: 3}
       propertyPath: m_LocalScale.x
@@ -6669,15 +6669,15 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 239199620}
-  m_LocalRotation: {x: 0, y: 0.38268343, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
+  m_LocalRotation: {x: -0.258819, y: 0, z: 0, w: 0.9659259}
+  m_LocalPosition: {x: 0, y: 22.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 534669905}
   - {fileID: 1697240064}
   m_Father: {fileID: 0}
   m_RootOrder: 3
-  m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+  m_LocalEulerAnglesHint: {x: -30, y: 0, z: 0}
 --- !u!114 &239199623
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7334,7 +7334,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &345691159
 RectTransform:
   m_ObjectHideFlags: 0
@@ -7664,6 +7664,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd88ca184c2445eb91c4d3924c51228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  transparency: {fileID: 0}
 --- !u!225 &387000837
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -7898,7 +7899,7 @@ Transform:
   - {fileID: 465606275}
   - {fileID: 41551144}
   m_Father: {fileID: 1152445612}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &416959867
 GameObject:
@@ -12868,7 +12869,6 @@ GameObject:
   - component: {fileID: 534669906}
   - component: {fileID: 534669908}
   - component: {fileID: 534669907}
-  - component: {fileID: 534669909}
   m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -13027,17 +13027,6 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
---- !u!114 &534669909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 534669902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e52b905ad1cd045a9936f40ac282a910, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &545812841
 Prefab:
   m_ObjectHideFlags: 0
@@ -13910,7 +13899,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1152445612}
+    m_TransformParent: {fileID: 1680455152}
     m_Modifications:
     - target: {fileID: 400000, guid: a39f8eec0ce6c4618958228d306bf127, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13942,7 +13931,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a39f8eec0ce6c4618958228d306bf127, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a39f8eec0ce6c4618958228d306bf127, type: 3}
       propertyPath: m_LocalScale.x
@@ -21652,7 +21641,6 @@ Transform:
   - {fileID: 70768086}
   - {fileID: 1680455152}
   - {fileID: 1552886917}
-  - {fileID: 609685165}
   - {fileID: 1279509542}
   - {fileID: 406782114}
   - {fileID: 599978565}
@@ -22339,7 +22327,7 @@ Transform:
   - {fileID: 23636675}
   - {fileID: 639012485}
   m_Father: {fileID: 1152445612}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1280942623
 GameObject:
@@ -24915,6 +24903,7 @@ Transform:
   m_Children:
   - {fileID: 292925058}
   - {fileID: 1883159517}
+  - {fileID: 609685165}
   m_Father: {fileID: 1152445612}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -25459,7 +25448,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe837b43d6699408fa1e7e227daa1dad, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fe837b43d6699408fa1e7e227daa1dad, type: 3}
       propertyPath: m_LocalScale.x

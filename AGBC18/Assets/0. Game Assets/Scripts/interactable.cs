@@ -76,7 +76,9 @@ public class interactable : MonoBehaviour {
             }
          }
 
-        recentlyPressed = true;
+        if(interactedWith)
+            recentlyPressed = true;
+            
         anim.Play("Pressed");
         pressTimer = 0;
      }

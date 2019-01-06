@@ -10,7 +10,8 @@ public class CustomCursor : MonoBehaviour {
 
 	bool isPressed, isPlaying = false;
 	Tween fxGrow, fxFade;
-	
+
+
 	// Use this for initialization
 	void Start () {
 		Cursor.visible = false;
@@ -36,6 +37,12 @@ public class CustomCursor : MonoBehaviour {
 
 		if(Input.GetMouseButtonUp(0)) {
 			isPressed = false;
+		}
+
+		if(Input.mousePresent) {
+			if(Cursor.visible == true) {
+				Cursor.visible = false;
+			}
 		}
 	}
 	

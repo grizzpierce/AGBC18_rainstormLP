@@ -104,7 +104,7 @@ public class CassetteSelector : MonoBehaviour {
 			_active[3] = _newRight;
 			_active[4] = _rightQ;
 
-			Debug.Log(_leftQ + "  >>>  " + _newLeft + "  >>>  " + _newActive + "  >>>  " + _newRight + "  >>>  " + _rightQ);
+			//Debug.Log(_leftQ + "  >>>  " + _newLeft + "  >>>  " + _newActive + "  >>>  " + _newRight + "  >>>  " + _rightQ);
 
 			// CALCULATE INACTIVE CASSETTES
 			int[] _inactive = new int[cassetteStock];
@@ -155,7 +155,7 @@ public class CassetteSelector : MonoBehaviour {
 			_active[3] = _newRight;
 			_active[4] = _rightQ;
 
-			Debug.Log(_leftQ + "  <<<  " + _newLeft + "  <<<  " + _newActive + "  <<<  " + _newRight + "  <<<  " + _rightQ);
+			//Debug.Log(_leftQ + "  <<<  " + _newLeft + "  <<<  " + _newActive + "  <<<  " + _newRight + "  <<<  " + _rightQ);
 
 
 			// 8  |  0  |  1  |  2  |  3

@@ -59,7 +59,7 @@ public class PerspectiveToggle : MonoBehaviour {
 	public void onClick() {
 		switch(hovered) {
 			case VIEW_STATES.INVALID:
-				Debug.Log("Nada");
+				//Debug.Log("Nada");
 				break;
 			case VIEW_STATES.ORTHOGRAPHIC:
 				orthographicState();

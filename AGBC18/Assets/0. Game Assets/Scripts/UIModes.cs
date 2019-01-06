@@ -17,7 +17,7 @@ public class UIModes : MonoBehaviour {
 
 	public void LaunchMain() {
 		activateTimeUI(true);
-		cassetteUI.GetComponent<AudioNotification>().Launch();
+		//cassetteUI.GetComponent<AudioNotification>().Launch();
 		dialogUI.SetActive(true);
 		cassetteBar.SetActive(true);
 		prespectiveUI.SetActive(true);
