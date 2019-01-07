@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.25814605, g: 0.26651317, b: 0.6541467, a: 1}
+  m_IndirectSpecularColor: {r: 0.25814605, g: 0.2665132, b: 0.65414673, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -7664,7 +7664,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bd88ca184c2445eb91c4d3924c51228, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  transparency: {fileID: 0}
 --- !u!225 &387000837
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -24472,28 +24471,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8024516b014e4692af31bcc55c4c080, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cartridgeLoad: 
-  cartridgePlay: 
-  cartridgeStop: 
-  cartridgeFinishPlaying: 
-  cartridgeRattle: 
-  rainAmbiance: event:/sfx/ambiances/sfx_rain
-  lampAmbiance: 
-  vendingMachineAmbiance: 
-  vendingMachineFlicker: 
-  grassAmbiance: 
-  findTapeInteract: event:/sfx/one shots/interaction/sfx_findTape
-  vendingMachineInteract: 
-  lampInteract: 
-  binInteract: 
-  pylonInteract: 
-  bikeRackInteract: 
-  cupInteract: 
-  grassInteract: 
-  flyerInteract: 
-  graffitiInteract: 
-  dudInteract: 
-  textScroll: event:/sfx/one shots/sfx_textScroll
 --- !u!114 &1604503713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24505,8 +24482,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a91d87d415468479f8accdfd9d8678d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  audioBin: {fileID: 1604503712}
-  cameraRig: {fileID: 534669904}
+  cartridgeLoad: 
+  cartridgePlay: 
+  cartridgeStop: 
+  cartridgeFinishPlaying: 
+  cartridgeRattle: event:/sfx/one shots/cartridge/sfx_cartridgeRattle
+  cartridgeScrollLeft: event:/sfx/one shots/cartridge/sfx_cartridgeScroll_Left
+  cartridgeScrollRight: event:/sfx/one shots/cartridge/sfx_cartridgeScroll_Right
+  findTapeInteract: event:/sfx/one shots/cartridge/sfx_cartridgeRattle
+  dudInteract: 
+  textScroll: 
+  rainAmbiance: event:/sfx/ambiances/sfx_rain
 --- !u!4 &1604503714
 Transform:
   m_ObjectHideFlags: 0
@@ -24697,18 +24683,34 @@ MonoBehaviour:
   m_GameObject: {fileID: 1635649292}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 10a771a380248459aaf944a7dd4c23ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 8d8f5e95f114f4cc2a026667b2827d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _fmodEvent: event:/sfx/ambiances/sfx_vendingMachineAmbiance
-  _fmodParameter: Volume0to1
   _orientationAngle: 154.28143
-  _widthAngleToAdd: 29.9
-  _fadeSpreadAngleToAdd: 61.5
-  _maxVolumeForSlider: 0.9301275
-  _minVolumeForSlider: 0.5422144
-  _maxDB: -0.6291503
-  _minDB: -5.3165793
+  SHOW_ON_UNSELECTED: 1
+  _parameters:
+  - _fmodParameter: volume0to1
+    _orientationOffset: 0
+    _widthAngleToAdd: 25
+    _fadeAngleToAdd: 52
+    _widthUpperAngle: 204.99998
+    _widthLowerAngle: 155
+    _fadeUpperAngle: 257
+    _fadeLowerAngle: 103
+    _widthUpperVector: {x: 0.012541116, y: 0, z: -0.9999214}
+    _widthLowerVector: {x: 0.77404535, y: 0, z: -0.63313013}
+    _fadeUpperVector: {x: -0.7802278, y: 0, z: -0.6254955}
+    _fadeLowerVector: {x: 0.9754633, y: 0, z: 0.22016233}
+    DISPLAY: 2
+    _maxNormalizedValue: 0.9306063
+    _minNormalizedValue: 0.536324
+    _maxValueToDisplay: -0.62468016
+    _minValueToDisplay: -5.411455
+    SHOW_ON_UNSELECTED: 1
+    DROPDOWN_OPEN: 1
+    IN_FOCUS: 1
+    SHOW_ADVANCED: 0
 --- !u!1 &1640135119
 GameObject:
   m_ObjectHideFlags: 0
@@ -26262,7 +26264,7 @@ MonoBehaviour:
   manager: {fileID: 0}
   audioManager: {fileID: 0}
   cassetteFound: {fileID: 0}
-  cassetteOverride: 1
+  cassetteOverride: 0
   preDialog: 
   postDialog: 
   interactedWith: 0
@@ -26435,8 +26437,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 20af868d7f6254749b73b98179e7059b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waitTime: 5
-  fadeDuration: 2
+  waitTime: 0
+  fadeDuration: 0
 --- !u!114 &1901810600
 MonoBehaviour:
   m_ObjectHideFlags: 0
