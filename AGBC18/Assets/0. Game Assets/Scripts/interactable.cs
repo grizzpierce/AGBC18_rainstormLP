@@ -10,43 +10,80 @@ public class interactable : MonoBehaviour {
     public CartridgeDataHolder cassetteFound;
     Color cassetteColor;
 
+    public bool cassetteOverride = false;
     public string preDialog;
     public string postDialog; 
     public bool interactedWith = false;
+
+    float pressTimer = 0;
+    bool recentlyPressed = false;
+    float timerLimit = 240;
 
     Animator anim;
 
     void Start() {
         anim = this.GetComponent<Animator>();
 
-        if(cassetteFound == null) {
-            cassetteColor = new Color(0, 0, 0, 0);
+        if(!cassetteOverride) {
+            if(cassetteFound == null) {
+                cassetteColor = new Color(0, 0, 0, 0);
+            }
+            else {
+                cassetteColor = new Color(cassetteFound.color.r, cassetteFound.color.g, cassetteFound.color.b, 1f);
+            }
         }
-        else {
-            cassetteColor = new Color(cassetteFound.color.r, cassetteFound.color.g, cassetteFound.color.b, 1f);
+    }
+
+    void FixedUpdate() {
+        if(!cassetteOverride) {
+            if (recentlyPressed) {
+                pressTimer += Time.deltaTime;
+
+                if (pressTimer >= timerLimit) {
+                    pressTimer = 0;
+                    recentlyPressed = false;
+                }
+            }
         }
     }
 
      void OnMouseDown()
      {
-         if(manager.GetIfAvailable()) {
-            if(!interactedWith) {
-                manager.Pop(preDialog, cassetteColor, cassetteFound);
-                if (audioManager != null) {
-                    FMODUnity.RuntimeManager.PlayOneShot(audioManager.audioBin.findTapeInteract);
-                } else {
-                    Debug.Log("Set the Audio Manager in Interactable!");
-                }
+         if(!cassetteOverride) {
+            if(!recentlyPressed) {
+                if(manager.GetIfAvailable()) {
 
-                interactedWith = true;
-            }
-            else {
-                manager.Pop(postDialog, new Color(0, 0, 0, 0));               
+                    // LAUNCH CARTRIDGE DIALOG IF UNPRESSED BEFORE
+                    if(!interactedWith) {
+                        manager.Pop(preDialog, cassetteColor, cassetteFound);
+                        
+                        if (audioManager != null) {
+                            audioManager.playOneShot(audioManager.findTapeInteract);                        
+                        } 
+                        
+                        else {
+                            Debug.Log("Set the Audio Manager in Interactable!");
+                        }
+
+                        interactedWith = true;
+                    }
+
+                    // LAUNCH SECONDARY DIALOG IF PRESSED
+                    else {
+                        manager.Pop(postDialog, new Color(0, 0, 0, 0));               
+                    }
+                }
             }
          }
 
+        if(interactedWith)
+            recentlyPressed = true;
+            
         anim.Play("Pressed");
+        pressTimer = 0;
      }
+
+
     //  void OnDrawGizmos() {
     //      Gizmos.DrawIcon(transform.position, "test_icon2.png", true);
     //  }

@@ -37,8 +37,8 @@ public class IntroCassette : MonoBehaviour {
 
 			if(cassetteInteractAudio != "") {
 				FMODUnity.RuntimeManager.PlayOneShot(cassetteInteractAudio);
-			} else if (audioManager.audioBin.cartridgeRattle != "") {
-				FMODUnity.RuntimeManager.PlayOneShot(audioManager.audioBin.cartridgeRattle);
+			} else if (audioManager.cartridgeRattle != "") {
+				FMODUnity.RuntimeManager.PlayOneShot(audioManager.cartridgeRattle);
 			} else {
 				Debug.Log("No FMOD Event data for intro cassette interact");
 			}
@@ -65,8 +65,8 @@ public class IntroCassette : MonoBehaviour {
 
 		if(cassetteStartAudio != "") {
 			FMODUnity.RuntimeManager.PlayOneShot(cassetteStartAudio);
-		} else if (audioManager.audioBin.cartridgeLoad != "") {
-			FMODUnity.RuntimeManager.PlayOneShot(audioManager.audioBin.cartridgeLoad);
+		} else if (audioManager.cartridgeLoad != "") {
+			FMODUnity.RuntimeManager.PlayOneShot(audioManager.cartridgeLoad);
 		} else {
 			Debug.Log("No FMOD Event data for intro cassette load");
 		}

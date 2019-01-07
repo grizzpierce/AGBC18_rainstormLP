@@ -21,13 +21,17 @@ public class PerspectiveToggle : MonoBehaviour {
 	public GameObject perspective, orthographic;
 	public float uiH, uiX, perY, orthY = 0;
 	public Camera mainCamera;
+	Animator anim;
 
 	public string debug_state, debug_cursor = "";
 	BAR_STATES current = BAR_STATES.INVALID;
 	VIEW_STATES hovered, selected = VIEW_STATES.INVALID;
 
+	public float pixels = 8;
+
 	void Start () {
 		mainCamera = Camera.main;
+		anim = mainCamera.transform.parent.GetComponent<Animator>();
 		selected = VIEW_STATES.ORTHOGRAPHIC;
 
 		uiX = perspective.GetComponent<RectTransform>().anchoredPosition.x;
@@ -55,7 +59,7 @@ public class PerspectiveToggle : MonoBehaviour {
 	public void onClick() {
 		switch(hovered) {
 			case VIEW_STATES.INVALID:
-				Debug.Log("Nada");
+				//Debug.Log("Nada");
 				break;
 			case VIEW_STATES.ORTHOGRAPHIC:
 				orthographicState();
@@ -72,13 +76,15 @@ public class PerspectiveToggle : MonoBehaviour {
 	void orthographicState() {
 		perspective.transform.GetChild(0).GetComponent<Text>().DOFade(.35f, .5f);
 		orthographic.transform.GetChild(0).GetComponent<Text>().DOFade(1f, .5f);
-		mainCamera.orthographic = true;		
+		if(!mainCamera.orthographic)
+			cameraShift(true);
 	}
 
 	void perspectiveState() {
 		orthographic.transform.GetChild(0).GetComponent<Text>().DOFade(.35f, .5f);
 		perspective.transform.GetChild(0).GetComponent<Text>().DOFade(1f, .5f);
-		mainCamera.orthographic = false;		
+		if(mainCamera.orthographic)
+			cameraShift(false);
 	}
 
 
@@ -100,6 +106,16 @@ public class PerspectiveToggle : MonoBehaviour {
 		}
 	}
 
+	void cameraShift(bool _isOrtho) {
+        string anim_name;
+
+		if(_isOrtho)
+			anim_name = "ToOrtho";
+		else
+			anim_name = "ToPersp";
+		
+		anim.Play(anim_name);
+	}
 
 	IEnumerator drop() {
 		perspective.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, perY), 1, false).SetEase(Ease.OutBack);

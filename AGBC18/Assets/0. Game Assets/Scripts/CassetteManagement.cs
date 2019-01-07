@@ -100,7 +100,7 @@ public class CassetteManagement : MonoBehaviour {
     IEnumerator TapeStop() {
         IsStopping = true;
         
-        FMODUnity.RuntimeManager.PlayOneShot(audioManager.audioBin.cartridgeStop);
+        FMODUnity.RuntimeManager.PlayOneShot(audioManager.cartridgeStop);
 
         float t = 0.0f;
         float targetT = playing.GetComponent<CartridgeData>().GetDataHolder().fadeOutTimeOnStop;
@@ -123,7 +123,7 @@ public class CassetteManagement : MonoBehaviour {
 
     IEnumerator TapeFinish() {
         IsStopping = true;
-        yield return StartCoroutine(PlayOneShot(audioManager.audioBin.cartridgeFinishPlaying));
+        yield return StartCoroutine(PlayOneShot(audioManager.cartridgeFinishPlaying));
         IsStopping = false;
         yield return null;
     }
@@ -132,7 +132,7 @@ public class CassetteManagement : MonoBehaviour {
         // TODO play cartridge start
         // TODO wait for reel up
         IsStarting = true;
-        yield return StartCoroutine(PlayOneShot(audioManager.audioBin.cartridgeLoad));
+        yield return StartCoroutine(PlayOneShot(audioManager.cartridgeLoad));
 
         var audioEvent = _pressed.GetComponent<CartridgeData>().GetDataHolder().trackAudioEvent;
 
@@ -140,13 +140,13 @@ public class CassetteManagement : MonoBehaviour {
         // only proceed to new track if there is a new track event available
         if (audioEvent == null)
         {
-            yield return StartCoroutine(PlayOneShot(audioManager.audioBin.cartridgePlay));
+            yield return StartCoroutine(PlayOneShot(audioManager.cartridgePlay));
             Debug.Log("No Track Event Data for selected track!");
-            yield return StartCoroutine(PlayOneShot(audioManager.audioBin.cartridgeFinishPlaying));
+            yield return StartCoroutine(PlayOneShot(audioManager.cartridgeFinishPlaying));
         }
         else
         {
-            FMODUnity.RuntimeManager.PlayOneShot(audioManager.audioBin.cartridgePlay);
+            FMODUnity.RuntimeManager.PlayOneShot(audioManager.cartridgePlay);
             if (playingTrack.isValid()) playingTrack.release();
             playingTrack = FMODUnity.RuntimeManager.CreateInstance(audioEvent);
             playingTrack.start();

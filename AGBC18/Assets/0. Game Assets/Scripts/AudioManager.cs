@@ -10,10 +10,36 @@ public class AudioManager : MonoBehaviour {
         IDLE
     }
 
-    public AudioBin audioBin;
-    public Camera cameraRig;
+    private Camera cameraRig;
     private Transform cameraRigTransform;
-    private FMOD.Studio.EventInstance rainAmbiance;
+    private FMOD.Studio.EventInstance rainAmbianceInstance;
+
+
+    [Space]
+    [Header("Audio Events")]
+    [FMODUnity.EventRef]
+    public string cartridgeLoad;
+    [FMODUnity.EventRef]
+    public string cartridgePlay;
+    [FMODUnity.EventRef]
+    public string cartridgeStop;
+    [FMODUnity.EventRef]
+    public string cartridgeFinishPlaying;
+    [FMODUnity.EventRef]
+    public string cartridgeRattle;
+    [FMODUnity.EventRef]
+    public string cartridgeScrollLeft;
+    [FMODUnity.EventRef]
+    public string cartridgeScrollRight;
+    [FMODUnity.EventRef]
+    public string findTapeInteract;
+    [FMODUnity.EventRef]
+    public string dudInteract;
+    [FMODUnity.EventRef]
+    public string textScroll;
+
+    [FMODUnity.EventRef]
+    public string rainAmbiance;
 
     MUSIC_STATE currentState = MUSIC_STATE.INTRO;
 
@@ -24,32 +50,33 @@ public class AudioManager : MonoBehaviour {
     }
 
 	void Start () {
-        if(audioBin == null) {
-            audioBin = GetComponentInParent<AudioBin>();
-        }
 
         cameraRigTransform = cameraRig.GetComponent<Transform>();
-        var audioString = audioBin.rainAmbiance;
+        var audioString = rainAmbiance;
         if(audioString == "") {
             Debug.Log("No FMOD Event Data for Rain Ambiance");
         }
         else 
         {
-            rainAmbiance = FMODUnity.RuntimeManager.CreateInstance(audioBin.rainAmbiance);
-            rainAmbiance.start();
-            // FMODUnity.RuntimeManager.AttachInstanceToGameObject(rainAmbiance, cameraRig.GetComponent<Transform>(), cameraRig.GetComponentInChildren<Rigidbody>());
+            rainAmbianceInstance = FMODUnity.RuntimeManager.CreateInstance(rainAmbiance);
+            rainAmbianceInstance.start();
+            // FMODUnity.RuntimeManager.AttachInstanceToGameObject(rainAmbianceInstance, cameraRig.GetComponent<Transform>(), cameraRig.GetComponentInChildren<Rigidbody>());
         }
 
 	}
 
+    public void playOneShot(string _toPlay) {
+        FMODUnity.RuntimeManager.PlayOneShot(_toPlay);
+    }
+
     void Update() {
-        //  rainAmbiance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(cameraRigTransform));
-        rainAmbiance.setParameterValue("Elevation_User", cameraRigTransform.position.y);
+        //  rainAmbianceInstance.set3DAttributes(FMODUnity.RuntimeUtils.To3DAttributes(cameraRigTransform));
+        rainAmbianceInstance.setParameterValue("Elevation_User", cameraRigTransform.position.y);
     }
 	
     void OnDestroy()
     {
-        rainAmbiance.release();
+        rainAmbianceInstance.release();
     }
 
     public bool isMusicPlaying() {
@@ -67,4 +94,5 @@ public class AudioManager : MonoBehaviour {
     public void setMusicIdle() {
         currentState = MUSIC_STATE.IDLE;
     }
+    
 }

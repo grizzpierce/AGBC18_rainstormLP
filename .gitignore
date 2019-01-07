@@ -51,3 +51,8 @@ Corridor/Library/ShaderCache/
 Corridor/Library/metadata/
 *.log
 *.sln
+AGBC18/Assembly-CSharp.csproj
+AGBC18/Assembly-CSharp-firstpass.csproj
+AGBC18/Assembly-CSharp-Editor.csproj
+AGBC18/Assembly-CSharp-Editor-firstpass.csproj
+AGBC18/AGBC18.sln

@@ -60,9 +60,6 @@
      <Compile Include="Assets\FMOD Resources\Editor\FMODMigrationUtil.cs" />
      <Compile Include="Assets\FMOD Resources\GoogleVR\Editor\FmodGvrAudioRoomEditor.cs" />
      <Compile Include="Assets\FMOD Resources\ResonanceAudio\Editor\FmodResonanceAudioRoomEditor.cs" />
-     <Compile Include="Assets\ProceduralUIImage\Editor\ModifierUtility.cs" />
-     <Compile Include="Assets\ProceduralUIImage\Editor\ProceduralImageEditor.cs" />
-     <Compile Include="Assets\ProceduralUIImage\Editor\ProceduralImageEditorUtility.cs" />
      <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\Editor\ControlMapperInspector.cs" />
      <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\Editor\CustomButtonInspector.cs" />
      <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\Editor\CustomSliderInspector.cs" />
