@@ -6,13 +6,23 @@ using DG.Tweening;
 
 public class UIModes : MonoBehaviour {
 
-	public GameObject cursorUI, timeUI, cassetteUI, dialogUI, cassetteBar, prespectiveUI;
+	public GameObject cursorUI, timeUI, cassetteUI, dialogUI, cassetteBar, prespectiveUI, curtain, menuButton, menu;
+
+	Tween menubtn_tween;
 
 	void Start() {
 		if(cursorUI == null || timeUI == null || cassetteBar == null) {
 			Destroy(this);
 		}
 		activateTimeUI(false);
+	}
+
+	void Update() {
+		if(menubtn_tween != null) {
+			if(menubtn_tween.IsComplete()) {
+				menuButton.GetComponent<CanvasGroup>().interactable = true;
+			}
+		}
 	}
 
 	public void LaunchMain() {
@@ -33,6 +43,18 @@ public class UIModes : MonoBehaviour {
 		}
 		else {
 			timeUI.GetComponent<RectTransform>().DOAnchorPos(new Vector3(0, 30), 0f);
+		}
+	}
+
+	public void MenuController(bool _isOpening) {
+		curtain.SetActive(_isOpening);
+		curtain.GetComponent<curtainBehaviour>().setFade(_isOpening);
+
+		menu.GetComponent<MenuManager>().Controller(_isOpening);
+
+
+		if(!_isOpening) {
+			menubtn_tween = menuButton.GetComponent<CanvasGroup>().DOFade(1, .5f).SetAutoKill(false).SetDelay(.25f);	
 		}
 	}
 }

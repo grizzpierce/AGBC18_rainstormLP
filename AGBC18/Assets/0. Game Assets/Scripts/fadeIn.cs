@@ -10,6 +10,7 @@ public class fadeIn : MonoBehaviour {
 	Tween fade;
 
 	void Start () {
+		GetComponent<Image>().DOFade(1f, 0);
 		StartCoroutine(fadeProcess());
 
 	}
@@ -17,7 +18,9 @@ public class fadeIn : MonoBehaviour {
 	void Update () {
 		if(fade != null) {
 			if(fade.IsComplete()) {
-				Destroy(gameObject);
+				transform.SetSiblingIndex(transform.GetSiblingIndex() - 2);
+				gameObject.SetActive(false);
+				Destroy(this);
 			}
 		}
 	}

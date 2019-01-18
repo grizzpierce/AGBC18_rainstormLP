@@ -9,7 +9,8 @@ public class PerspectiveToggle : MonoBehaviour {
 	enum BAR_STATES {
 		INVALID = -1,
 		HOVER,
-		EXIT
+		EXIT,
+		OFF
 	}
 
 	enum VIEW_STATES {
@@ -26,6 +27,9 @@ public class PerspectiveToggle : MonoBehaviour {
 	public string debug_state, debug_cursor = "";
 	BAR_STATES current = BAR_STATES.INVALID;
 	VIEW_STATES hovered, selected = VIEW_STATES.INVALID;
+	Tween persp_tween, orth_tween; 
+
+	float exitedTimer = 0;
 
 	public float pixels = 8;
 
@@ -43,17 +47,37 @@ public class PerspectiveToggle : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		assessCursor();
+
+		if(current == BAR_STATES.HOVER)
+			assessCursor();
+		else if(current == BAR_STATES.EXIT) {
+
+			exitedTimer += Time.deltaTime;
+
+			if(exitedTimer > .5f) {
+
+				orth_tween = orthographic.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, orthY + 120), .75f, false).SetEase(Ease.OutBack).SetAutoKill(false);
+				persp_tween = perspective.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, perY + 120), .75f, false).SetEase(Ease.OutBack).SetDelay(.1f).SetAutoKill(false);
+
+				current = BAR_STATES.OFF;
+			}
+		}
+		
+
 	}
 
 	public void onHover() {
 		current = BAR_STATES.HOVER;
-		StartCoroutine(drop());
+
+		killTweens();
+
+		persp_tween = perspective.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, perY), .5f, false).SetEase(Ease.OutBack).SetAutoKill(false);
+		orth_tween = orthographic.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, orthY), .5f, false).SetEase(Ease.OutBack).SetDelay(.1f).SetAutoKill(false);
 	}
 
 	public void onExit() {
 		current = BAR_STATES.EXIT;
-		StartCoroutine(raise());
+		exitedTimer = 0f;
 	}
 
 	public void onClick() {
@@ -117,24 +141,9 @@ public class PerspectiveToggle : MonoBehaviour {
 		anim.Play(anim_name);
 	}
 
-	IEnumerator drop() {
-		perspective.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, perY), 1, false).SetEase(Ease.OutBack);
-		
-		yield return new WaitForSeconds(.1f);
-
-		orthographic.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, orthY), 1, false).SetEase(Ease.OutBack);
-
-		yield return new WaitForSeconds(1f);
-	}
-
-	IEnumerator raise() {
-		orthographic.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, orthY + 120), 1, false).SetEase(Ease.OutBack);
-		
-		yield return new WaitForSeconds(.1f);
-
-		perspective.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, perY + 120), 1, false).SetEase(Ease.OutBack);
-
-		yield return new WaitForSeconds(1f);
+	void killTweens() {
+		orth_tween.Kill();
+		persp_tween.Kill();
 	}
 
 }
