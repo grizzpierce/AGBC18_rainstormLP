@@ -13710,6 +13710,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 0e1c7d6c424c54507b730c2be7d62317,
     type: 3}
   m_PrefabInternal: {fileID: 529983671}
+--- !u!1 &651697734
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 651697735}
+  - component: {fileID: 651697736}
+  m_Layer: 0
+  m_Name: LightAmbiance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &651697735
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 651697734}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.22, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 609685165}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &651697736
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 651697734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d8f5e95f114f4cc2a026667b2827d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fmodEvent: event:/sfx/ambiances/sfx_lampAmbiance
+  _orientationAngle: 180
+  SHOW_ON_UNSELECTED: 1
+  _parameters:
+  - _fmodParameter: Volume0to1
+    _orientationOffset: 63
+    _widthAngleToAdd: 29
+    _fadeAngleToAdd: 114
+    _widthUpperAngle: 272
+    _widthLowerAngle: 214
+    _fadeUpperAngle: 26
+    _fadeLowerAngle: 100
+    _widthUpperVector: {x: -0.99939084, y: 0, z: 0.03489931}
+    _widthLowerVector: {x: -0.55919296, y: 0, z: -0.82903755}
+    _fadeUpperVector: {x: 0.43837115, y: 0, z: 0.89879405}
+    _fadeLowerVector: {x: 0.9848077, y: 0, z: -0.1736482}
+    DISPLAY: 2
+    _maxNormalizedValue: 0.7105553
+    _minNormalizedValue: 0.5098809
+    _maxValueToDisplay: -2.9680421
+    _minValueToDisplay: -5.850625
+    SHOW_ON_UNSELECTED: 1
+    DROPDOWN_OPEN: 1
+    IN_FOCUS: 1
+    SHOW_ADVANCED: 1
 --- !u!1 &655672162
 GameObject:
   m_ObjectHideFlags: 0
@@ -19502,6 +19567,71 @@ MonoBehaviour:
   unknownText: ???
   startsUnknown: 1
   textLabel: {fileID: 0}
+--- !u!1 &809151870
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809151871}
+  - component: {fileID: 809151872}
+  m_Layer: 0
+  m_Name: GrassAmbiance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &809151871
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 809151870}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.15, z: 7.09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2119992721}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &809151872
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 809151870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d8f5e95f114f4cc2a026667b2827d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fmodEvent: event:/sfx/ambiances/sfx_grassAmbiance
+  _orientationAngle: 0
+  SHOW_ON_UNSELECTED: 1
+  _parameters:
+  - _fmodParameter: Volume0to1
+    _orientationOffset: 0
+    _widthAngleToAdd: 70
+    _fadeAngleToAdd: 66
+    _widthUpperAngle: 250
+    _widthLowerAngle: 110
+    _fadeUpperAngle: 316
+    _fadeLowerAngle: 44
+    _widthUpperVector: {x: 0.9396926, y: 0, z: 0.34202015}
+    _widthLowerVector: {x: -0.9396926, y: 0, z: 0.3420201}
+    _fadeUpperVector: {x: 0.69465846, y: 0, z: -0.7193397}
+    _fadeLowerVector: {x: -0.6946584, y: 0, z: -0.7193398}
+    DISPLAY: 2
+    _maxNormalizedValue: 0.70397687
+    _minNormalizedValue: 0.40462673
+    _maxValueToDisplay: -3.0488322
+    _minValueToDisplay: -7.8589087
+    SHOW_ON_UNSELECTED: 1
+    DROPDOWN_OPEN: 1
+    IN_FOCUS: 1
+    SHOW_ADVANCED: 0
 --- !u!1 &830631460
 GameObject:
   m_ObjectHideFlags: 0
@@ -20427,6 +20557,71 @@ MonoBehaviour:
   unknownText: ???
   startsUnknown: 1
   textLabel: {fileID: 0}
+--- !u!1 &950869042
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 950869043}
+  - component: {fileID: 950869044}
+  m_Layer: 0
+  m_Name: StreetAmbiance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &950869043
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 950869042}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
+  m_LocalPosition: {x: 0, y: 0.95, z: -1.752}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2119992721}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &950869044
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 950869042}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d8f5e95f114f4cc2a026667b2827d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fmodEvent: event:/sfx/ambiances/sfx_streetAmbiance
+  _orientationAngle: 180
+  SHOW_ON_UNSELECTED: 1
+  _parameters:
+  - _fmodParameter: Volume0to1
+    _orientationOffset: 0
+    _widthAngleToAdd: 68
+    _fadeAngleToAdd: 76
+    _widthUpperAngle: 248
+    _widthLowerAngle: 112
+    _fadeUpperAngle: 324
+    _fadeLowerAngle: 36
+    _widthUpperVector: {x: -0.9271838, y: 0, z: -0.3746068}
+    _widthLowerVector: {x: 0.92718387, y: 0, z: -0.3746066}
+    _fadeUpperVector: {x: -0.5877853, y: 0, z: 0.80901694}
+    _fadeLowerVector: {x: 0.58778524, y: 0, z: 0.809017}
+    DISPLAY: 2
+    _maxNormalizedValue: 0.75331414
+    _minNormalizedValue: 0.51978487
+    _maxValueToDisplay: -2.4604776
+    _minValueToDisplay: -5.6835275
+    SHOW_ON_UNSELECTED: 0
+    DROPDOWN_OPEN: 1
+    IN_FOCUS: 1
+    SHOW_ADVANCED: 1
 --- !u!1 &954939128
 GameObject:
   m_ObjectHideFlags: 0
@@ -24656,7 +24851,7 @@ GameObject:
   - component: {fileID: 1635649293}
   - component: {fileID: 1635649294}
   m_Layer: 0
-  m_Name: DirectionalAmbiance
+  m_Name: VendingMachineAmbiance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -24668,13 +24863,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1635649292}
-  m_LocalRotation: {x: -0, y: -0.9749197, z: -0, w: -0.22255738}
+  m_LocalRotation: {x: -0, y: -0.9245266, z: -0, w: -0.38111758}
   m_LocalPosition: {x: 0.47099993, y: 0.89, z: -0.052999973}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1329134579}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 514.281, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 495.194, z: 0}
 --- !u!114 &1635649294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24687,21 +24882,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _fmodEvent: event:/sfx/ambiances/sfx_vendingMachineAmbiance
-  _orientationAngle: 154.28143
+  _orientationAngle: 135.19415
   SHOW_ON_UNSELECTED: 1
   _parameters:
   - _fmodParameter: volume0to1
     _orientationOffset: 0
-    _widthAngleToAdd: 25
-    _fadeAngleToAdd: 52
-    _widthUpperAngle: 204.99998
-    _widthLowerAngle: 155
-    _fadeUpperAngle: 257
-    _fadeLowerAngle: 103
-    _widthUpperVector: {x: 0.012541116, y: 0, z: -0.9999214}
-    _widthLowerVector: {x: 0.77404535, y: 0, z: -0.63313013}
-    _fadeUpperVector: {x: -0.7802278, y: 0, z: -0.6254955}
-    _fadeLowerVector: {x: 0.9754633, y: 0, z: 0.22016233}
+    _widthAngleToAdd: 29
+    _fadeAngleToAdd: 61
+    _widthUpperAngle: 209
+    _widthLowerAngle: 151
+    _fadeUpperAngle: 270
+    _fadeLowerAngle: 90
+    _widthUpperVector: {x: 0.2723784, y: 0, z: -0.9621902}
+    _widthLowerVector: {x: 0.9603222, y: 0, z: -0.27889302}
+    _fadeUpperVector: {x: -0.7094988, y: 0, z: -0.70470667}
+    _fadeLowerVector: {x: 0.7094988, y: 0, z: 0.7047066}
     DISPLAY: 2
     _maxNormalizedValue: 0.9306063
     _minNormalizedValue: 0.536324
@@ -27303,6 +27498,71 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 60368631773dc4aac8290651b72388b8,
     type: 3}
   m_PrefabInternal: {fileID: 2143117439}
+--- !u!1 &2092520898
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2092520899}
+  - component: {fileID: 2092520900}
+  m_Layer: 0
+  m_Name: DrainAmbiance
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &2092520899
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2092520898}
+  m_LocalRotation: {x: -0, y: 0.5103294, z: -0, w: 0.85997903}
+  m_LocalPosition: {x: 6.79, y: 2.36, z: 2.87}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2119992721}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 61.372, z: 0}
+--- !u!114 &2092520900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2092520898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d8f5e95f114f4cc2a026667b2827d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fmodEvent: event:/sfx/ambiances/sfx_drainAmbiance
+  _orientationAngle: 61.371544
+  SHOW_ON_UNSELECTED: 1
+  _parameters:
+  - _fmodParameter: Volume0to1
+    _orientationOffset: 0
+    _widthAngleToAdd: 36
+    _fadeAngleToAdd: 53
+    _widthUpperAngle: 216
+    _widthLowerAngle: 144
+    _fadeUpperAngle: 269
+    _fadeLowerAngle: 90.99999
+    _widthUpperVector: {x: 0.991735, y: 0, z: -0.1283031}
+    _widthLowerVector: {x: 0.42848644, y: 0, z: 0.90354824}
+    _fadeUpperVector: {x: 0.49437362, y: 0, z: -0.8692495}
+    _fadeLowerVector: {x: -0.46373618, y: 0, z: 0.88597333}
+    DISPLAY: 2
+    _maxNormalizedValue: 0.85638297
+    _minNormalizedValue: 0.34142926
+    _maxValueToDisplay: -1.3466395
+    _minValueToDisplay: -9.333985
+    SHOW_ON_UNSELECTED: 1
+    DROPDOWN_OPEN: 1
+    IN_FOCUS: 1
+    SHOW_ADVANCED: 1
 --- !u!1 &2103984047
 GameObject:
   m_ObjectHideFlags: 0
@@ -27488,6 +27748,9 @@ Transform:
   - {fileID: 558053938}
   - {fileID: 903021657}
   - {fileID: 1826033645}
+  - {fileID: 809151871}
+  - {fileID: 950869043}
+  - {fileID: 2092520899}
   m_Father: {fileID: 1315878311}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
