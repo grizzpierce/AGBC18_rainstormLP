@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="ParameterPreset" id="{eb0b3974-1c95-4a07-b1e5-39aec062b14a}">
+        <property name="name">
+            <value>DrivebysVolume0to1</value>
+        </property>
+        <relationship name="folder">
+            <destination>{f2cd3bf4-8a65-4c70-9ae8-9fb6b3eca739}</destination>
+        </relationship>
+        <relationship name="parameter">
+            <destination>{1b378d6e-cff9-40ca-a677-6c12be590a16}</destination>
+        </relationship>
+    </object>
+    <object class="GameParameter" id="{1b378d6e-cff9-40ca-a677-6c12be590a16}">
+        <property name="initialValue">
+            <value>1</value>
+        </property>
+    </object>
+</objects>
