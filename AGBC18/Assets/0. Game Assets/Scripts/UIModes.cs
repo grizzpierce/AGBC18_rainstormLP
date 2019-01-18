@@ -49,12 +49,6 @@ public class UIModes : MonoBehaviour {
 	public void MenuController(bool _isOpening) {
 		curtain.SetActive(_isOpening);
 		curtain.GetComponent<curtainBehaviour>().setFade(_isOpening);
-
 		menu.GetComponent<MenuManager>().Controller(_isOpening);
-
-
-		if(!_isOpening) {
-			menubtn_tween = menuButton.GetComponent<CanvasGroup>().DOFade(1, .5f).SetAutoKill(false).SetDelay(.25f);	
-		}
 	}
 }

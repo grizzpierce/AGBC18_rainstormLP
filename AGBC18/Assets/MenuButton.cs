@@ -5,18 +5,19 @@ using DG.Tweening;
 
 public class MenuButton : MonoBehaviour {
 
-	Animator anim;
-	public GameObject canvas;
-
+	public GameObject menu;
+	public bool willOpenMenu;
 	Tween fade_tween;
 
 	void Start () {
-		anim = GetComponent<Animator>();
+
 	}
 
 	void Update () {
 		
 	}
+
+
 
 	void tweenReset(Tween _tween) {
 		if(_tween != null) {
@@ -27,22 +28,20 @@ public class MenuButton : MonoBehaviour {
 	}
 
 	public void Hover() {
+		Debug.Log("HOVERING " + gameObject.name + " BUTTON");
 		tweenReset(fade_tween);
-		GetComponent<CanvasGroup>().DOFade(.75f, .25f);
+		GetComponent<CanvasGroup>().DOFade(1f, .25f);
 	} 
 
 	public void Exit() {
-		if(GetComponent<CanvasGroup>().interactable == true) {
-			tweenReset(fade_tween);
-			GetComponent<CanvasGroup>().DOFade(1f, .25f);		
-		}
+		tweenReset(fade_tween);
+		GetComponent<CanvasGroup>().DOFade(.5f, .25f);		
 	}
 
 	public void Pressed() {
+		Debug.Log("PRESSING " + gameObject.name + " BUTTON");
 		tweenReset(fade_tween);
-		GetComponent<CanvasGroup>().DOFade(0, .25f);
 
-		GetComponent<CanvasGroup>().interactable = false;
-		canvas.GetComponent<UIModes>().MenuController(true);
+		menu.GetComponent<MenuManager>().Controller(willOpenMenu); // IS OPENING
 	}
 }

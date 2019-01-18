@@ -86,9 +86,11 @@ public class PerspectiveToggle : MonoBehaviour {
 				//Debug.Log("Nada");
 				break;
 			case VIEW_STATES.ORTHOGRAPHIC:
+				selected = VIEW_STATES.ORTHOGRAPHIC;
 				orthographicState();
 				break;
 			case VIEW_STATES.PERSPECTIVE:
+				selected = VIEW_STATES.PERSPECTIVE;
 				perspectiveState();
 				break;
 			default:
@@ -98,6 +100,8 @@ public class PerspectiveToggle : MonoBehaviour {
 	}
 
 	void orthographicState() {
+		perspective.GetComponent<CanvasGroup>().DOFade(.5f, .25f);
+
 		perspective.transform.GetChild(0).GetComponent<Text>().DOFade(.35f, .5f);
 		orthographic.transform.GetChild(0).GetComponent<Text>().DOFade(1f, .5f);
 		if(!mainCamera.orthographic)
@@ -105,6 +109,8 @@ public class PerspectiveToggle : MonoBehaviour {
 	}
 
 	void perspectiveState() {
+		orthographic.GetComponent<CanvasGroup>().DOFade(.5f, .25f);
+
 		orthographic.transform.GetChild(0).GetComponent<Text>().DOFade(.35f, .5f);
 		perspective.transform.GetChild(0).GetComponent<Text>().DOFade(1f, .5f);
 		if(mainCamera.orthographic)
@@ -116,16 +122,29 @@ public class PerspectiveToggle : MonoBehaviour {
 		if(Input.mousePosition.y > (Screen.height - (32 + (2 * uiH))) && Input.mousePosition.y < (Screen.height - (28 + uiH))) {
 			debug_cursor = "perspective";
 			hovered = VIEW_STATES.PERSPECTIVE;
+			perspective.GetComponent<CanvasGroup>().DOFade(1f, .25f);
 			debug_state = hovered.ToString();
 		}
 		else if(Input.mousePosition.y > (Screen.height - (14 + uiH)) && Input.mousePosition.y < (Screen.height - 10)) {
 			debug_cursor = "orthographic";		
 			hovered = VIEW_STATES.ORTHOGRAPHIC;
+			orthographic.GetComponent<CanvasGroup>().DOFade(1f, .25f);
 			debug_state = hovered.ToString();
 		}
 		else {
 			debug_cursor = "";
 			hovered = VIEW_STATES.INVALID;
+
+			if(selected == VIEW_STATES.ORTHOGRAPHIC) {
+				perspective.GetComponent<CanvasGroup>().DOFade(.5f, .25f);
+				orthographic.GetComponent<CanvasGroup>().DOFade(1f, .25f);
+			}
+			if(selected == VIEW_STATES.PERSPECTIVE) {
+				perspective.GetComponent<CanvasGroup>().DOFade(1f, .25f);
+				orthographic.GetComponent<CanvasGroup>().DOFade(.5f, .25f);				
+			}
+
+
 			debug_state = hovered.ToString();
 		}
 	}
