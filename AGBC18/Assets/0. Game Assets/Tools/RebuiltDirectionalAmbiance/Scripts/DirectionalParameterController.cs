@@ -67,10 +67,10 @@ namespace DirectionalParameterController {
 				Color oldColor = Gizmos.color;
 
 				foreach(ParameterData parameterDataInstance in _parameters) {
-					parameterDataInstance.DrawAngleVectorsGizmos(_from, Selection.Contains(this.gameObject), SHOW_ON_UNSELECTED);
+					//parameterDataInstance.DrawAngleVectorsGizmos(_from, Selection.Contains(this.gameObject), SHOW_ON_UNSELECTED);
 				}
 
-				DrawOrientationVectorGizmo(Selection.Contains(this.gameObject));
+				//DrawOrientationVectorGizmo(Selection.Contains(this.gameObject));
 
 				Gizmos.color = oldColor;
 			}
