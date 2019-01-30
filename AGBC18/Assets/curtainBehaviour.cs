@@ -17,9 +17,15 @@ public class curtainBehaviour : MonoBehaviour {
 	void Update () {
 		if(inital_fade != null) {
 			if(inital_fade.IsComplete()) {
-				transform.SetSiblingIndex(transform.GetSiblingIndex() - 2);
-				setCanvasGroupActive(false);
+
+				transform.parent = GameObject.Find("Menu").transform;
+				GetComponent<RectTransform>().DOAnchorPos(Vector2.zero, 0, false);
+				transform.SetAsFirstSibling();
+
+
+				setCanvasGroupActive(true);
 				inital_fade.Kill();
+				setFade(true);
 			}
 		}
 	}

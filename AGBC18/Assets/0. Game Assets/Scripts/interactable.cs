@@ -20,9 +20,11 @@ public class interactable : MonoBehaviour {
     float timerLimit = 240;
 
     Animator anim;
+    UIModes ui;
 
     void Start() {
         anim = this.GetComponent<Animator>();
+        ui = GameObject.Find("Game Canvas").GetComponent<UIModes>();
 
         if(!cassetteOverride) {
             if(cassetteFound == null) {
@@ -49,38 +51,40 @@ public class interactable : MonoBehaviour {
 
      void OnMouseDown()
      {
-         if(!cassetteOverride) {
-            if(!recentlyPressed) {
-                if(manager.GetIfAvailable()) {
+         if(!ui.isMenuOpen) {         
+            if(!cassetteOverride) {
+                if(!recentlyPressed) {
+                    if(manager.GetIfAvailable()) {
 
-                    // LAUNCH CARTRIDGE DIALOG IF UNPRESSED BEFORE
-                    if(!interactedWith) {
-                        manager.Pop(preDialog, cassetteColor, cassetteFound);
-                        
-                        if (audioManager != null) {
-                            audioManager.playOneShot(audioManager.findTapeInteract);                        
-                        } 
-                        
-                        else {
-                            Debug.Log("Set the Audio Manager in Interactable!");
+                        // LAUNCH CARTRIDGE DIALOG IF UNPRESSED BEFORE
+                        if(!interactedWith) {
+                            manager.Pop(preDialog, cassetteColor, cassetteFound);
+                            
+                            if (audioManager != null) {
+                                audioManager.playOneShot(audioManager.findTapeInteract);                        
+                            } 
+                            
+                            else {
+                                Debug.Log("Set the Audio Manager in Interactable!");
+                            }
+
+                            interactedWith = true;
                         }
 
-                        interactedWith = true;
-                    }
-
-                    // LAUNCH SECONDARY DIALOG IF PRESSED
-                    else {
-                        manager.Pop(postDialog, new Color(0, 0, 0, 0));               
+                        // LAUNCH SECONDARY DIALOG IF PRESSED
+                        else {
+                            manager.Pop(postDialog, new Color(0, 0, 0, 0));               
+                        }
                     }
                 }
             }
-         }
 
-        if(interactedWith)
-            recentlyPressed = true;
-            
-        anim.Play("Pressed");
-        pressTimer = 0;
+            if(interactedWith)
+                recentlyPressed = true;
+                
+            anim.Play("Pressed");
+            pressTimer = 0;
+        }
      }
 
 

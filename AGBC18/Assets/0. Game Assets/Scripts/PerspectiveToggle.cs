@@ -43,6 +43,10 @@ public class PerspectiveToggle : MonoBehaviour {
 
 		perY = perspective.GetComponent<RectTransform>().anchoredPosition.y;
 		orthY = orthographic.GetComponent<RectTransform>().anchoredPosition.y;
+
+		orth_tween = orthographic.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, orthY + 120), 0, false);
+		persp_tween = perspective.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, perY + 120), 0, false);
+
 	}
 	
 	// Update is called once per frame

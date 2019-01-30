@@ -10,6 +10,10 @@ public class MenuManager : MonoBehaviour {
 
 	private GameObject LAST_PRESSED, NOW_AVAILABLE;
 
+	void Start() {
+		GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 960), 0f, false);
+	}
+
 	public void Controller(bool _isOpening) {
 		if(_isOpening) {
 			LAST_PRESSED = menuButton;
@@ -20,6 +24,7 @@ public class MenuManager : MonoBehaviour {
 			NOW_AVAILABLE = menuButton;			
 		}
 
+		transform.parent.GetComponent<UIModes>().isMenuOpen = _isOpening;
 		StartCoroutine(controllerSequence(_isOpening));
 	}
 
@@ -45,10 +50,14 @@ public class MenuManager : MonoBehaviour {
 		LAST_PRESSED.GetComponent<CanvasGroup>().DOFade(0, .5f);
 
 	// PHASE 3: Transition in curtain + menu content
-		curtain.GetComponent<curtainBehaviour>().setCanvasGroupActive(_isOpening);
-		curtain.GetComponent<curtainBehaviour>().setFade(_isOpening);
-		GetComponent<CanvasGroup>().DOFade(_isOpeningVal, .5f);
-		yield return new WaitForSeconds(.5f);
+		if(_isOpening) {
+			GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 0), 1.5f, false);
+		}
+		else {
+			GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 960), 1.5f, false);		
+		}
+
+		yield return new WaitForSeconds(1f);	
 
 	// PHASE 4: Fade in [NOW AVAILABLE] button canvas group
 		NOW_AVAILABLE.GetComponent<CanvasGroup>().DOFade(.5f, .25f);
