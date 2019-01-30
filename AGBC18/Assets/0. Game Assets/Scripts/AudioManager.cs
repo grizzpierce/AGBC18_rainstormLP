@@ -23,11 +23,11 @@ public class AudioManager : MonoBehaviour {
         IDLE
     }
 
-    public enum ENVIRO_SETTING {
-        LIGHTWEIGHT,
-        ROBUST,
-        UNDEFINED
-    }
+    // public enum ENVIRO_SETTING {
+    //     LIGHTWEIGHT,
+    //     ROBUST,
+    //     UNDEFINED
+    // }
 
 
     [Space]
@@ -82,7 +82,7 @@ public class AudioManager : MonoBehaviour {
     FMOD.Studio.EventInstance _rainAmbianceInstance;
 
     MUSIC_STATE _currentState = MUSIC_STATE.INTRO;
-    ENVIRO_SETTING _environmentAudioSetting = ENVIRO_SETTING.UNDEFINED;
+    // ENVIRO_SETTING _environmentAudioSetting = ENVIRO_SETTING.UNDEFINED;
 
     GameObject[] _directionalAmbianceObjects;
 
@@ -103,9 +103,9 @@ public class AudioManager : MonoBehaviour {
             _cameraRig = Camera.main;
         }
 
-        if (_environmentAudioSetting ==  ENVIRO_SETTING.UNDEFINED) {
-            _environmentAudioSetting = ENVIRO_SETTING.ROBUST;
-        }
+        // if (_environmentAudioSetting ==  ENVIRO_SETTING.UNDEFINED) {
+        //     _environmentAudioSetting = ENVIRO_SETTING.ROBUST;
+        // }
 
         if (mainBank != "") {
             FMODUnity.RuntimeManager.LoadBank(mainBank, true);
@@ -118,11 +118,11 @@ public class AudioManager : MonoBehaviour {
             Debug.LogWarning("Music bank not defined!");
         }
 
-        if (_environmentAudioSetting == ENVIRO_SETTING.LIGHTWEIGHT) {
-            FMODUnity.RuntimeManager.LoadBank(lightweightAmbiances, true);
-        } else if (_environmentAudioSetting == ENVIRO_SETTING.ROBUST) {
-            FMODUnity.RuntimeManager.LoadBank(robustAmbiances, true);
-        }
+        // if (_environmentAudioSetting == ENVIRO_SETTING.LIGHTWEIGHT) {
+        //     FMODUnity.RuntimeManager.LoadBank(lightweightAmbiances, true);
+        // } else if (_environmentAudioSetting == ENVIRO_SETTING.ROBUST) {
+        //     FMODUnity.RuntimeManager.LoadBank(robustAmbiances, true);
+        // }
     }
 
 	void Start () {
@@ -133,18 +133,18 @@ public class AudioManager : MonoBehaviour {
         
 
         // Only plays single background rain from start in lightweight mode
-        if (_environmentAudioSetting == ENVIRO_SETTING.LIGHTWEIGHT) {
-            foreach(GameObject directionalAmbianceObject in _directionalAmbianceObjects) {
-                directionalAmbianceObject.GetComponent<DirectionalParameterController.DirectionalParameterController>().SetEnvironmentAmbianceSetting(ENVIRO_SETTING.LIGHTWEIGHT);
-            }
+        // if (_environmentAudioSetting == ENVIRO_SETTING.LIGHTWEIGHT) {
+        //     foreach(GameObject directionalAmbianceObject in _directionalAmbianceObjects) {
+        //         directionalAmbianceObject.GetComponent<DirectionalParameterController.DirectionalParameterController>().SetEnvironmentAmbianceSetting(ENVIRO_SETTING.LIGHTWEIGHT);
+        //     }
 
             _rainAmbianceInstance = FMODUnity.RuntimeManager.CreateInstance(rainAmbiance);
             _rainAmbianceInstance.start();
-        } else {
-            foreach(GameObject directionalAmbianceObject in _directionalAmbianceObjects) {
-                directionalAmbianceObject.GetComponent<DirectionalParameterController.DirectionalParameterController>().SetEnvironmentAmbianceSetting(ENVIRO_SETTING.ROBUST);
-            }
-        }
+        // } else {
+        //     foreach(GameObject directionalAmbianceObject in _directionalAmbianceObjects) {
+        //         directionalAmbianceObject.GetComponent<DirectionalParameterController.DirectionalParameterController>().SetEnvironmentAmbianceSetting(ENVIRO_SETTING.ROBUST);
+        //     }
+        // }
 
         _masterVolumeVCA = FMODUnity.RuntimeManager.GetVCA(masterVolume);
         _musicVolumeVCA = FMODUnity.RuntimeManager.GetVCA(musicVolume);
@@ -157,9 +157,9 @@ public class AudioManager : MonoBehaviour {
     }
 
     void Update() {
-        if(_environmentAudioSetting == ENVIRO_SETTING.LIGHTWEIGHT) {
+        // if(_environmentAudioSetting == ENVIRO_SETTING.LIGHTWEIGHT) {
             _rainAmbianceInstance.setParameterValue("Elevation_User", _cameraRigTransform.position.y);
-        }
+        // }
     }
 	
     void OnDestroy()
@@ -244,40 +244,40 @@ public class AudioManager : MonoBehaviour {
         }
     }
 
-    public void SetEnvironmentAmbianceSetting(ENVIRO_SETTING newEnviroSetting) {
-        if (_environmentAudioSetting != newEnviroSetting) {
-            switch (newEnviroSetting) {
-                case ENVIRO_SETTING.LIGHTWEIGHT:
-                    // Going to lightweight drops the robust audio first, then loads the new audio, to save on processing/memory
-                    foreach(GameObject directionalAmbianceObject in _directionalAmbianceObjects) {
-                        directionalAmbianceObject.GetComponent<DirectionalParameterController.DirectionalParameterController>().SetEnvironmentAmbianceSetting(ENVIRO_SETTING.LIGHTWEIGHT);
-                    }
-                    FMODUnity.RuntimeManager.UnloadBank(robustAmbiances);
-                    if (lightweightAmbiances != "") {
-                        FMODUnity.RuntimeManager.LoadBank(lightweightAmbiances, true);
-                    } else {
-                        Debug.LogWarning("Lightweight environments bank not defined!");
-                    }
+    // public void SetEnvironmentAmbianceSetting(ENVIRO_SETTING newEnviroSetting) {
+    //     if (_environmentAudioSetting != newEnviroSetting) {
+    //         switch (newEnviroSetting) {
+    //             case ENVIRO_SETTING.LIGHTWEIGHT:
+    //                 // Going to lightweight drops the robust audio first, then loads the new audio, to save on processing/memory
+    //                 foreach(GameObject directionalAmbianceObject in _directionalAmbianceObjects) {
+    //                     directionalAmbianceObject.GetComponent<DirectionalParameterController.DirectionalParameterController>().SetEnvironmentAmbianceSetting(ENVIRO_SETTING.LIGHTWEIGHT);
+    //                 }
+    //                 FMODUnity.RuntimeManager.UnloadBank(robustAmbiances);
+    //                 if (lightweightAmbiances != "") {
+    //                     FMODUnity.RuntimeManager.LoadBank(lightweightAmbiances, true);
+    //                 } else {
+    //                     Debug.LogWarning("Lightweight environments bank not defined!");
+    //                 }
 
-                    _rainAmbianceInstance = FMODUnity.RuntimeManager.CreateInstance(rainAmbiance);
-                    _rainAmbianceInstance.start();
+    //                 _rainAmbianceInstance = FMODUnity.RuntimeManager.CreateInstance(rainAmbiance);
+    //                 _rainAmbianceInstance.start();
 
-                    break;
-                case ENVIRO_SETTING.ROBUST:
-                    // Going to robust starts new audio, then unloads the lightweight audio, to make the transition cleaner without a gap
-                    if (lightweightAmbiances != "") {
-                        FMODUnity.RuntimeManager.LoadBank(robustAmbiances, true);
-                    } else {
-                        Debug.LogWarning("Robust environments bank not defined!");
-                    }
-                    foreach(GameObject directionalAmbianceObject in _directionalAmbianceObjects) {
-                        directionalAmbianceObject.GetComponent<DirectionalParameterController.DirectionalParameterController>().SetEnvironmentAmbianceSetting(ENVIRO_SETTING.ROBUST);
-                    }
-                    _rainAmbianceInstance.release();
-                    FMODUnity.RuntimeManager.UnloadBank(lightweightAmbiances);
-                    break;
-            }
-        }
-    }
+    //                 break;
+    //             case ENVIRO_SETTING.ROBUST:
+    //                 // Going to robust starts new audio, then unloads the lightweight audio, to make the transition cleaner without a gap
+    //                 if (lightweightAmbiances != "") {
+    //                     FMODUnity.RuntimeManager.LoadBank(robustAmbiances, true);
+    //                 } else {
+    //                     Debug.LogWarning("Robust environments bank not defined!");
+    //                 }
+    //                 foreach(GameObject directionalAmbianceObject in _directionalAmbianceObjects) {
+    //                     directionalAmbianceObject.GetComponent<DirectionalParameterController.DirectionalParameterController>().SetEnvironmentAmbianceSetting(ENVIRO_SETTING.ROBUST);
+    //                 }
+    //                 _rainAmbianceInstance.release();
+    //                 FMODUnity.RuntimeManager.UnloadBank(lightweightAmbiances);
+    //                 break;
+    //         }
+    //     }
+    // }
 }
 

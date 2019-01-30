@@ -98,11 +98,6 @@ public class interactable : MonoBehaviour {
                         // LAUNCH SECONDARY DIALOG IF PRESSED
                         else {
                             _popupManager.Pop(postDialog, new Color(0, 0, 0, 0));               
-
-                            // LAUNCH SECONDARY DIALOG IF PRESSED
-                            else {
-                                manager.Pop(postDialog, new Color(0, 0, 0, 0));               
-                            }
                         }
                     }
                 }

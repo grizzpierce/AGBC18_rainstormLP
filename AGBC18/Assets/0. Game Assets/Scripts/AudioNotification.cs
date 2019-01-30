@@ -9,7 +9,7 @@ public class AudioNotification : MonoBehaviour {
 	public CartridgeRotator cassette;
 	public RawImage ui;
 	Text trackTitle;
-	bool DEBUG_TEST = false;
+	// bool DEBUG_TEST = false;
 	Color stopColor = new Color(0, 0, 0, .1f);
 
 
