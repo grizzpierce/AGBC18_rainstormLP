@@ -8,6 +8,7 @@ public class UIModes : MonoBehaviour {
 
 	public GameObject cursorUI, timeUI, cassetteUI, dialogUI, cassetteBar, prespectiveUI, curtain, menuButton, menu;
 
+	public bool isMenuOpen = false;
 	Tween menubtn_tween;
 
 	void Start() {
@@ -31,6 +32,7 @@ public class UIModes : MonoBehaviour {
 		dialogUI.SetActive(true);
 		cassetteBar.SetActive(true);
 		prespectiveUI.SetActive(true);
+		menuButton.SetActive(true);
 	}
 
 	public void cursorActive(bool isActive) {

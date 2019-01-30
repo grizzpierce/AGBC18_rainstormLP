@@ -73,7 +73,7 @@ public class CassetteBar : MonoBehaviour {
 	}
 
     public void RaiseBar() {
-		if(!showcasing) {
+		if(!showcasing && !transform.parent.GetComponent<UIModes>().isMenuOpen) {
 			raisedCount++;
 			idleTime = 0;
 			isOpen = true;
@@ -114,7 +114,8 @@ public class CassetteBar : MonoBehaviour {
     }
 
 	public void PressBar() {
-		switch(clickAction) {
+		if(!transform.parent.GetComponent<UIModes>().isMenuOpen) {
+			switch(clickAction) {
 			case -1:
 				cassetteRevolver.GetComponent<CassetteSelector>().ShiftRight();
 				resetCursorStatus();
@@ -135,6 +136,7 @@ public class CassetteBar : MonoBehaviour {
 			default:
 				Debug.Log("STATE MACHINE CODE ERROR");
 				break;
+		}
 		}
 	}
 
