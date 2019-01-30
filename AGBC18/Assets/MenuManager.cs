@@ -11,7 +11,7 @@ public class MenuManager : MonoBehaviour {
 	private GameObject LAST_PRESSED, NOW_AVAILABLE;
 
 	void Start() {
-		GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 960), 0f, false);
+		GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, -960), 0f, false);
 	}
 
 	public void Controller(bool _isOpening) {
@@ -54,7 +54,7 @@ public class MenuManager : MonoBehaviour {
 			GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 0), 1.5f, false);
 		}
 		else {
-			GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 960), 1.5f, false);		
+			GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, -960), 1.5f, false);		
 		}
 
 		yield return new WaitForSeconds(1f);	
