@@ -18,7 +18,7 @@ MonoBehaviour:
   SourceProjectPathUnformatted: /Users/jacobmumford/Desktop/RAINSTORM_LP/AGBC18_rainstormLP/f.
     mod project/RainstormLP/RainstormLP.fspro
   SourceBankPathUnformatted: FMOD_Assets/Desktop
-  AutomaticEventLoading: 1
+  AutomaticEventLoading: 0
   AutomaticSampleLoading: 0
   ImportType: 0
   TargetAssetPath: 
@@ -62,3 +62,5 @@ MonoBehaviour:
   MasterBank: Master Bank
   Banks:
   - music
+  - SimpleAmbiances
+  - ComplexAmbiances

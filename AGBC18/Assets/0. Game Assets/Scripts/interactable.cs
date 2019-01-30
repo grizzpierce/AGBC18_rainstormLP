@@ -3,45 +3,69 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+TODO finish implementing pre and post dialog functionality
+ */
+
 public class interactable : MonoBehaviour {
 
-    public PopupManager manager;
-    public AudioManager audioManager;
     public CartridgeDataHolder cassetteFound;
-    Color cassetteColor;
 
     public bool cassetteOverride = false;
-    public string preDialog;
-    public string postDialog; 
     public bool interactedWith = false;
 
-    float pressTimer = 0;
-    bool recentlyPressed = false;
-    float timerLimit = 240;
 
-    Animator anim;
+    [Header("First Interaction")]
+    public string preDialog;
+    [FMODUnity.EventRef]
+    public string preDialogAudio;
+    public float cartridgeDiscoverAudioDelay = 0.0f;
+
+    [Space]
+    [Header("Subsequent Interactions")]
+    public string postDialog; 
+    [FMODUnity.EventRef]
+    public string postDialogAudio;
+
+    float _pressTimer = 0f;
+    bool _recentlyPressed = false;
+    float _timerLimit = 240f;
+
+    Animator _anim;
+    Color _cassetteColor;
+
+
+    PopupManager _popupManager;
+    AudioManager _audioManager;
 
     void Start() {
-        anim = this.GetComponent<Animator>();
+        _anim = this.GetComponent<Animator>();
+
+        if (_audioManager == null) {
+            _audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
+        }
+        if (_popupManager == null) {
+            _popupManager = GameObject.FindGameObjectWithTag("PopupManager").GetComponent<PopupManager>();
+        }
 
         if(!cassetteOverride) {
             if(cassetteFound == null) {
-                cassetteColor = new Color(0, 0, 0, 0);
+                _cassetteColor = new Color(0, 0, 0, 0);
             }
             else {
-                cassetteColor = new Color(cassetteFound.color.r, cassetteFound.color.g, cassetteFound.color.b, 1f);
+                _cassetteColor = new Color(cassetteFound.color.r, cassetteFound.color.g, cassetteFound.color.b, 1f);
             }
         }
     }
 
     void FixedUpdate() {
         if(!cassetteOverride) {
-            if (recentlyPressed) {
-                pressTimer += Time.deltaTime;
+            if (_recentlyPressed) {
+                _pressTimer += Time.deltaTime;
 
-                if (pressTimer >= timerLimit) {
-                    pressTimer = 0;
-                    recentlyPressed = false;
+                if (_pressTimer >= _timerLimit) {
+                    _pressTimer = 0;
+                    _recentlyPressed = false;
                 }
             }
         }
@@ -50,15 +74,15 @@ public class interactable : MonoBehaviour {
      void OnMouseDown()
      {
          if(!cassetteOverride) {
-            if(!recentlyPressed) {
-                if(manager.GetIfAvailable()) {
+            if(!_recentlyPressed) {
+                if(_popupManager.GetIfAvailable()) {
 
                     // LAUNCH CARTRIDGE DIALOG IF UNPRESSED BEFORE
                     if(!interactedWith) {
-                        manager.Pop(preDialog, cassetteColor, cassetteFound);
+                        _popupManager.Pop(preDialog, _cassetteColor, cassetteFound);
                         
-                        if (audioManager != null) {
-                            audioManager.playOneShot(audioManager.findTapeInteract);                        
+                        if (_audioManager != null) {
+                            _audioManager.playOneShot(_audioManager.findTapeInteract);                        
                         } 
                         
                         else {
@@ -70,21 +94,16 @@ public class interactable : MonoBehaviour {
 
                     // LAUNCH SECONDARY DIALOG IF PRESSED
                     else {
-                        manager.Pop(postDialog, new Color(0, 0, 0, 0));               
+                        _popupManager.Pop(postDialog, new Color(0, 0, 0, 0));               
                     }
                 }
             }
          }
 
         if(interactedWith)
-            recentlyPressed = true;
+            _recentlyPressed = true;
             
-        anim.Play("Pressed");
-        pressTimer = 0;
+        _anim.Play("Pressed");
+        _pressTimer = 0;
      }
-
-
-    //  void OnDrawGizmos() {
-    //      Gizmos.DrawIcon(transform.position, "test_icon2.png", true);
-    //  }
 }

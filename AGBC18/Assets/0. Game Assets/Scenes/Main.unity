@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.25814605, g: 0.26651317, b: 0.6541467, a: 1}
+  m_IndirectSpecularColor: {r: 0.25814605, g: 0.2665132, b: 0.65414673, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -156,15 +156,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884396348}
-  audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 549539083}
   cassetteOverride: 0
+  interactedWith: 0
   preDialog: Ah, the ole' 'Hide-Something-Behind-The-Wobbly-Sign' trick. Oldest trick
     in the book.
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
   postDialog: The sign reads 'Slow'. You'd have to agree, that's how this whole night
     has felt.
-  interactedWith: 0
+  postDialogAudio: 
 --- !u!95 &5115068
 Animator:
   serializedVersion: 3
@@ -7025,13 +7026,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884396348}
-  audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 549539083}
   cassetteOverride: 0
-  preDialog: blimps 1 block
-  postDialog: clicked bingche
   interactedWith: 0
+  preDialog: blimps 1 block
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
+  postDialog: clicked bingche
+  postDialogAudio: 
 --- !u!1001 &222622626
 Prefab:
   m_ObjectHideFlags: 0
@@ -7750,6 +7752,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a88d3305b2d4ed4ac988696843c9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  graffitiSFX: 
 --- !u!23 &292925056
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -15189,7 +15192,7 @@ GameObject:
   - component: {fileID: 651697736}
   m_Layer: 0
   m_Name: LightAmbiance
-  m_TagString: Untagged
+  m_TagString: DirectionalAmbiance
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21052,13 +21055,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  audioManager: {fileID: 0}
   cassetteFound: {fileID: 0}
   cassetteOverride: 1
-  preDialog: Who puts a cassette in a cup?
-  postDialog: Seriously, why did someone put a cassette in this cup?
   interactedWith: 0
+  preDialog: Who puts a cassette in a cup?
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
+  postDialog: Seriously, why did someone put a cassette in this cup?
+  postDialogAudio: 
 --- !u!95 &775486774
 Animator:
   serializedVersion: 3
@@ -21298,7 +21302,7 @@ GameObject:
   - component: {fileID: 809151872}
   m_Layer: 0
   m_Name: GrassAmbiance
-  m_TagString: Untagged
+  m_TagString: DirectionalAmbiance
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -21414,14 +21418,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884396348}
-  audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 1764492724}
   cassetteOverride: 0
+  interactedWith: 0
   preDialog: You've always wanted to open a manhole before. And now it seems like
     your curiousity has been rewarded.
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
   postDialog: Oh that's where that sewer smell is coming from.
-  interactedWith: 0
+  postDialogAudio: 
 --- !u!65 &830631464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21931,13 +21936,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884396348}
-  audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 443255214}
   cassetteOverride: 0
-  preDialog: you clicked the first block!
-  postDialog: hella baby its gone bb
   interactedWith: 0
+  preDialog: you clicked the first block!
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
+  postDialog: hella baby its gone bb
+  postDialogAudio: 
 --- !u!114 &902074801
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22280,14 +22286,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884396348}
-  audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 443255214}
   cassetteOverride: 0
+  interactedWith: 0
   preDialog: Woah someone's cellphone? They also dropped a cassette too. I'll try
     getting it back to them when the rain stops.
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
   postDialog: I should really pick up that cellphone... It's so muddy and gross though...
-  interactedWith: 0
+  postDialogAudio: 
 --- !u!65 &919126664
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -22564,7 +22571,7 @@ GameObject:
   - component: {fileID: 950869044}
   m_Layer: 0
   m_Name: StreetAmbiance
-  m_TagString: Untagged
+  m_TagString: DirectionalAmbiance
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23373,15 +23380,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884396348}
-  audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 131574015}
   cassetteOverride: 0
+  interactedWith: 0
   preDialog: No one ever realizes how perfect traffic cones are for hiding nice, small
     presents.
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
   postDialog: 'Is someone saving a parking spot? Or maybe there''s going to be construction
     soon? '
-  interactedWith: 0
+  postDialogAudio: 
 --- !u!1 &1012661169
 GameObject:
   m_ObjectHideFlags: 0
@@ -29249,13 +29257,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884396348}
-  audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 1640135121}
   cassetteOverride: 0
-  preDialog: celestial whiner block
-  postDialog: lkjsdlkjdlkj
   interactedWith: 0
+  preDialog: celestial whiner block
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
+  postDialog: lkjsdlkjdlkj
+  postDialogAudio: 
 --- !u!1001 &1149693775
 Prefab:
   m_ObjectHideFlags: 0
@@ -29630,7 +29639,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1184155535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -30975,13 +30984,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884396348}
-  audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 131574015}
   cassetteOverride: 0
-  preDialog: noise block
-  postDialog: fuck off im sleeping
   interactedWith: 0
+  preDialog: noise block
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
+  postDialog: fuck off im sleeping
+  postDialogAudio: 
 --- !u!1 &1301297392
 GameObject:
   m_ObjectHideFlags: 0
@@ -31195,14 +31205,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884396348}
-  audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 1830836829}
   cassetteOverride: 0
+  interactedWith: 0
   preDialog: Something rattles behind the vending machine. Maybe a mouse with a sweet
     tooth? Oh a cassette.
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
   postDialog: Like usual, you don't have any cash in your wallet.
-  interactedWith: 0
+  postDialogAudio: 
 --- !u!4 &1329134579
 Transform:
   m_ObjectHideFlags: 0
@@ -33565,25 +33576,13 @@ GameObject:
   m_Component:
   - component: {fileID: 1604503714}
   - component: {fileID: 1604503713}
-  - component: {fileID: 1604503712}
   m_Layer: 0
   m_Name: Audio Manager
-  m_TagString: Untagged
+  m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1604503712
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1604503711}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8024516b014e4692af31bcc55c4c080, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1604503713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33595,6 +33594,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a91d87d415468479f8accdfd9d8678d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  musicBank: music
+  mainBank: Master Bank
+  robustAmbiances: ComplexAmbiances
+  lightweightAmbiances: SimpleAmbiances
+  masterVolume: VCA_Master
+  musicVolume: VCA_MenuMusic
+  uiVolume: VCA_MenuUI
+  enviroVolume: VCA_MenuEnvironmental
   cartridgeLoad: 
   cartridgePlay: 
   cartridgeStop: 
@@ -33770,7 +33777,7 @@ GameObject:
   - component: {fileID: 1635649294}
   m_Layer: 0
   m_Name: VendingMachineAmbiance
-  m_TagString: Untagged
+  m_TagString: DirectionalAmbiance
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -34400,13 +34407,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884396348}
-  audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 1460853254}
   cassetteOverride: 0
-  preDialog: optimism time
-  postDialog: dik dik
   interactedWith: 0
+  preDialog: optimism time
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
+  postDialog: dik dik
+  postDialogAudio: 
 --- !u!1 &1728483240
 GameObject:
   m_ObjectHideFlags: 0
@@ -34452,15 +34460,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884396348}
-  audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 1460853254}
   cassetteOverride: 0
+  interactedWith: 0
   preDialog: Oh neat, someone left a cassette taped to their concert poster. Maybe
     you'll stop being a hermit and go to a show?
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
   postDialog: There's a really rad poster for your favorite artist, but it's way too
     soggy now. Cool.
-  interactedWith: 0
+  postDialogAudio: 
 --- !u!95 &1728483243
 Animator:
   serializedVersion: 3
@@ -34980,15 +34989,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884396348}
-  audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 1640135121}
   cassetteOverride: 0
+  interactedWith: 0
   preDialog: A bit rude for someone to throw out a perfectly fine cassette... Oh no,
     what if it's cursed?
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
   postDialog: As you dig past half empty pop cans, you remember your dad once broke
     his ribs dumpster diving.
-  interactedWith: 0
+  postDialogAudio: 
 --- !u!95 &1785561261
 Animator:
   serializedVersion: 3
@@ -35870,13 +35880,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 0}
-  audioManager: {fileID: 0}
   cassetteFound: {fileID: 0}
   cassetteOverride: 1
-  preDialog: 
-  postDialog: 
   interactedWith: 0
+  preDialog: 
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
+  postDialog: 
+  postDialogAudio: 
 --- !u!1 &1884396344
 GameObject:
   m_ObjectHideFlags: 0
@@ -35891,7 +35902,7 @@ GameObject:
   - component: {fileID: 1884396349}
   m_Layer: 5
   m_Name: Popup Container
-  m_TagString: Untagged
+  m_TagString: PopupManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -37521,13 +37532,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884396348}
-  audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 443255214}
   cassetteOverride: 1
-  preDialog: Huh, maybe someone thought they could pay the meter with their mixtape?
-  postDialog: God you hate parking meters.
   interactedWith: 0
+  preDialog: Huh, maybe someone thought they could pay the meter with their mixtape?
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
+  postDialog: God you hate parking meters.
+  postDialogAudio: 
 --- !u!1 &2007456994
 GameObject:
   m_ObjectHideFlags: 0
@@ -38051,13 +38063,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  manager: {fileID: 1884396348}
-  audioManager: {fileID: 1604503713}
   cassetteFound: {fileID: 1764492724}
   cassetteOverride: 0
-  preDialog: wee hours
-  postDialog: ass in my dick
   interactedWith: 0
+  preDialog: wee hours
+  preDialogAudio: 
+  cartridgeDiscoverAudioDelay: 0
+  postDialog: ass in my dick
+  postDialogAudio: 
 --- !u!1 &2064985728
 GameObject:
   m_ObjectHideFlags: 0
@@ -38385,7 +38398,7 @@ GameObject:
   - component: {fileID: 2092520900}
   m_Layer: 0
   m_Name: DrainAmbiance
-  m_TagString: Untagged
+  m_TagString: DirectionalAmbiance
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

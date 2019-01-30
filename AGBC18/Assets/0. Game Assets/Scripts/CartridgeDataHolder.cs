@@ -17,12 +17,4 @@ public class CartridgeDataHolder : MonoBehaviour {
 
     [FMODUnity.EventRef]
     [SerializeField] public string trackAudioEvent;
-
-	void Start () {
-        
-	}
-	
-	void Update () {
-		
-	}
 }

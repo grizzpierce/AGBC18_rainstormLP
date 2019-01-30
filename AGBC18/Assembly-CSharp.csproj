@@ -86,6 +86,8 @@
      <Compile Include="Assets\0. Game Assets\Tools\DirectionalAmbiance\Scripts\ParameterData.cs" />
      <Compile Include="Assets\0. Game Assets\Tools\RebuiltDirectionalAmbiance\Scripts\DirectionalParameterController.cs" />
      <Compile Include="Assets\0. Game Assets\Tools\RebuiltDirectionalAmbiance\Scripts\ParameterData.cs" />
+     <Compile Include="Assets\CloseButton.cs" />
+     <Compile Include="Assets\curtainBehaviour.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
@@ -101,6 +103,8 @@
      <Compile Include="Assets\FMOD Resources\GoogleVR\Scripts\Audio\FmodGvrAudioRoom.cs" />
      <Compile Include="Assets\FMOD Resources\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
      <Compile Include="Assets\FMOD Resources\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
+     <Compile Include="Assets\MenuButton.cs" />
+     <Compile Include="Assets\MenuManager.cs" />
      <Compile Include="Assets\Rewired\Examples\ControlRemapping1\Scripts\ControlRemappingDemo1.cs" />
      <Compile Include="Assets\Rewired\Examples\CustomControllersTilt\Scripts\CustomControllersTiltDemo.cs" />
      <Compile Include="Assets\Rewired\Examples\CustomControllersTouch\Scripts\CustomControllerDemo.cs" />

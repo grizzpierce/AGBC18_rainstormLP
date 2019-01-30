@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/0. Game Assets/Scenes/IWG_Splash/IWG_Splash_worldspace.unity
+- path: Assets/0. Game Assets/Scenes/Main.unity
   isLoaded: 1
   isActive: 1
