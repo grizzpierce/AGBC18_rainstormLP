@@ -7691,7 +7691,7 @@ MonoBehaviour:
   preDialogAudio: 
   cartridgeDiscoverAudioDelay: 0
   postDialog: clicked bingche
-  interactedWith: 0
+  postDialogAudio: 
 --- !u!1 &198085577
 GameObject:
   m_ObjectHideFlags: 0
@@ -10095,7 +10095,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   stopNaNPropagation: 1
-  finalBlitToCameraTarget: 1
   antialiasingMode: 0
   temporalAntialiasing:
     jitterSpread: 0.75
@@ -15344,7 +15343,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   stopNaNPropagation: 1
-  finalBlitToCameraTarget: 1
   antialiasingMode: 0
   temporalAntialiasing:
     jitterSpread: 0.75
@@ -16542,7 +16540,7 @@ GameObject:
   - component: {fileID: 651697736}
   m_Layer: 0
   m_Name: LightAmbiance
-  m_TagString: DirectionalAmbiance
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -22888,7 +22886,7 @@ GameObject:
   - component: {fileID: 809151872}
   m_Layer: 0
   m_Name: GrassAmbiance
-  m_TagString: DirectionalAmbiance
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -23303,7 +23301,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   stopNaNPropagation: 1
-  finalBlitToCameraTarget: 1
   antialiasingMode: 0
   temporalAntialiasing:
     jitterSpread: 0.75
@@ -24241,7 +24238,7 @@ GameObject:
   - component: {fileID: 950869044}
   m_Layer: 0
   m_Name: StreetAmbiance
-  m_TagString: DirectionalAmbiance
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -31249,7 +31246,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1184155535
 RectTransform:
   m_ObjectHideFlags: 0
@@ -32841,7 +32838,7 @@ MonoBehaviour:
   cartridgeDiscoverAudioDelay: 0
   postDialog: fuck off im sleeping
   postDialogAudio: 
---- !u!1 &1301297392
+--- !u!1 &1306858534
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 1556925358207020, guid: 14b83b146d3b247aa8e6ed379323d919,
@@ -35796,7 +35793,7 @@ GameObject:
   - component: {fileID: 1604503713}
   m_Layer: 0
   m_Name: Audio Manager
-  m_TagString: AudioManager
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35814,12 +35811,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicBank: music
   mainBank: Master Bank
-  robustAmbiances: ComplexAmbiances
-  lightweightAmbiances: SimpleAmbiances
-  masterVolume: VCA_Master
-  musicVolume: VCA_MenuMusic
-  uiVolume: VCA_MenuUI
-  enviroVolume: VCA_MenuEnvironmental
   cartridgeLoad: 
   cartridgePlay: 
   cartridgeStop: 
@@ -36090,7 +36081,7 @@ GameObject:
   - component: {fileID: 1635649294}
   m_Layer: 0
   m_Name: VendingMachineAmbiance
-  m_TagString: DirectionalAmbiance
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -38864,7 +38855,7 @@ GameObject:
   - component: {fileID: 1884396349}
   m_Layer: 5
   m_Name: Popup Container
-  m_TagString: PopupManager
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39974,7 +39965,7 @@ MonoBehaviour:
   cartridgeDiscoverAudioDelay: 0
   postDialog: God you hate parking meters.
   postDialogAudio: 
---- !u!1 &2007456994
+--- !u!1 &2004111829
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 1414796917198832, guid: 14b83b146d3b247aa8e6ed379323d919,
@@ -40890,7 +40881,7 @@ GameObject:
   - component: {fileID: 2092520900}
   m_Layer: 0
   m_Name: DrainAmbiance
-  m_TagString: DirectionalAmbiance
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

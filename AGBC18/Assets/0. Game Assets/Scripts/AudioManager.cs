@@ -36,18 +36,18 @@ public class AudioManager : MonoBehaviour {
     public string musicBank;
     [FMODUnity.BankRef]
     public string mainBank;
-    [FMODUnity.BankRef]
-    public string robustAmbiances;
-    [FMODUnity.BankRef]
-    public string lightweightAmbiances;
+    // [FMODUnity.BankRef]
+    // public string robustAmbiances;
+    // [FMODUnity.BankRef]
+    // public string lightweightAmbiances;
 
 
-    [Space]
-    [Header("VCAs")]
-    public string masterVolume;
-    public string musicVolume;
-    public string uiVolume;
-    public string enviroVolume;
+    // [Space]
+    // [Header("VCAs")]
+    // public string masterVolume;
+    // public string musicVolume;
+    // public string uiVolume;
+    // public string enviroVolume;
 
 
     [Space]
@@ -72,7 +72,6 @@ public class AudioManager : MonoBehaviour {
     public string dudInteract;
     [FMODUnity.EventRef]
     public string textScroll;
-
     [FMODUnity.EventRef]
     public string rainAmbiance;
 
@@ -84,17 +83,17 @@ public class AudioManager : MonoBehaviour {
     MUSIC_STATE _currentState = MUSIC_STATE.INTRO;
     // ENVIRO_SETTING _environmentAudioSetting = ENVIRO_SETTING.UNDEFINED;
 
-    GameObject[] _directionalAmbianceObjects;
+    // GameObject[] _directionalAmbianceObjects;
 
-    FMOD.Studio.VCA _masterVolumeVCA;
-    FMOD.Studio.VCA _musicVolumeVCA;
-    FMOD.Studio.VCA _uiVolumeVCA;
-    FMOD.Studio.VCA _enviroVolumeVCA;
+    // FMOD.Studio.VCA _masterVolumeVCA;
+    // FMOD.Studio.VCA _musicVolumeVCA;
+    // FMOD.Studio.VCA _uiVolumeVCA;
+    // FMOD.Studio.VCA _enviroVolumeVCA;
 
-    float _currentMasterVolumePercent = -1.0f;
-    float _currentMusicVolumePercent = -1.0f;
-    float _currentUIVolumePercent = -1.0f;
-    float _currentEnviroVolumePercent = -1.0f;
+    // float _currentMasterVolumePercent = -1.0f;
+    // float _currentMusicVolumePercent = -1.0f;
+    // float _currentUIVolumePercent = -1.0f;
+    // float _currentEnviroVolumePercent = -1.0f;
 
     
 
@@ -128,7 +127,7 @@ public class AudioManager : MonoBehaviour {
 	void Start () {
 
         _cameraRigTransform = _cameraRig.GetComponent<Transform>();
-        _directionalAmbianceObjects = GameObject.FindGameObjectsWithTag("DirectionalAmbiance");
+        // _directionalAmbianceObjects = GameObject.FindGameObjectsWithTag("DirectionalAmbiance");
 
         
 
@@ -146,10 +145,10 @@ public class AudioManager : MonoBehaviour {
         //     }
         // }
 
-        _masterVolumeVCA = FMODUnity.RuntimeManager.GetVCA(masterVolume);
-        _musicVolumeVCA = FMODUnity.RuntimeManager.GetVCA(musicVolume);
-        _uiVolumeVCA = FMODUnity.RuntimeManager.GetVCA(uiVolume);
-        _enviroVolumeVCA = FMODUnity.RuntimeManager.GetVCA(enviroVolume);
+        // _masterVolumeVCA = FMODUnity.RuntimeManager.GetVCA(masterVolume);
+        // _musicVolumeVCA = FMODUnity.RuntimeManager.GetVCA(musicVolume);
+        // _uiVolumeVCA = FMODUnity.RuntimeManager.GetVCA(uiVolume);
+        // _enviroVolumeVCA = FMODUnity.RuntimeManager.GetVCA(enviroVolume);
 	}
 
     public void playOneShot(string _toPlay) {
@@ -187,62 +186,62 @@ public class AudioManager : MonoBehaviour {
     // MENU INTERFACE
 
     // constants for volume slider implementation
-    static float dynamic_range = 40.0f;
-    static float power = Mathf.Pow(10.0f, dynamic_range / 20.0f);
-    static float a = 1.0f / power;
-    static float b = Mathf.Log(power);
+    // static float dynamic_range = 40.0f;
+    // static float power = Mathf.Pow(10.0f, dynamic_range / 20.0f);
+    // static float a = 1.0f / power;
+    // static float b = Mathf.Log(power);
 
-    public void SetMasterVolume(float controlPercentage) {
-        if (controlPercentage != _currentMasterVolumePercent) {
-            float volumePercent;
-            if (controlPercentage == 0.0f) {
-                volumePercent = 0.0f;
-            } else {
-                volumePercent = a * Mathf.Exp(controlPercentage * b);
-            }
-            _masterVolumeVCA.setVolume(volumePercent);
-            _currentMasterVolumePercent = controlPercentage;
-        }
-    }
+    // public void SetMasterVolume(float controlPercentage) {
+    //     if (controlPercentage != _currentMasterVolumePercent) {
+    //         float volumePercent;
+    //         if (controlPercentage == 0.0f) {
+    //             volumePercent = 0.0f;
+    //         } else {
+    //             volumePercent = a * Mathf.Exp(controlPercentage * b);
+    //         }
+    //         _masterVolumeVCA.setVolume(volumePercent);
+    //         _currentMasterVolumePercent = controlPercentage;
+    //     }
+    // }
 
-    public void SetMusicVolume(float controlPercentage) {
-        if (controlPercentage != _currentMusicVolumePercent) {
-            float volumePercent;
-            if (controlPercentage == 0.0f) {
-                volumePercent = 0.0f;
-            } else {
-                volumePercent = a * Mathf.Exp(controlPercentage * b);
-            }
-            _musicVolumeVCA.setVolume(volumePercent);
-            _currentMusicVolumePercent = controlPercentage;
-        }
-    }
+    // public void SetMusicVolume(float controlPercentage) {
+    //     if (controlPercentage != _currentMusicVolumePercent) {
+    //         float volumePercent;
+    //         if (controlPercentage == 0.0f) {
+    //             volumePercent = 0.0f;
+    //         } else {
+    //             volumePercent = a * Mathf.Exp(controlPercentage * b);
+    //         }
+    //         _musicVolumeVCA.setVolume(volumePercent);
+    //         _currentMusicVolumePercent = controlPercentage;
+    //     }
+    // }
 
-    public void SetUIVolume(float controlPercentage) {
-        if (controlPercentage != _currentMusicVolumePercent) {
-            float volumePercent;
-            if (controlPercentage == 0.0f) {
-                volumePercent = 0.0f;
-            } else {
-                volumePercent = a * Mathf.Exp(controlPercentage * b);
-            }
-            _uiVolumeVCA.setVolume(volumePercent);
-            _currentUIVolumePercent = controlPercentage;
-        }
-    }
+    // public void SetUIVolume(float controlPercentage) {
+    //     if (controlPercentage != _currentMusicVolumePercent) {
+    //         float volumePercent;
+    //         if (controlPercentage == 0.0f) {
+    //             volumePercent = 0.0f;
+    //         } else {
+    //             volumePercent = a * Mathf.Exp(controlPercentage * b);
+    //         }
+    //         _uiVolumeVCA.setVolume(volumePercent);
+    //         _currentUIVolumePercent = controlPercentage;
+    //     }
+    // }
 
-    public void SetEnviroVolume(float controlPercentage) {
-        if (controlPercentage != _currentEnviroVolumePercent) {
-            float volumePercent;
-            if (controlPercentage == 0.0f) {
-                volumePercent = 0.0f;
-            } else {
-                volumePercent = a * Mathf.Exp(controlPercentage * b);
-            }
-            _enviroVolumeVCA.setVolume(volumePercent);
-            _currentEnviroVolumePercent = controlPercentage;
-        }
-    }
+    // public void SetEnviroVolume(float controlPercentage) {
+    //     if (controlPercentage != _currentEnviroVolumePercent) {
+    //         float volumePercent;
+    //         if (controlPercentage == 0.0f) {
+    //             volumePercent = 0.0f;
+    //         } else {
+    //             volumePercent = a * Mathf.Exp(controlPercentage * b);
+    //         }
+    //         _enviroVolumeVCA.setVolume(volumePercent);
+    //         _currentEnviroVolumePercent = controlPercentage;
+    //     }
+    // }
 
     // public void SetEnvironmentAmbianceSetting(ENVIRO_SETTING newEnviroSetting) {
     //     if (_environmentAudioSetting != newEnviroSetting) {
