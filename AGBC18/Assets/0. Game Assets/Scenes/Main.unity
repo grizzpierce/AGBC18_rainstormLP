@@ -35863,7 +35863,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicBank: music
   mainBank: Master Bank
-  cartridgeLoad: 
+  cartridgeLoad: event:/sfx/one shots/cartridge/sfx_cartridgeLoad
   cartridgePlay: event:/sfx/one shots/cartridge/sfx_cartridgePlay
   cartridgeStop: event:/sfx/one shots/cartridge/sfx_cartridgeStop
   cartridgeFinishPlaying: event:/sfx/one shots/cartridge/sfx_cartridgeFinishPlay

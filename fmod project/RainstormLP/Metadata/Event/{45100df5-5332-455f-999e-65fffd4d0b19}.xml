@@ -164,6 +164,9 @@
         </property>
     </object>
     <object class="SFXReverbEffect" id="{99fdecc3-2fc3-42e0-971b-0ab09011883b}">
+        <property name="bypass">
+            <value>true</value>
+        </property>
         <property name="wetLevel">
             <value>-9</value>
         </property>

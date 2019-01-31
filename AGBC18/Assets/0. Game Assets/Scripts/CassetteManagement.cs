@@ -93,6 +93,7 @@ public class CassetteManagement : MonoBehaviour {
     IEnumerator TapeChange(GameObject _pressed) {
 
         yield return StartCoroutine(TapeStop());
+        yield return new WaitForSeconds(1.0f);
         yield return StartCoroutine(TapeStart(_pressed));
         yield return null;
     }
@@ -118,21 +119,21 @@ public class CassetteManagement : MonoBehaviour {
         playingTrack.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
         
         IsStopping = false;
-        yield return null;
     }
 
     IEnumerator TapeFinish() {
         IsStopping = true;
         yield return StartCoroutine(PlayOneShot(audioManager.cartridgeFinishPlaying));
         IsStopping = false;
-        yield return null;
     }
+
 
     IEnumerator TapeStart(GameObject _pressed) {
         // TODO play cartridge start
         // TODO wait for reel up
         IsStarting = true;
         yield return StartCoroutine(PlayOneShot(audioManager.cartridgeLoad));
+        yield return new WaitForSeconds(2.0f);
 
         var audioEvent = _pressed.GetComponent<CartridgeData>().GetDataHolder().trackAudioEvent;
 
@@ -141,7 +142,7 @@ public class CassetteManagement : MonoBehaviour {
         if (audioEvent == null)
         {
             yield return StartCoroutine(PlayOneShot(audioManager.cartridgePlay));
-            Debug.Log("No Track Event Data for selected track!");
+            // Debug.Log("No Track Event Data for selected track!");
             yield return StartCoroutine(PlayOneShot(audioManager.cartridgeFinishPlaying));
         }
         else
@@ -170,7 +171,6 @@ public class CassetteManagement : MonoBehaviour {
             }
         }
         IsStarting = false;
-        yield return null;
     }
     
     FMOD.Studio.EventInstance playingOneShot;

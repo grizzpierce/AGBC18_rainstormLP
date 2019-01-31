@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{e359b4fa-bda8-45e2-a723-cf6addc03794}">
+        <property name="assetPath">
+            <value>Rainstorm_UI_NewCartridgeRecs_TapeLoad_02.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>1.1250113378684807</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{ff88e6c8-6eab-47e1-a8ce-a2d145d2fd0b}</destination>
+        </relationship>
+    </object>
+</objects>

@@ -73,9 +73,11 @@ MonoBehaviour:
   - {fileID: 114883755604157290}
   - {fileID: 114001752878007796}
   - {fileID: 114324424357955448}
+  - {fileID: 114839784438373938}
+  - {fileID: 114953864900211334}
   MasterBankRef: {fileID: 114549747764888890}
   StringsBankRef: {fileID: 114576159809570444}
-  stringsBankWriteTime: 636845107660000000
+  stringsBankWriteTime: 636845147110000000
   cacheVersion: 2
 --- !u!114 &114001752878007796
 MonoBehaviour:
@@ -194,7 +196,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114914500423205066}
+  - {fileID: 114201330199504524}
   MinDistance: 0
   MaxDistance: 0
   Length: 135288
@@ -423,6 +425,21 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114038441707703790
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114038721041585256
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -450,6 +467,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: StreetVolume0to1
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114039573401172636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
   Min: 0
   Max: 1
   Default: 1
@@ -606,6 +638,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114065899621814842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114069656737983534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1019,7 +1066,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114728305241213572}
+  - {fileID: 114228928792502188}
   MinDistance: 0
   MaxDistance: 0
   Length: 166739
@@ -1227,7 +1274,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114939847651066006}
+  - {fileID: 114305849873001268}
   MinDistance: 0
   MaxDistance: 0
   Length: 90723
@@ -1270,7 +1317,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114651168170557456}
+  - {fileID: 114210286297639434}
   MinDistance: 0
   MaxDistance: 0
   Length: 98000
@@ -1413,7 +1460,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114624915400397502}
+  - {fileID: 114405945930581552}
   MinDistance: 0
   MaxDistance: 0
   Length: 168071
@@ -1469,6 +1516,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114201330199504524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114201683217473072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1575,10 +1637,25 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114782429908903860}
+  - {fileID: 114217558107445678}
   MinDistance: 0
   MaxDistance: 0
   Length: 235000
+--- !u!114 &114210286297639434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114211166417639686
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1647,7 +1724,52 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114217558107445678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114221574013459978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114228928792502188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114229161144682294
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1692,6 +1814,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114232940212941226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114234996468632868
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1711,7 +1848,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114715726818259046}
+  - {fileID: 114645428528241046}
   MinDistance: 0
   MaxDistance: 0
   Length: 40000
@@ -1883,6 +2020,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114270506255636750
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
   Min: 0
   Max: 1
   Default: 1
@@ -2058,6 +2210,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114305849873001268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114306398252997892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2103,6 +2270,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114310480519707682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114310624972756414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2276,7 +2458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: /Users/jacobmumford/Desktop/RAINSTORM_LP/AGBC18_rainstormLP/AGBC18/FMOD_Assets/Desktop/ComplexAmbiances.bank
-  lastModified: 636845107660000000
+  lastModified: 636845147110000000
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -2327,6 +2509,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114341835689357690
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Elevation_User
+  Min: -2
+  Max: 25
+  Default: 25
 --- !u!114 &114347141033275736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2361,8 +2558,8 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114739593678270386}
-  - {fileID: 114019320481050718}
+  - {fileID: 114792157267719176}
+  - {fileID: 114488564858306062}
   MinDistance: 0
   MaxDistance: 0
   Length: 20000
@@ -2463,6 +2660,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114356161995532572
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: DrainOffCenter
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114357944792797816
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2512,7 +2724,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114856437451694260}
+  - {fileID: 114931459282719880}
   MinDistance: 0
   MaxDistance: 0
   Length: 164000
@@ -2744,6 +2956,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114389271806437956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114389738355323446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2893,6 +3120,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114405945930581552
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114408060250230684
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2930,6 +3172,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114408485692156324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114409914125442984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3095,6 +3352,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114435505105867274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114437027646985922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3343,6 +3615,51 @@ MonoBehaviour:
   - Name: 
     Value: 2711040
   Exists: 1
+--- !u!114 &114466517661463824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114467232405376152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114467606441430382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114468813384034388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3422,7 +3739,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114221574013459978}
+  - {fileID: 114516314765356034}
   MinDistance: 0
   MaxDistance: 0
   Length: 15000
@@ -3461,7 +3778,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114270678681673322}
+  - {fileID: 114310480519707682}
   MinDistance: 0
   MaxDistance: 0
   Length: 413500
@@ -3562,6 +3879,36 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114488564858306062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114491990996065556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114495773554900116
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3631,6 +3978,21 @@ MonoBehaviour:
   Max: 1
   Default: 1
 --- !u!114 &114502162889455732
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114502882636460054
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3735,6 +4097,36 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114515324365464188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114516314765356034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114516530861290278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3784,10 +4176,10 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114038721041585256}
-  - {fileID: 114600549702859378}
-  - {fileID: 114456469402791256}
-  - {fileID: 114543584052114380}
+  - {fileID: 114684438178630024}
+  - {fileID: 114811232058674084}
+  - {fileID: 114232940212941226}
+  - {fileID: 114808555177623606}
   MinDistance: 0
   MaxDistance: 0
   Length: 580
@@ -4032,11 +4424,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: /Users/jacobmumford/Desktop/RAINSTORM_LP/AGBC18_rainstormLP/AGBC18/FMOD_Assets/Desktop/Master
     Bank.bank
-  lastModified: 636845107660000000
+  lastModified: 636845147110000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 6714784
+    Value: 6764096
   Exists: 1
 --- !u!114 &114551588986856934
 MonoBehaviour:
@@ -4065,7 +4457,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: /Users/jacobmumford/Desktop/RAINSTORM_LP/AGBC18_rainstormLP/AGBC18/FMOD_Assets/Desktop/music.bank
-  lastModified: 636845107670000000
+  lastModified: 636845147120000000
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -4259,11 +4651,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: FMOD_Assets/Desktop/Master Bank.strings.bank
-  lastModified: 636845107660000000
+  lastModified: 636845147110000000
   LoadResult: 0
   FileSizes:
   - Name: 
-    Value: 3588
+    Value: 3660
   Exists: 1
 --- !u!114 &114580418164037686
 MonoBehaviour:
@@ -4284,7 +4676,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114572029845961418}
+  - {fileID: 114515324365464188}
   MinDistance: 0
   MaxDistance: 0
   Length: 240796
@@ -4382,6 +4774,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: RainVolume0to1
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114601721230366192
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
   Min: 0
   Max: 1
   Default: 1
@@ -4494,7 +4901,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114267630173968824}
+  - {fileID: 114229161144682294}
   MinDistance: 0
   MaxDistance: 0
   Length: 5000
@@ -4673,6 +5080,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114645428528241046
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114647793289175560
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4815,6 +5237,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114658226941007346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: StreetVolume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114661754633871446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5018,6 +5455,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114684438178630024
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: StreetVolume0to1
   Min: 0
   Max: 1
   Default: 1
@@ -5285,6 +5737,21 @@ MonoBehaviour:
   Max: 1
   Default: 1
 --- !u!114 &114722365053815682
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114722411480410084
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5640,7 +6107,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Path: /Users/jacobmumford/Desktop/RAINSTORM_LP/AGBC18_rainstormLP/AGBC18/FMOD_Assets/Desktop/SimpleAmbiances.bank
-  lastModified: 636845107670000000
+  lastModified: 636845147120000000
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -5728,6 +6195,36 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114790242435169756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: DrivebysVolume0to1
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114792157267719176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: DrainOffCenter
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114793369692414902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5788,6 +6285,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114808555177623606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: DrivebysVolume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114810732912906908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5818,6 +6330,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114811232058674084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: RainVolume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114811371822154932
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5960,6 +6487,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114839784438373938
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/one shots/cartridge/sfx_cartridgeLoad
+  guid: 42290108c882e2428bfac3078dd4fd7c
+  Banks:
+  - {fileID: 114549747764888890}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1761
 --- !u!114 &114841597192170012
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6702,7 +7251,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114679049303344754}
+  - {fileID: 114502882636460054}
   MinDistance: 0
   MaxDistance: 0
   Length: 146000
@@ -6740,6 +7289,21 @@ MonoBehaviour:
   - Name: 
     Value: 2782400
   Exists: 1
+--- !u!114 &114931459282719880
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Elevation_User
+  Min: -2
+  Max: 25
+  Default: 25
 --- !u!114 &114935136742707136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6960,6 +7524,28 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114953864900211334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: event:/sfx/one shots/cartridge/sfx_cartridgeSwapPlay
+  guid: f243dd996b01e048a5b37188d652ce71
+  Banks:
+  - {fileID: 114549747764888890}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 4000
 --- !u!114 &114956590911385200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7128,6 +7714,36 @@ MonoBehaviour:
   Min: -2
   Max: 25
   Default: 25
+--- !u!114 &114985263960219570
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: RainVolume0to1
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114985338156568276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114985341928582528
 MonoBehaviour:
   m_ObjectHideFlags: 0

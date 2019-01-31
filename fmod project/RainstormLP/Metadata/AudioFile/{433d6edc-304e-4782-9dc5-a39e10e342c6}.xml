@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{433d6edc-304e-4782-9dc5-a39e10e342c6}">
+        <property name="assetPath">
+            <value>Rainstorm_UI_NewCartridgeRecs_TapeDoorClose_03.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>1</value>
+        </property>
+        <property name="length">
+            <value>0.79167800453514736</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{ff88e6c8-6eab-47e1-a8ce-a2d145d2fd0b}</destination>
+        </relationship>
+    </object>
+</objects>
