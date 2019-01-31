@@ -33,6 +33,12 @@ public class CassetteSelector : MonoBehaviour {
 	public List<GameObject> cassettes;
 	int cassetteStock = -1;
 
+
+    [FMODUnity.EventRef]
+    public string cartridgeScrollLeft;
+    [FMODUnity.EventRef]
+    public string cartridgeScrollRight;
+
 	void Start () {
 		if(inactiveSlot == null)
 			Destroy(this);
@@ -126,6 +132,8 @@ public class CassetteSelector : MonoBehaviour {
 				//print(_inactive[i].ToString());
 			}
 
+			//FMODUnity.RuntimeManager.PlayOneShot(cartridgeScrollRight);
+
 			StartCoroutine(Shift(_inactive, _active));
 		}
 	}
@@ -179,6 +187,8 @@ public class CassetteSelector : MonoBehaviour {
 
 				//print(_inactive[i].ToString());
 			}
+
+			//FMODUnity.RuntimeManager.PlayOneShot(cartridgeScrollLeft);
 
 			StartCoroutine(Shift(_inactive, _active));
 		}

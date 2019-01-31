@@ -63,10 +63,6 @@ public class AudioManager : MonoBehaviour {
     [FMODUnity.EventRef]
     public string cartridgeRattle;
     [FMODUnity.EventRef]
-    public string cartridgeScrollLeft;
-    [FMODUnity.EventRef]
-    public string cartridgeScrollRight;
-    [FMODUnity.EventRef]
     public string findTapeInteract;
     [FMODUnity.EventRef]
     public string dudInteract;
