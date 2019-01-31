@@ -75,11 +75,11 @@ public class CassetteManagement : MonoBehaviour {
                 StartCoroutine(TapeStop());
             } else {
                 // Check to see if there is a currently playing cartridge at all; if so, stops it.
-                if (!IsStopping || !IsStarting) {
+                if (!IsStopping && !IsStarting) {
                     if (playing != null) {
-                        StartCoroutine(TapeChange(pressed));
+                        if (!IsStarting) StartCoroutine(TapeChange(pressed));
                     } else {
-                        StartCoroutine(TapeStart(pressed));
+                        if (!IsStarting) StartCoroutine(TapeStart(pressed));
                     }
                 }
 			}
@@ -148,7 +148,10 @@ public class CassetteManagement : MonoBehaviour {
         else
         {
             FMODUnity.RuntimeManager.PlayOneShot(audioManager.cartridgePlay);
-            if (playingTrack.isValid()) playingTrack.release();
+            if (playingTrack.isValid()) {
+                playingTrack.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+                playingTrack.release();
+            } 
             playingTrack = FMODUnity.RuntimeManager.CreateInstance(audioEvent);
             playingTrack.start();
 
