@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-namespace DirectionalParameterController {
+namespace DirectionalParameterControllerNameSpace {
 	public class DirectionalParameterController : MonoBehaviour {
 
 		[FMODUnity.EventRef]
@@ -67,10 +67,10 @@ namespace DirectionalParameterController {
 				Color oldColor = Gizmos.color;
 
 				foreach(ParameterData parameterDataInstance in _parameters) {
-					//parameterDataInstance.DrawAngleVectorsGizmos(_from, Selection.Contains(this.gameObject), SHOW_ON_UNSELECTED);
+					parameterDataInstance.DrawAngleVectorsGizmos(_from, Selection.Contains(this.gameObject), SHOW_ON_UNSELECTED);
 				}
 
-				//DrawOrientationVectorGizmo(Selection.Contains(this.gameObject));
+				DrawOrientationVectorGizmo(Selection.Contains(this.gameObject));
 
 				Gizmos.color = oldColor;
 			}
@@ -79,9 +79,9 @@ namespace DirectionalParameterController {
 		void OnDrawGizmosSelected() {
 			Color oldColor = Gizmos.color;
 
-			// foreach(ParameterData parameterDataInstance in _parameters) {
-			// 	parameterDataInstance.DrawAngleVectorsGizmos(_from, Selection.Contains(this.gameObject), SHOW_ON_UNSELECTED);
-			// }
+			foreach(ParameterData parameterDataInstance in _parameters) {
+				parameterDataInstance.DrawAngleVectorsGizmos(_from, Selection.Contains(this.gameObject), SHOW_ON_UNSELECTED);
+			}
 			DrawCameraVectorGizmo();
 
 			Gizmos.color = oldColor;
@@ -126,6 +126,10 @@ namespace DirectionalParameterController {
 
 			// Calculates camera angle and represents it in 0 - 360 deg
 			_cameraAngle = Vector3.SignedAngle(transform.forward, _cameraVector, transform.up) + 180f;
+		}
+
+		public FMOD.Studio.EventInstance GetThisEventInstance() {
+			return _thisEvent;
 		}
 	}
 }

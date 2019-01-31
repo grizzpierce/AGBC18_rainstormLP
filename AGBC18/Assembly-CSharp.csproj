@@ -65,8 +65,6 @@
      <Compile Include="Assets\0. Game Assets\Scripts\CassetteSelector.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\CassetteShowcase.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\CassetteUI.cs" />
-     <Compile Include="Assets\0. Game Assets\Scripts\CloseButton.cs" />
-     <Compile Include="Assets\0. Game Assets\Scripts\curtainBehaviour.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\CustomCursor.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\fadeIn.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\GraffitiBehaviour.cs" />
@@ -75,8 +73,6 @@
      <Compile Include="Assets\0. Game Assets\Scripts\IntroCassette.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\LampBehaviour.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\MapRotator.cs" />
-     <Compile Include="Assets\0. Game Assets\Scripts\MenuButton.cs" />
-     <Compile Include="Assets\0. Game Assets\Scripts\MenuManager.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\PerspectiveToggle.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\PopupManager.cs" />
      <Compile Include="Assets\0. Game Assets\Scripts\Renderscale.cs" />
@@ -92,6 +88,7 @@
      <Compile Include="Assets\0. Game Assets\Tools\RebuiltDirectionalAmbiance\Scripts\ParameterData.cs" />
      <Compile Include="Assets\AudioSetting.cs" />
      <Compile Include="Assets\CloseButton.cs" />
+     <Compile Include="Assets\curtainBehaviour.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
@@ -107,6 +104,7 @@
      <Compile Include="Assets\FMOD Resources\GoogleVR\Scripts\Audio\FmodGvrAudioRoom.cs" />
      <Compile Include="Assets\FMOD Resources\ResonanceAudio\Scripts\FmodResonanceAudio.cs" />
      <Compile Include="Assets\FMOD Resources\ResonanceAudio\Scripts\FmodResonanceAudioRoom.cs" />
+     <Compile Include="Assets\MenuButton.cs" />
      <Compile Include="Assets\MenuManager.cs" />
      <Compile Include="Assets\RadioButton.cs" />
      <Compile Include="Assets\RainSetting.cs" />

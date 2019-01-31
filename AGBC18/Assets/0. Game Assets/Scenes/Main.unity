@@ -9772,6 +9772,8 @@ MonoBehaviour:
   areaLight: {fileID: 1256007868}
   isLit: 1
   isChanging: 0
+  transitionTime: 0.5
+  lampInteractAudio: event:/sfx/one shots/interaction/sfx_lampInteract
 --- !u!65 &394853282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9802,6 +9804,42 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &394853285
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 394853279}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d8f5e95f114f4cc2a026667b2827d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fmodEvent: event:/sfx/ambiances/sfx_lampAmbiance
+  _orientationAngle: 180
+  SHOW_ON_UNSELECTED: 1
+  _parameters:
+  - _fmodParameter: Volume0to1
+    _orientationOffset: 63
+    _widthAngleToAdd: 29
+    _fadeAngleToAdd: 114
+    _widthUpperAngle: 272
+    _widthLowerAngle: 214
+    _fadeUpperAngle: 26
+    _fadeLowerAngle: 100
+    _widthUpperVector: {x: -0.99939084, y: 0, z: 0.03489931}
+    _widthLowerVector: {x: -0.55919296, y: 0, z: -0.82903755}
+    _fadeUpperVector: {x: 0.43837115, y: 0, z: 0.89879405}
+    _fadeLowerVector: {x: 0.9848077, y: 0, z: -0.1736482}
+    DISPLAY: 2
+    _maxNormalizedValue: 0.84711576
+    _minNormalizedValue: 0.5098809
+    _maxValueToDisplay: -1.4411448
+    _minValueToDisplay: -5.850625
+    SHOW_ON_UNSELECTED: 1
+    DROPDOWN_OPEN: 1
+    IN_FOCUS: 1
+    SHOW_ADVANCED: 1
 --- !u!1 &395643415
 GameObject:
   m_ObjectHideFlags: 0
@@ -10095,6 +10133,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   stopNaNPropagation: 1
+  finalBlitToCameraTarget: 1
   antialiasingMode: 0
   temporalAntialiasing:
     jitterSpread: 0.75
@@ -15343,6 +15382,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   stopNaNPropagation: 1
+  finalBlitToCameraTarget: 1
   antialiasingMode: 0
   temporalAntialiasing:
     jitterSpread: 0.75
@@ -16537,14 +16577,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 651697735}
-  - component: {fileID: 651697736}
   m_Layer: 0
   m_Name: LightAmbiance
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &651697735
 Transform:
   m_ObjectHideFlags: 0
@@ -16558,42 +16597,6 @@ Transform:
   m_Father: {fileID: 609685165}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &651697736
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 651697734}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8d8f5e95f114f4cc2a026667b2827d03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _fmodEvent: event:/sfx/ambiances/sfx_lampAmbiance
-  _orientationAngle: 180
-  SHOW_ON_UNSELECTED: 1
-  _parameters:
-  - _fmodParameter: Volume0to1
-    _orientationOffset: 63
-    _widthAngleToAdd: 29
-    _fadeAngleToAdd: 114
-    _widthUpperAngle: 272
-    _widthLowerAngle: 214
-    _fadeUpperAngle: 26
-    _fadeLowerAngle: 100
-    _widthUpperVector: {x: -0.99939084, y: 0, z: 0.03489931}
-    _widthLowerVector: {x: -0.55919296, y: 0, z: -0.82903755}
-    _fadeUpperVector: {x: 0.43837115, y: 0, z: 0.89879405}
-    _fadeLowerVector: {x: 0.9848077, y: 0, z: -0.1736482}
-    DISPLAY: 2
-    _maxNormalizedValue: 0.7105553
-    _minNormalizedValue: 0.5098809
-    _maxValueToDisplay: -2.9680421
-    _minValueToDisplay: -5.850625
-    SHOW_ON_UNSELECTED: 1
-    DROPDOWN_OPEN: 1
-    IN_FOCUS: 1
-    SHOW_ADVANCED: 1
 --- !u!1 &655672162
 GameObject:
   m_ObjectHideFlags: 0
@@ -23301,6 +23304,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   stopNaNPropagation: 1
+  finalBlitToCameraTarget: 1
   antialiasingMode: 0
   temporalAntialiasing:
     jitterSpread: 0.75

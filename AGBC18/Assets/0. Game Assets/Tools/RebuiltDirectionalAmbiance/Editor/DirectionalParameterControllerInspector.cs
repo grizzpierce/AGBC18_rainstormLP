@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 
-namespace DirectionalParameterController {
+namespace DirectionalParameterControllerNameSpace {
 	[CustomEditor(typeof(DirectionalParameterController))]
 	public class DirectionalParameterControllerInspector : Editor {
 		

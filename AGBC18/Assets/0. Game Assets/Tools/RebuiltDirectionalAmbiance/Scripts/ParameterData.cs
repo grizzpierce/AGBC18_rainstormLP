@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace DirectionalParameterController {
+namespace DirectionalParameterControllerNameSpace {
 	[Serializable]
 	public class ParameterData {
 		public string _fmodParameter;
