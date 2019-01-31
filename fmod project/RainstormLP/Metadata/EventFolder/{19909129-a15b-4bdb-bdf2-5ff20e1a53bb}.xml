@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="EventFolder" id="{19909129-a15b-4bdb-bdf2-5ff20e1a53bb}">
+        <property name="name">
+            <value>manhole</value>
+        </property>
+        <relationship name="folder">
+            <destination>{5d2c8450-af51-411a-a0df-c8a611d1ea9d}</destination>
+        </relationship>
+    </object>
+</objects>
