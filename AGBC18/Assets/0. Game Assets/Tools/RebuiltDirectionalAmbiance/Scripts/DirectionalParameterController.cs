@@ -131,5 +131,13 @@ namespace DirectionalParameterControllerNameSpace {
 		public FMOD.Studio.EventInstance GetThisEventInstance() {
 			return _thisEvent;
 		}
+
+		public void SetEventPaused(bool _pausedValue) {
+			if (_pausedValue) {
+				_thisEvent.setPaused(true);
+			} else {
+				_thisEvent.setPaused(false);
+			}
+		}
 	}
 }

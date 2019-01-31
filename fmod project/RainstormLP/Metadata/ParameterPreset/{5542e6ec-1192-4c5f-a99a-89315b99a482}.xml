@@ -13,7 +13,7 @@
     </object>
     <object class="GameParameter" id="{59f78e04-39a1-49a2-8546-3d11eef80c13}">
         <property name="initialValue">
-            <value>0</value>
+            <value>1</value>
         </property>
         <property name="isExposedRecursively">
             <value>false</value>

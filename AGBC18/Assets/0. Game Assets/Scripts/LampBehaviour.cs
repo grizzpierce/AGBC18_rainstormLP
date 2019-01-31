@@ -22,9 +22,9 @@ public class LampBehaviour : MonoBehaviour {
 
 			FMODUnity.RuntimeManager.PlayOneShot(lampInteractAudio);
 			if (isLit) {
-				this.GetComponent<DirectionalParameterControllerNameSpace.DirectionalParameterController>().GetThisEventInstance().setPaused(true);
+				this.GetComponent<DirectionalParameterControllerNameSpace.DirectionalParameterController>().SetEventPaused(true);
 			} else {
-				this.GetComponent<DirectionalParameterControllerNameSpace.DirectionalParameterController>().GetThisEventInstance().setPaused(false);
+				this.GetComponent<DirectionalParameterControllerNameSpace.DirectionalParameterController>().SetEventPaused(false);
 			}
 
 			StartCoroutine(toggleLight());

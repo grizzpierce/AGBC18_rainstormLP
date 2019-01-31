@@ -279,7 +279,7 @@ namespace DirectionalParameterControllerNameSpace {
 				}
 			}
 
-			Debug.LogWarning("Error: End of calculation section and no area has been choosen!");
+			// Debug.LogWarning("Error: End of calculation section and no area has been choosen!");
 			return -1f;
 		}
 
