@@ -9819,7 +9819,7 @@ MonoBehaviour:
   isLit: 1
   isChanging: 0
   transitionTime: 0.5
-  lampInteractAudio: event:/sfx/one shots/interaction/sfx_lampInteract
+  lampInteractAudio: event:/sfx/one shots/interaction/lamp/sfx_lamp_micro
 --- !u!65 &394853282
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -36304,6 +36304,7 @@ MonoBehaviour:
   audioManager: {fileID: 1604503713}
   cassetteInteractAudio: 
   cassetteStartAudio: 
+  _loadAudioDelay: 6.5
 --- !u!114 &1644698770
 MonoBehaviour:
   m_ObjectHideFlags: 0

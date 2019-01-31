@@ -93,7 +93,7 @@ public class CassetteManagement : MonoBehaviour {
     IEnumerator TapeChange(GameObject _pressed) {
 
         yield return StartCoroutine(TapeStop());
-        yield return new WaitForSeconds(1.0f);
+        yield return new WaitForSeconds(0.8f);
         yield return StartCoroutine(TapeStart(_pressed));
         yield return null;
     }
@@ -133,7 +133,7 @@ public class CassetteManagement : MonoBehaviour {
         // TODO wait for reel up
         IsStarting = true;
         yield return StartCoroutine(PlayOneShot(audioManager.cartridgeLoad));
-        yield return new WaitForSeconds(2.0f);
+        yield return new WaitForSeconds(1.2f);
 
         var audioEvent = _pressed.GetComponent<CartridgeData>().GetDataHolder().trackAudioEvent;
 

@@ -16,6 +16,8 @@ public class IntroCassette : MonoBehaviour {
 	[FMODUnity.EventRef]
 	public string cassetteStartAudio;
 
+	public float _loadAudioDelay = 1.0f;
+
 
 	bool isLaunched = false;
 
@@ -37,15 +39,11 @@ public class IntroCassette : MonoBehaviour {
 			Destroy(gameObject.GetComponent<BoxCollider>());
 			cartridge.transform.parent = null;
 
-			if(cassetteInteractAudio != "") {
-				FMODUnity.RuntimeManager.PlayOneShot(cassetteInteractAudio);
-			} else if (audioManager.cartridgeRattle != "") {
-				FMODUnity.RuntimeManager.PlayOneShot(audioManager.cartridgeRattle);
-			} else {
-				Debug.Log("No FMOD Event data for intro cassette interact");
-			}
+			
+			FMODUnity.RuntimeManager.PlayOneShot(audioManager.dudInteract);
 
 			StartCoroutine(IntroAnimation());
+			StartCoroutine(IntroAudioCues());
 			isLaunched = true;
 		}
 		
@@ -79,19 +77,9 @@ public class IntroCassette : MonoBehaviour {
 
 		cartridge.transform.DOMove(Vector3.zero, 2f).SetEase(Ease.InBack);
 
-		yield return new WaitForSeconds(1.5f);
+		yield return new WaitForSeconds(2.0f);
 
-		if(cassetteStartAudio != "") {
-			FMODUnity.RuntimeManager.PlayOneShot(cassetteStartAudio);
-		} else if (audioManager.cartridgeLoad != "") {
-			FMODUnity.RuntimeManager.PlayOneShot(audioManager.cartridgeLoad);
-		} else {
-			Debug.Log("No FMOD Event data for intro cassette load");
-		}
-
-		yield return new WaitForSeconds(0.5f);
-
-		Destroy(cartridge);				
+		Destroy(cartridge);	
 		//environment.SetActive(true);
 
 		cameraRig.transform.DORotate(new Vector3(0, 30, 0), 3f);
@@ -99,9 +87,14 @@ public class IntroCassette : MonoBehaviour {
 		
 		yield return new WaitForSeconds(3f);
 		
+
+	}
+
+	IEnumerator IntroAudioCues() {
+		yield return new WaitForSeconds(_loadAudioDelay);
+
 		cameraRig.GetComponent<MapRotator>().enabled = true;
 		canvas.GetComponent<UIModes>().LaunchMain();
 		cassetteManager.GetComponent<CassetteManagement>().Launch();
-
 	}
 }
