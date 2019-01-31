@@ -48,7 +48,7 @@ public class interactable : MonoBehaviour {
         if (_popupManager == null) {
             _popupManager = GameObject.FindGameObjectWithTag("PopupManager").GetComponent<PopupManager>();
         }
-        ui = GameObject.Find("Game Canvas").GetComponent<UIModes>();
+        ui = GameObject.FindGameObjectWithTag("GameCanvas").GetComponent<UIModes>();
 
         if(!cassetteOverride) {
             if(cassetteFound == null) {

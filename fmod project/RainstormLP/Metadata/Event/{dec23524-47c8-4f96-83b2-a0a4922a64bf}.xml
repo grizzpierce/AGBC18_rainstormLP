@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{dec23524-47c8-4f96-83b2-a0a4922a64bf}">
         <property name="name">
-            <value>sfx_graffitiInteract</value>
+            <value>sfx_graffiti_micro</value>
         </property>
         <property name="outputFormat">
             <value>0</value>
         </property>
         <relationship name="folder">
-            <destination>{5d2c8450-af51-411a-a0df-c8a611d1ea9d}</destination>
+            <destination>{f7d11d71-7d85-4188-b633-ee9140c3e284}</destination>
         </relationship>
         <relationship name="mixer">
             <destination>{41539e3f-d4ac-4767-abea-520c928eef57}</destination>

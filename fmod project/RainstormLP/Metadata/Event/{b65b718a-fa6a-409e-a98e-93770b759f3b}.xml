@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{b65b718a-fa6a-409e-a98e-93770b759f3b}">
         <property name="name">
-            <value>sfx_pylonInteract</value>
+            <value>sfx_pylon_findTape</value>
         </property>
         <property name="outputFormat">
             <value>0</value>
         </property>
         <relationship name="folder">
-            <destination>{5d2c8450-af51-411a-a0df-c8a611d1ea9d}</destination>
+            <destination>{f2f979eb-47ab-4236-929d-12c6aab57e76}</destination>
         </relationship>
         <relationship name="mixer">
             <destination>{c35c6372-3607-44c5-bac1-6e5713153fac}</destination>

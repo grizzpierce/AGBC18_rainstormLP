@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{1d4e95ea-6553-4a9c-8527-0db71f3f003a}">
         <property name="name">
-            <value>sfx_cupInteract</value>
+            <value>sfx_cup_micro</value>
         </property>
         <property name="outputFormat">
             <value>0</value>
         </property>
         <relationship name="folder">
-            <destination>{5d2c8450-af51-411a-a0df-c8a611d1ea9d}</destination>
+            <destination>{7b109f2a-7746-4425-a3df-1bf68dc0344e}</destination>
         </relationship>
         <relationship name="mixer">
             <destination>{97c9dab2-08c4-4032-942e-e2463f46d597}</destination>

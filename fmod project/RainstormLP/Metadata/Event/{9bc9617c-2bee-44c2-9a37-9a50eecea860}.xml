@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{9bc9617c-2bee-44c2-9a37-9a50eecea860}">
         <property name="name">
-            <value>sfx_flyerInteract</value>
+            <value>sfx_flyer_findTape</value>
         </property>
         <property name="outputFormat">
             <value>0</value>
         </property>
         <relationship name="folder">
-            <destination>{5d2c8450-af51-411a-a0df-c8a611d1ea9d}</destination>
+            <destination>{5ebf507f-fc92-4b86-873b-2758e72099db}</destination>
         </relationship>
         <relationship name="mixer">
             <destination>{1ee65bc6-23bc-4866-84c0-bfbaebf2102e}</destination>

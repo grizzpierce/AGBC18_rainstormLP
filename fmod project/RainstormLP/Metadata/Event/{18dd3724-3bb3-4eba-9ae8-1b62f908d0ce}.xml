@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.01.10.00">
     <object class="Event" id="{18dd3724-3bb3-4eba-9ae8-1b62f908d0ce}">
         <property name="name">
-            <value>sfx_bikeRackInteract</value>
+            <value>sfx_bikeRack_findTape</value>
         </property>
         <property name="outputFormat">
             <value>0</value>
         </property>
         <relationship name="folder">
-            <destination>{5d2c8450-af51-411a-a0df-c8a611d1ea9d}</destination>
+            <destination>{0bc0ced6-bdbf-435d-a449-3354e670f07e}</destination>
         </relationship>
         <relationship name="mixer">
             <destination>{ff9d15e6-8500-4ed7-a0e1-471731c91d13}</destination>

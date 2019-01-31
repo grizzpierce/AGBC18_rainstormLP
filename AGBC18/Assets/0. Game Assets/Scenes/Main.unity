@@ -5435,7 +5435,7 @@ GameObject:
   - component: {fileID: 41206564}
   m_Layer: 5
   m_Name: Canvas
-  m_TagString: Untagged
+  m_TagString: GameCanvas
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35845,7 +35845,7 @@ GameObject:
   - component: {fileID: 1604503713}
   m_Layer: 0
   m_Name: Audio Manager
-  m_TagString: Untagged
+  m_TagString: AudioManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -35864,12 +35864,12 @@ MonoBehaviour:
   musicBank: music
   mainBank: Master Bank
   cartridgeLoad: 
-  cartridgePlay: 
-  cartridgeStop: 
-  cartridgeFinishPlaying: 
+  cartridgePlay: event:/sfx/one shots/cartridge/sfx_cartridgePlay
+  cartridgeStop: event:/sfx/one shots/cartridge/sfx_cartridgeStop
+  cartridgeFinishPlaying: event:/sfx/one shots/cartridge/sfx_cartridgeFinishPlay
   cartridgeRattle: event:/sfx/one shots/cartridge/sfx_cartridgeRattle
   findTapeInteract: event:/sfx/one shots/cartridge/sfx_cartridgeRattle
-  dudInteract: 
+  dudInteract: event:/sfx/one shots/cartridge/sfx_dudInteract
   textScroll: 
   rainAmbiance: event:/sfx/ambiances/sfx_rain
 --- !u!4 &1604503714
@@ -38906,7 +38906,7 @@ GameObject:
   - component: {fileID: 1884396349}
   m_Layer: 5
   m_Name: Popup Container
-  m_TagString: Untagged
+  m_TagString: PopupManager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

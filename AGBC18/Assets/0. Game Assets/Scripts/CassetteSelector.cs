@@ -132,7 +132,7 @@ public class CassetteSelector : MonoBehaviour {
 				//print(_inactive[i].ToString());
 			}
 
-			//FMODUnity.RuntimeManager.PlayOneShot(cartridgeScrollRight);
+			FMODUnity.RuntimeManager.PlayOneShot(cartridgeScrollRight);
 
 			StartCoroutine(Shift(_inactive, _active));
 		}
@@ -188,7 +188,7 @@ public class CassetteSelector : MonoBehaviour {
 				//print(_inactive[i].ToString());
 			}
 
-			//FMODUnity.RuntimeManager.PlayOneShot(cartridgeScrollLeft);
+			FMODUnity.RuntimeManager.PlayOneShot(cartridgeScrollLeft);
 
 			StartCoroutine(Shift(_inactive, _active));
 		}
