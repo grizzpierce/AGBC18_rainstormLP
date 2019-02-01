@@ -13,6 +13,7 @@ public class interactable : MonoBehaviour {
 
     public bool cassetteOverride = false;
     public bool _interactedWith = false;
+    public bool dontShowPopup = false;
 
 
     [Header("First Interaction")]
@@ -85,30 +86,35 @@ public class interactable : MonoBehaviour {
                     FMODUnity.RuntimeManager.PlayOneShot(postDialogAudio);
                 }
 
-                // Only display the popup if it has not been recently interacted with
-                if(!_recentlyPressed) {
-                    if(_popupManager.GetIfAvailable()) {
+                if(!dontShowPopup) {
+                    // Only display the popup if it has not been recently interacted with
+                    if(!_recentlyPressed) {
+                        if(_popupManager.GetIfAvailable()) {
 
-                        // LAUNCH CARTRIDGE DIALOG IF UNPRESSED BEFORE
-                        if(!_interactedWith) {
-                            _popupManager.Pop(preDialog, _cassetteColor, cassetteFound);
-                            _interactedWith = true;
-                            _recentlyPressed = true;
+                            // LAUNCH CARTRIDGE DIALOG IF UNPRESSED BEFORE
+                            if(!_interactedWith) {
+                                _popupManager.Pop(preDialog, _cassetteColor, cassetteFound);
+                                _interactedWith = true;
+                                _recentlyPressed = true;
 
-                        }
+                            }
 
-                        // LAUNCH SECONDARY DIALOG IF PRESSED
-                        else {
-                            _popupManager.Pop(postDialog, new Color(0, 0, 0, 0));
+                            // LAUNCH SECONDARY DIALOG IF PRESSED
+                            else {
+                                _popupManager.Pop(postDialog, new Color(0, 0, 0, 0));
+                            }
                         }
                     }
-                }
-            // This is a micro interaction!
-            } else {
-                FMODUnity.RuntimeManager.PlayOneShot(preDialogAudio);
-                if (!_recentlyPressed) {
-                    if (_popupManager.GetIfAvailable()) {
-                        _popupManager.Pop(preDialog, Color.clear);
+                // This is a micro interaction!
+                } else {
+                    FMODUnity.RuntimeManager.PlayOneShot(preDialogAudio);
+                    if (!dontShowPopup) {
+                        if (!_recentlyPressed) {
+                            if (_popupManager.GetIfAvailable()) {
+                                _popupManager.Pop(preDialog, Color.clear);
+                                _recentlyPressed = true;
+                            }
+                        }
                     }
                 }
             }

@@ -280,7 +280,7 @@ namespace DirectionalParameterControllerNameSpace {
 			}
 
 			// Debug.LogWarning("Error: End of calculation section and no area has been choosen!");
-			return -1f;
+			return _minNormalizedValue;
 		}
 
 		float Normalize0To360Scale(float i) {

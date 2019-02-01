@@ -159,6 +159,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 1764492724}
   cassetteOverride: 0
   _interactedWith: 0
+  dontShowPopup: 0
   preDialog: Ah, the ole' 'Hide-Something-Behind-The-Wobbly-Sign' trick. Oldest trick
     in the book.
   preDialogAudio: event:/sfx/one shots/interaction/wall sign/sfx_wallSign_findTape
@@ -7688,6 +7689,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 549539083}
   cassetteOverride: 0
   _interactedWith: 0
+  dontShowPopup: 0
   preDialog: blimps 1 block
   preDialogAudio: 
   cartridgeDiscoverAudioDelay: 0
@@ -22761,6 +22763,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 0}
   cassetteOverride: 1
   _interactedWith: 0
+  dontShowPopup: 1
   preDialog: Free refills today, if you had rainwater
   preDialogAudio: 
   cartridgeDiscoverAudioDelay: 0
@@ -23151,6 +23154,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 335046045}
   cassetteOverride: 0
   _interactedWith: 0
+  dontShowPopup: 0
   preDialog: You've always wanted to open a manhole. And now it seems like your curiosity
     has been rewarded.
   preDialogAudio: event:/sfx/one shots/interaction/manhole/sfx_manholeFlip
@@ -23881,6 +23885,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 443255214}
   cassetteOverride: 0
   _interactedWith: 0
+  dontShowPopup: 0
   preDialog: you clicked the first block!
   preDialogAudio: 
   cartridgeDiscoverAudioDelay: 0
@@ -24164,6 +24169,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 1460853254}
   cassetteOverride: 0
   _interactedWith: 0
+  dontShowPopup: 0
   preDialog: Woah someone's cellphone? I'll try getting it back to them when the rain
     stops.
   preDialogAudio: event:/sfx/one shots/interaction/cell phone/sfx_cellphone_findTape
@@ -25361,6 +25367,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 443255214}
   cassetteOverride: 0
   _interactedWith: 0
+  dontShowPopup: 0
   preDialog: How come nobody ever talks about how perfect traffic cones are for hiding
     small trinkets.
   preDialogAudio: event:/sfx/one shots/interaction/pylon/sfx_pylon_findTape
@@ -31053,6 +31060,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 1640135121}
   cassetteOverride: 0
   _interactedWith: 0
+  dontShowPopup: 0
   preDialog: celestial whiner block
   preDialogAudio: 
   cartridgeDiscoverAudioDelay: 0
@@ -32951,6 +32959,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 131574015}
   cassetteOverride: 0
   _interactedWith: 0
+  dontShowPopup: 0
   preDialog: noise block
   preDialogAudio: 
   cartridgeDiscoverAudioDelay: 0
@@ -33213,6 +33222,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 1830836829}
   cassetteOverride: 0
   _interactedWith: 0
+  dontShowPopup: 0
   preDialog: Something rattles behind the vending machine. Maybe a mouse with a sweet
     tooth?
   preDialogAudio: event:/sfx/one shots/interaction/vending machine/sfx_vendingMachine_findTape
@@ -36978,6 +36988,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 1460853254}
   cassetteOverride: 0
   _interactedWith: 0
+  dontShowPopup: 0
   preDialog: optimism time
   preDialogAudio: 
   cartridgeDiscoverAudioDelay: 0
@@ -37031,6 +37042,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 131574015}
   cassetteOverride: 0
   _interactedWith: 0
+  dontShowPopup: 0
   preDialog: There's a really rad poster for your favorite artist, but it's way too
     soggy now. Cool.
   preDialogAudio: event:/sfx/one shots/interaction/flyer/sfx_flyer_rip
@@ -37921,6 +37933,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 549539083}
   cassetteOverride: 0
   _interactedWith: 0
+  dontShowPopup: 0
   preDialog: A bit rude for someone to throw out a perfectly fine cassette... Oh no,
     what if it's cursed?
   preDialogAudio: event:/sfx/one shots/interaction/bin/binflip
@@ -39040,6 +39053,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 0}
   cassetteOverride: 1
   _interactedWith: 0
+  dontShowPopup: 1
   preDialog: I walked into a parking meter in Santa Fe when I was young enough for
     it to be at face level
   preDialogAudio: event:/sfx/one shots/interaction/vending machine/sfx_vendingMachine_noTape
@@ -40165,6 +40179,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 1640135121}
   cassetteOverride: 0
   _interactedWith: 0
+  dontShowPopup: 0
   preDialog: Huh, maybe someone thought they could pay the meter with their mixtape?
   preDialogAudio: event:/sfx/one shots/interaction/parking meter/sfx_parkingMeter_findTape
   cartridgeDiscoverAudioDelay: 2.3
@@ -41042,6 +41057,7 @@ MonoBehaviour:
   cassetteFound: {fileID: 1764492724}
   cassetteOverride: 0
   _interactedWith: 0
+  dontShowPopup: 0
   preDialog: wee hours
   preDialogAudio: 
   cartridgeDiscoverAudioDelay: 0
