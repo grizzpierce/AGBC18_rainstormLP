@@ -51,8 +51,8 @@ public class AudioManager : MonoBehaviour {
 
     [Space]
     [Header("Busses")]
-    public string masterVolumeBusRef = "SFX_Master";
-    public string ambientVolumeBusRef = "SFX_Enviro_Ambiance";
+    public string masterVolumeBusRef = "bus:/SFX_Master";
+    public string ambientVolumeBusRef = "bus:/SFX_Master/SFX_Environment/SFX_Enviro_Ambiance";
 
 
     [Space]
@@ -98,6 +98,13 @@ public class AudioManager : MonoBehaviour {
     // float _currentMusicVolumePercent = -1.0f;
     // float _currentUIVolumePercent = -1.0f;
     // float _currentEnviroVolumePercent = -1.0f;
+
+
+    // constants for volume slider implementation
+    static float dynamic_range = 40.0f;
+    static float power = Mathf.Pow(10.0f, dynamic_range / 20.0f);
+    static float a = 1.0f / power;
+    static float b = Mathf.Log(power);
 
     
 
@@ -191,39 +198,79 @@ public class AudioManager : MonoBehaviour {
         _currentState = MUSIC_STATE.IDLE;
     }
 
-
-    public void SetMasterBusVolume(float _level) {
-        _masterVolumeBus.setVolume(_level);
+    
+    // BUS AND VOLUME SETTINGS
+    public void SetMasterBusVolume(float _controlPercent) {
+        float _volumePercent;
+        if (_controlPercent == 0.0f) {
+            _volumePercent = 0.0f;
+        } else {
+            _volumePercent = a * Mathf.Exp(_controlPercent * b);
+        }
+        _masterVolumeBus.setVolume(_volumePercent);
     }
 
     public float GetMasterBusVolume() {
-        float temp_value;
-        float out_value;
-        _masterVolumeBus.getVolume(out temp_value, out out_value); 
-        return out_value;
+        float _lastVolumeSent;
+        float _actualVolume;
+        float _normalizedToSend;
+        _masterVolumeBus.getVolume(out _lastVolumeSent, out _actualVolume);
+        if(_lastVolumeSent == 0.0f) {
+            _normalizedToSend = 0.0f;
+        } else {
+            _normalizedToSend = Mathf.Log(_lastVolumeSent / a) / b;
+        }
+        return _normalizedToSend;
     }
 
-    public void SetAmbianceBusVolume(float _level) {
-        _ambientVolumeBus.setVolume(_level);
+    public void SetAmbianceBusVolume(float _controlPercent) {
+        float _volumePercent;
+        if (_controlPercent == 0.0f) {
+            _volumePercent = 0.0f;
+        } else {
+            _volumePercent = a * Mathf.Exp(_controlPercent * b);
+        }
+        _ambientVolumeBus.setVolume(_volumePercent);
     }
 
     public float GetAmbianceBusVolume() {
-        float temp_value;
-        float out_value;
-        _ambientVolumeBus.getVolume(out temp_value, out out_value); 
-        return out_value;
+        float _lastVolumeSent;
+        float _actualVolume;
+        float _normalizedToSend;
+        _ambientVolumeBus.getVolume(out _lastVolumeSent, out _actualVolume); 
+        if(_lastVolumeSent == 0.0f) {
+            _normalizedToSend = 0.0f;
+        } else {
+            _normalizedToSend = Mathf.Log(_lastVolumeSent / a) / b;
+        }
+        return _normalizedToSend;
     }
 
-    public void SetIntroRainVolume(float _level) {
-        _rainAmbianceInstance.setVolume(_level);
+    public void SetIntroRainVolume(float _controlPercent) {
+        if (_rainAmbianceInstance.isValid()) {
+            float _volumePercent;
+            if (_controlPercent == 0.0f) {
+                _volumePercent = 0.0f;
+            } else {
+                _volumePercent = a * Mathf.Exp(_controlPercent * b);
+            }
+            _rainAmbianceInstance.setVolume(_volumePercent);
+        }
     }
 
     public float GetIntroRainVolume() {
         if (_rainAmbianceInstance.isValid()) {
-            float temp_value;
-            float out_value;
-            _rainAmbianceInstance.getVolume(out temp_value, out out_value);
-            return out_value;
+            float _lastVolumeSent;
+            float _actualVolume;
+            float _normalizedToSend;
+
+            _rainAmbianceInstance.getVolume(out _lastVolumeSent, out _actualVolume);
+            if(_lastVolumeSent == 0.0f) {
+                _normalizedToSend = 0.0f;
+            } else {
+                _normalizedToSend = Mathf.Log(_lastVolumeSent / a) / b;
+            }
+            return _normalizedToSend;
         } else {
             return 0.0f;
         }
@@ -237,11 +284,7 @@ public class AudioManager : MonoBehaviour {
 
     // MENU INTERFACE
 
-    // constants for volume slider implementation
-    // static float dynamic_range = 40.0f;
-    // static float power = Mathf.Pow(10.0f, dynamic_range / 20.0f);
-    // static float a = 1.0f / power;
-    // static float b = Mathf.Log(power);
+    
 
     // public void SetMasterVolume(float controlPercentage) {
     //     if (controlPercentage != _currentMasterVolumePercent) {

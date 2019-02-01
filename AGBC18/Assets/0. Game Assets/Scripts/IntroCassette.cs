@@ -11,12 +11,19 @@ public class IntroCassette : MonoBehaviour {
 	public AudioManager audioManager;
 
 	public float cassetteLoadDelay = 1.0f;
+	public float masterFadeinDelay = 3.0f;
 	public float masterFadeinTargetVolume = 1.0f;
 	public float masterFadeinTime = 2.0f;
-	public float enviroCrossfadeDelay = 0.0f;
+	public float enviroFadeinDelay = 0.0f;
 	public float enviroFadeinTargetVolume = 1.0f;
-	public float enviroCrossfadeTime = 4.0f;
+	public float enviroFadeinTime = 4.0f;
+	public float introRainFadeoutDelay = 1.0f;
 	public float introRainTargetVolume = 1.0f;
+	public float introRainFadeoutTime = 5.0f;
+
+	float _calculatedMasterVolume = 1.0f;
+	float _calculatedEnviroVolume = 1.0f;
+	float _calculatedIntroRainVolume = 1.0f;
 
 
 	bool isLaunched = false;
@@ -44,8 +51,10 @@ public class IntroCassette : MonoBehaviour {
 			FMODUnity.RuntimeManager.PlayOneShot(audioManager.dudInteract);
 
 			StartCoroutine(IntroAnimation());
-			StartCoroutine(IntroAudioCues());
-			StartCoroutine(IntroBusLerp());
+			StartCoroutine(CasseteLoadTimer());
+			StartCoroutine(RainFadeout());
+			StartCoroutine(EnviroFadein());
+
 			isLaunched = true;
 		}
 		
@@ -67,16 +76,25 @@ public class IntroCassette : MonoBehaviour {
 	}
 	
 	IEnumerator TitleVolume() {
-		audioManager.SetMasterBusVolume(0.0f);
-		audioManager.SetAmbianceBusVolume(0.0f);
-		audioManager.SetIntroRainVolume(introRainTargetVolume);
-		
-		yield return new WaitForSeconds(4.5f);
+		_calculatedEnviroVolume = 0.0f;
+		_calculatedMasterVolume = 0.0f;
+		_calculatedIntroRainVolume = introRainTargetVolume;
 
-		while (audioManager.GetMasterBusVolume() < (masterFadeinTargetVolume - 0.01f)) {
-			audioManager.SetMasterBusVolume(Mathf.Lerp(audioManager.GetMasterBusVolume(), masterFadeinTargetVolume, masterFadeinTime * Time.deltaTime));
+		audioManager.SetMasterBusVolume(_calculatedMasterVolume);
+		audioManager.SetAmbianceBusVolume(_calculatedEnviroVolume);
+		audioManager.SetIntroRainVolume(_calculatedIntroRainVolume);
+
+		float _elapsedTime = 0.0f;
+		
+		yield return new WaitForSeconds(masterFadeinDelay);
+
+		while (_calculatedMasterVolume < (masterFadeinTargetVolume - 0.01f)) {
+			_calculatedMasterVolume = Mathf.Lerp(audioManager.GetMasterBusVolume(), masterFadeinTargetVolume, (_elapsedTime / masterFadeinTime));
+			audioManager.SetMasterBusVolume(_calculatedMasterVolume);
+			_elapsedTime += Time.deltaTime;
+			yield return new WaitForEndOfFrame();
 		}
-		if (audioManager.GetMasterBusVolume() >= (masterFadeinTargetVolume - 0.01f)) {
+		if (_calculatedMasterVolume >= (masterFadeinTargetVolume - 0.01f)) {
 			audioManager.SetMasterBusVolume(masterFadeinTargetVolume);
 		}
 	}
@@ -107,7 +125,7 @@ public class IntroCassette : MonoBehaviour {
 
 	}
 
-	IEnumerator IntroAudioCues() {
+	IEnumerator CasseteLoadTimer() {
 		yield return new WaitForSeconds(cassetteLoadDelay);
 
 		cameraRig.GetComponent<MapRotator>().enabled = true;
@@ -115,18 +133,33 @@ public class IntroCassette : MonoBehaviour {
 		cassetteManager.GetComponent<CassetteManagement>().Launch();
 	}
 
-	IEnumerator IntroBusLerp() {
-		yield return new WaitForSeconds(enviroCrossfadeDelay);
+	IEnumerator RainFadeout() {
+		yield return new WaitForSeconds(enviroFadeinDelay + introRainFadeoutDelay);
 
-		while ((audioManager.GetAmbianceBusVolume() < (enviroFadeinTargetVolume - 0.01f)) && (audioManager.GetIntroRainVolume() > 0.01f)) {
-			audioManager.SetAmbianceBusVolume(Mathf.Lerp(audioManager.GetAmbianceBusVolume(), enviroFadeinTargetVolume, enviroCrossfadeTime * Time.deltaTime));
-			audioManager.SetIntroRainVolume(Mathf.Lerp(audioManager.GetIntroRainVolume(), 0.0f, enviroCrossfadeTime * Time.deltaTime));
+		float _elapsedTime = 0.0f;
+
+		while (_calculatedIntroRainVolume > 0.01f) {
+			_calculatedIntroRainVolume = Mathf.Lerp(audioManager.GetIntroRainVolume(), 0.0f, (_elapsedTime / introRainFadeoutTime));
+			audioManager.SetIntroRainVolume(_calculatedIntroRainVolume);
+			_elapsedTime += Time.deltaTime;
+			yield return new WaitForEndOfFrame();
 		}
-		if (audioManager.GetAmbianceBusVolume() >= (enviroFadeinTargetVolume - 0.01f)) {
+		audioManager.DestroyIntroRain();
+	}
+
+	IEnumerator EnviroFadein() {
+		yield return new WaitForSeconds(enviroFadeinDelay);
+
+		float _elapsedTime = 0.0f;
+
+		while (_calculatedEnviroVolume < (enviroFadeinTargetVolume - 0.01f)) {
+			_calculatedEnviroVolume = Mathf.Lerp(audioManager.GetAmbianceBusVolume(), enviroFadeinTargetVolume, (_elapsedTime / enviroFadeinTime));
+			audioManager.SetAmbianceBusVolume(_calculatedEnviroVolume);
+			_elapsedTime += Time.deltaTime;
+			yield return new WaitForEndOfFrame();
+		}
+		if (audioManager.GetAmbianceBusVolume() < enviroFadeinTargetVolume) {
 			audioManager.SetAmbianceBusVolume(enviroFadeinTargetVolume);
-		}
-		if (audioManager.GetIntroRainVolume() <= 0.01f) {
-			audioManager.DestroyIntroRain();
 		}
 	}
 }

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.25814605, g: 0.26651317, b: 0.6541467, a: 1}
+  m_IndirectSpecularColor: {r: 0.25814605, g: 0.2665132, b: 0.65414673, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -35940,6 +35940,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicBank: music
   mainBank: Master Bank
+  masterVolumeBusRef: bus:/SFX_Master
+  ambientVolumeBusRef: bus:/SFX_Master/SFX_Environment/SFX_Enviro_Ambiance
   cartridgeLoad: event:/sfx/one shots/cartridge/sfx_cartridgeLoad
   cartridgePlay: event:/sfx/one shots/cartridge/sfx_cartridgePlay
   cartridgeStop: event:/sfx/one shots/cartridge/sfx_cartridgeStop
@@ -36379,9 +36381,16 @@ MonoBehaviour:
   environment: {fileID: 1315878310}
   title: {fileID: 236350073}
   audioManager: {fileID: 1604503713}
-  cassetteInteractAudio: 
-  cassetteStartAudio: 
-  _loadAudioDelay: 6.5
+  cassetteLoadDelay: 6.8
+  masterFadeinDelay: 2
+  masterFadeinTargetVolume: 1
+  masterFadeinTime: 40
+  enviroFadeinDelay: 4.5
+  enviroFadeinTargetVolume: 1
+  enviroFadeinTime: 60
+  introRainFadeoutDelay: 10
+  introRainTargetVolume: 1
+  introRainFadeoutTime: 20
 --- !u!114 &1644698770
 MonoBehaviour:
   m_ObjectHideFlags: 0
