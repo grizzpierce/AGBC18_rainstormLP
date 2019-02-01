@@ -105,9 +105,11 @@ public class interactable : MonoBehaviour {
                 if(interactedWith)
                     _recentlyPressed = true;
                     
-                _anim.Play("Pressed");
+
                 _pressTimer = 0;
             }
+            
+            _anim.Play("Pressed");
         }
      }
 }
