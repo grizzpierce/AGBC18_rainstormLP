@@ -109,9 +109,9 @@ public class interactable : MonoBehaviour {
 
     IEnumerator TapeDiscoveryAudio() {
         FMODUnity.RuntimeManager.PlayOneShot(preDialogAudio);
-
-        yield return new WaitForSeconds(cartridgeDiscoverAudioDelay);
-
-        FMODUnity.RuntimeManager.PlayOneShot(_audioManager.findTapeInteract);
+        if(!cassetteOverride) {
+            yield return new WaitForSeconds(cartridgeDiscoverAudioDelay);
+            FMODUnity.RuntimeManager.PlayOneShot(_audioManager.findTapeInteract);
+        }
     }
 }

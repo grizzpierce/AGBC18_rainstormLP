@@ -5,7 +5,7 @@
             <value>sfx_pylon_findTape</value>
         </property>
         <property name="outputFormat">
-            <value>0</value>
+            <value>1</value>
         </property>
         <relationship name="folder">
             <destination>{f2f979eb-47ab-4236-929d-12c6aab57e76}</destination>
@@ -62,11 +62,18 @@
     <object class="EventAutomatableProperties" id="{c8455f66-35ca-4e0c-82cf-f33a9b48bb38}"/>
     <object class="MarkerTrack" id="{a2f7359a-cf5f-465a-889f-74d2f0316768}"/>
     <object class="GroupTrack" id="{781db99d-f304-4bb3-bd02-e8b10caf241e}">
+        <relationship name="modules">
+            <destination>{b204871e-8685-4ad9-8006-b5abbc964b48}</destination>
+        </relationship>
         <relationship name="mixerGroup">
             <destination>{ff84ef82-92b3-4569-9b33-8982afb3e3fb}</destination>
         </relationship>
     </object>
-    <object class="Timeline" id="{b2376fcc-4829-4ef9-935d-789ed78337b9}"/>
+    <object class="Timeline" id="{b2376fcc-4829-4ef9-935d-789ed78337b9}">
+        <relationship name="modules">
+            <destination>{b204871e-8685-4ad9-8006-b5abbc964b48}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerMaster" id="{d57be087-91d5-430a-91ed-3298f9adb7c7}">
         <relationship name="effectChain">
             <destination>{19b22b48-7a12-4132-bb3d-a3df3da7fc9e}</destination>
@@ -84,6 +91,14 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{56d84423-8456-42bd-97fa-0d9dc8f966d4}"/>
+    <object class="SingleSound" id="{b204871e-8685-4ad9-8006-b5abbc964b48}">
+        <property name="length">
+            <value>1.2955328798185941</value>
+        </property>
+        <relationship name="audioFile">
+            <destination>{b369d11c-e3d6-41be-818d-1a0383304189}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerGroup" id="{ff84ef82-92b3-4569-9b33-8982afb3e3fb}">
         <property name="name">
             <value>Audio 1</value>

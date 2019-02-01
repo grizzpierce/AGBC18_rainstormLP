@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{b369d11c-e3d6-41be-818d-1a0383304189}">
+        <property name="assetPath">
+            <value>Rainstorm_Interactions_Pylon_Tip_01.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1.2955328798185941</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{ff88e6c8-6eab-47e1-a8ce-a2d145d2fd0b}</destination>
+        </relationship>
+    </object>
+</objects>

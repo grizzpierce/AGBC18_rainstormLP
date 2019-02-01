@@ -26,6 +26,7 @@ public class PopupManager : MonoBehaviour {
 	string dialog = "No text was entered. Please use Pop(string text);";
 	Color cassetteColor;
 	public CartridgeDataHolder cassette;
+	string _interactAudio;
 
     void SetState(POPUP_STATE _state) {
 		current = _state;
@@ -39,6 +40,7 @@ public class PopupManager : MonoBehaviour {
 	}
 
 	void Start() {
+		_interactAudio = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>().dudInteract;
 		textUI.text = "";
 		SetState(POPUP_STATE.INACTIVE);
 	}
@@ -49,8 +51,8 @@ public class PopupManager : MonoBehaviour {
 			cassette = null;
 			SetState(POPUP_STATE.CLOSING);
 			StartCoroutine(Popdown());
+			FMODUnity.RuntimeManager.PlayOneShot(_interactAudio);
 		}
-
 	}
 
 	// LEGACY -> FOR TESTING ONLY

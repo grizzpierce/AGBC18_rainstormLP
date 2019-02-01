@@ -161,11 +161,11 @@ MonoBehaviour:
   interactedWith: 0
   preDialog: Ah, the ole' 'Hide-Something-Behind-The-Wobbly-Sign' trick. Oldest trick
     in the book.
-  preDialogAudio: 
-  cartridgeDiscoverAudioDelay: 0
+  preDialogAudio: event:/sfx/one shots/interaction/wall sign/sfx_wallSign_findTape
+  cartridgeDiscoverAudioDelay: 1.3
   postDialog: The sign reads 'Slow'. You'd have to agree, that's how this whole night
     has felt.
-  postDialogAudio: 
+  postDialogAudio: event:/sfx/one shots/interaction/wall sign/sfx_wallSign_noTape
 --- !u!95 &5115068
 Animator:
   serializedVersion: 3
@@ -8420,7 +8420,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 40a88d3305b2d4ed4ac988696843c9ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  graffitiSFX: 
+  graffitiSFX: event:/sfx/one shots/interaction/graffiti/sfx_graffiti_micro
 --- !u!23 &292925056
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -23153,10 +23153,10 @@ MonoBehaviour:
   interactedWith: 0
   preDialog: You've always wanted to open a manhole. And now it seems like your curiosity
     has been rewarded.
-  preDialogAudio: 
-  cartridgeDiscoverAudioDelay: 0
+  preDialogAudio: event:/sfx/one shots/interaction/manhole/sfx_manholeFlip
+  cartridgeDiscoverAudioDelay: 2
   postDialog: Oh that's where that sewer smell is coming from.
-  postDialogAudio: 
+  postDialogAudio: event:/sfx/one shots/interaction/manhole/sfx_manholeFlip
 --- !u!65 &830631464
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -23555,6 +23555,71 @@ Transform:
   m_Father: {fileID: 1826033645}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 45, z: 0}
+--- !u!1 &848628988
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 848628989}
+  - component: {fileID: 848628990}
+  m_Layer: 0
+  m_Name: PhoneLoop
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &848628989
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 848628988}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 919126662}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &848628990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 848628988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d8f5e95f114f4cc2a026667b2827d03, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _fmodEvent: event:/sfx/ambiances/sfx_cellphone_loop
+  _orientationAngle: 0
+  SHOW_ON_UNSELECTED: 1
+  _parameters:
+  - _fmodParameter: Volume0to1
+    _orientationOffset: -15
+    _widthAngleToAdd: 13.5
+    _fadeAngleToAdd: 47.3
+    _widthUpperAngle: 178.50002
+    _widthLowerAngle: 151.50002
+    _fadeUpperAngle: 225.79999
+    _fadeLowerAngle: 104.20001
+    _widthUpperVector: {x: -0.026177103, y: 0, z: 0.99965733}
+    _widthLowerVector: {x: -0.47715864, y: 0, z: 0.8788172}
+    _fadeUpperVector: {x: 0.7169104, y: 0, z: 0.69716525}
+    _fadeLowerVector: {x: -0.9694453, y: 0, z: 0.2453077}
+    DISPLAY: 2
+    _maxNormalizedValue: 1
+    _minNormalizedValue: 0
+    _maxValueToDisplay: 0
+    _minValueToDisplay: -Infinity
+    SHOW_ON_UNSELECTED: 1
+    DROPDOWN_OPEN: 1
+    IN_FOCUS: 1
+    SHOW_ADVANCED: 1
 --- !u!1 &869610492
 GameObject:
   m_ObjectHideFlags: 0
@@ -24080,7 +24145,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: -1.33, y: 0.8920002, z: 4.927}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 848628989}
   m_Father: {fileID: 70768086}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -24100,10 +24166,10 @@ MonoBehaviour:
   interactedWith: 0
   preDialog: Woah someone's cellphone? I'll try getting it back to them when the rain
     stops.
-  preDialogAudio: 
-  cartridgeDiscoverAudioDelay: 0
+  preDialogAudio: event:/sfx/one shots/interaction/cell phone/sfx_cellphone_findTape
+  cartridgeDiscoverAudioDelay: 0.5
   postDialog: I should really pick up that cellphone... It's so muddy and gross though...
-  postDialogAudio: 
+  postDialogAudio: event:/sfx/one shots/interaction/cell phone/sfx_cellphone_noTape
 --- !u!65 &919126664
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25297,11 +25363,11 @@ MonoBehaviour:
   interactedWith: 0
   preDialog: How come nobody ever talks about how perfect traffic cones are for hiding
     small trinkets.
-  preDialogAudio: 
-  cartridgeDiscoverAudioDelay: 0
+  preDialogAudio: event:/sfx/one shots/interaction/pylon/sfx_pylon_findTape
+  cartridgeDiscoverAudioDelay: 2
   postDialog: 'Is someone saving a parking spot? Or maybe there''s going to be construction
     soon? '
-  postDialogAudio: 
+  postDialogAudio: event:/sfx/one shots/interaction/pylon/sfx_pylon_findTape
 --- !u!1 &1012661169
 GameObject:
   m_ObjectHideFlags: 0
@@ -33149,10 +33215,10 @@ MonoBehaviour:
   interactedWith: 0
   preDialog: Something rattles behind the vending machine. Maybe a mouse with a sweet
     tooth?
-  preDialogAudio: 
+  preDialogAudio: event:/sfx/one shots/interaction/vending machine/sfx_vendingMachine_findTape
   cartridgeDiscoverAudioDelay: 0
-  postDialog: Like usual, you don't have any cash in your wallet.
-  postDialogAudio: 
+  postDialog: Like usual, you don't have enough cash in your wallet.
+  postDialogAudio: event:/sfx/one shots/interaction/vending machine/sfx_vendingMachine_noTape
 --- !u!4 &1329134579
 Transform:
   m_ObjectHideFlags: 0
@@ -35949,6 +36015,7 @@ MonoBehaviour:
   cartridgeRattle: event:/sfx/one shots/cartridge/sfx_cartridgeRattle
   findTapeInteract: event:/sfx/one shots/cartridge/sfx_cartridgeRattle
   dudInteract: event:/sfx/one shots/cartridge/sfx_dudInteract
+  badInteract: 
   textScroll: 
   rainAmbiance: event:/sfx/ambiances/sfx_rain
 --- !u!4 &1604503714
@@ -36966,11 +37033,11 @@ MonoBehaviour:
   interactedWith: 0
   preDialog: There's a really rad poster for your favorite artist, but it's way too
     soggy now. Cool.
-  preDialogAudio: 
-  cartridgeDiscoverAudioDelay: 0
+  preDialogAudio: event:/sfx/one shots/interaction/flyer/sfx_flyer_rip
+  cartridgeDiscoverAudioDelay: 1
   postDialog: Dang, that should be a fun concert. Maybe you'll stop being a hermit
     and go to a show?
-  postDialogAudio: 
+  postDialogAudio: event:/sfx/one shots/interaction/flyer/sfx_flyer_rip
 --- !u!95 &1728483243
 Animator:
   serializedVersion: 3
@@ -37857,10 +37924,10 @@ MonoBehaviour:
   preDialog: A bit rude for someone to throw out a perfectly fine cassette... Oh no,
     what if it's cursed?
   preDialogAudio: 
-  cartridgeDiscoverAudioDelay: 0
+  cartridgeDiscoverAudioDelay: 3
   postDialog: As you dig past half empty pop cans, you remember your dad once broke
     his ribs dumpster diving.
-  postDialogAudio: 
+  postDialogAudio: event:/sfx/one shots/interaction/bin/binflip
 --- !u!95 &1785561261
 Animator:
   serializedVersion: 3
@@ -38974,10 +39041,10 @@ MonoBehaviour:
   cassetteOverride: 1
   interactedWith: 0
   preDialog: 
-  preDialogAudio: 
+  preDialogAudio: event:/sfx/one shots/interaction/parking meter/sfx_parkingMeter_noTape
   cartridgeDiscoverAudioDelay: 0
   postDialog: 
-  postDialogAudio: 
+  postDialogAudio: event:/sfx/one shots/interaction/parking meter/sfx_parkingMeter_noTape
 --- !u!1 &1884396344
 GameObject:
   m_ObjectHideFlags: 0
@@ -40098,10 +40165,10 @@ MonoBehaviour:
   cassetteOverride: 0
   interactedWith: 0
   preDialog: Huh, maybe someone thought they could pay the meter with their mixtape?
-  preDialogAudio: 
-  cartridgeDiscoverAudioDelay: 0
-  postDialog: God you hate parking meters.
-  postDialogAudio: 
+  preDialogAudio: event:/sfx/one shots/interaction/parking meter/sfx_parkingMeter_findTape
+  cartridgeDiscoverAudioDelay: 0.7
+  postDialog: God I hate parking meters.
+  postDialogAudio: event:/sfx/one shots/interaction/parking meter/sfx_parkingMeter_noTape
 --- !u!1 &2000583103
 GameObject:
   m_ObjectHideFlags: 0

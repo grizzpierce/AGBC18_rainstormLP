@@ -5,7 +5,7 @@
             <value>binflip</value>
         </property>
         <property name="outputFormat">
-            <value>0</value>
+            <value>1</value>
         </property>
         <relationship name="folder">
             <destination>{0a7650fb-4854-415d-862a-169749e9a2b0}</destination>
@@ -30,6 +30,9 @@
         </relationship>
         <relationship name="timeline">
             <destination>{9ce1ac0d-b235-4d22-825a-ca847c498ae4}</destination>
+        </relationship>
+        <relationship name="banks">
+            <destination>{6f2cd580-34e7-4db0-b6c7-94636fd124f1}</destination>
         </relationship>
     </object>
     <object class="EventMixer" id="{b6aef8cf-6894-4991-a582-3c66bf6a7418}">
@@ -56,11 +59,18 @@
     <object class="EventAutomatableProperties" id="{9a39681a-8825-488b-84b2-27fc1494da68}"/>
     <object class="MarkerTrack" id="{e5f80d27-38f8-40d5-9cdd-ccc067c0e51e}"/>
     <object class="GroupTrack" id="{a42165f1-dc58-4e74-a8d2-60765ab300d4}">
+        <relationship name="modules">
+            <destination>{ca394ada-8276-4633-8d0b-ffca11e140e4}</destination>
+        </relationship>
         <relationship name="mixerGroup">
             <destination>{8e16dcec-91ce-4ad5-8bdb-1d34ba7ee748}</destination>
         </relationship>
     </object>
-    <object class="Timeline" id="{9ce1ac0d-b235-4d22-825a-ca847c498ae4}"/>
+    <object class="Timeline" id="{9ce1ac0d-b235-4d22-825a-ca847c498ae4}">
+        <relationship name="modules">
+            <destination>{ca394ada-8276-4633-8d0b-ffca11e140e4}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerMaster" id="{93182a15-532d-4ecd-8673-367b9f814662}">
         <relationship name="effectChain">
             <destination>{7c7b088d-a289-4d80-bd2b-078e8aa8b888}</destination>
@@ -78,6 +88,14 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{84a267d3-e49e-48e0-be73-6e4bb052a119}"/>
+    <object class="SingleSound" id="{ca394ada-8276-4633-8d0b-ffca11e140e4}">
+        <property name="length">
+            <value>2.0624943310657597</value>
+        </property>
+        <relationship name="audioFile">
+            <destination>{e53fd3cb-1d57-478c-9e23-d65469acda46}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerGroup" id="{8e16dcec-91ce-4ad5-8bdb-1d34ba7ee748}">
         <property name="name">
             <value>Audio 1</value>
