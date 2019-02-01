@@ -49,6 +49,11 @@ public class AudioManager : MonoBehaviour {
     // public string uiVolume;
     // public string enviroVolume;
 
+    [Space]
+    [Header("Busses")]
+    public string masterVolumeBusRef = "SFX_Master";
+    public string ambientVolumeBusRef = "SFX_Enviro_Ambiance";
+
 
     [Space]
     [Header("Common Audio Events")]
@@ -85,6 +90,9 @@ public class AudioManager : MonoBehaviour {
     // FMOD.Studio.VCA _musicVolumeVCA;
     // FMOD.Studio.VCA _uiVolumeVCA;
     // FMOD.Studio.VCA _enviroVolumeVCA;
+
+    FMOD.Studio.Bus _masterVolumeBus;
+    FMOD.Studio.Bus _ambientVolumeBus;
 
     // float _currentMasterVolumePercent = -1.0f;
     // float _currentMusicVolumePercent = -1.0f;
@@ -123,8 +131,13 @@ public class AudioManager : MonoBehaviour {
 	void Start () {
 
         _cameraRigTransform = _cameraRig.GetComponent<Transform>();
-        // _directionalAmbianceObjects = GameObject.FindGameObjectsWithTag("DirectionalAmbiance");
 
+        _masterVolumeBus = FMODUnity.RuntimeManager.GetBus(masterVolumeBusRef);
+        _ambientVolumeBus = FMODUnity.RuntimeManager.GetBus(ambientVolumeBusRef);
+
+        SetMasterBusVolume(0.0f);
+
+        // _directionalAmbianceObjects = GameObject.FindGameObjectsWithTag("DirectionalAmbiance");
         
 
         // Only plays single background rain from start in lightweight mode
@@ -176,6 +189,49 @@ public class AudioManager : MonoBehaviour {
 
     public void setMusicIdle() {
         _currentState = MUSIC_STATE.IDLE;
+    }
+
+
+    public void SetMasterBusVolume(float _level) {
+        _masterVolumeBus.setVolume(_level);
+    }
+
+    public float GetMasterBusVolume() {
+        float temp_value;
+        float out_value;
+        _masterVolumeBus.getVolume(out temp_value, out out_value); 
+        return out_value;
+    }
+
+    public void SetAmbianceBusVolume(float _level) {
+        _ambientVolumeBus.setVolume(_level);
+    }
+
+    public float GetAmbianceBusVolume() {
+        float temp_value;
+        float out_value;
+        _ambientVolumeBus.getVolume(out temp_value, out out_value); 
+        return out_value;
+    }
+
+    public void SetIntroRainVolume(float _level) {
+        _rainAmbianceInstance.setVolume(_level);
+    }
+
+    public float GetIntroRainVolume() {
+        if (_rainAmbianceInstance.isValid()) {
+            float temp_value;
+            float out_value;
+            _rainAmbianceInstance.getVolume(out temp_value, out out_value);
+            return out_value;
+        } else {
+            return 0.0f;
+        }
+    }
+
+    public void DestroyIntroRain() {
+        _rainAmbianceInstance.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+        _rainAmbianceInstance.release();
     }
 
 

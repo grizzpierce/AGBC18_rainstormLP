@@ -10,13 +10,13 @@ public class IntroCassette : MonoBehaviour {
 	public GameObject cartridge, cameraRig, mainCamera, canvas, cassetteManager, environment, title;
 	public AudioManager audioManager;
 
-	[FMODUnity.EventRef]
-	public string cassetteInteractAudio;
-
-	[FMODUnity.EventRef]
-	public string cassetteStartAudio;
-
-	public float _loadAudioDelay = 1.0f;
+	public float cassetteLoadDelay = 1.0f;
+	public float masterFadeinTargetVolume = 1.0f;
+	public float masterFadeinTime = 2.0f;
+	public float enviroCrossfadeDelay = 0.0f;
+	public float enviroFadeinTargetVolume = 1.0f;
+	public float enviroCrossfadeTime = 4.0f;
+	public float introRainTargetVolume = 1.0f;
 
 
 	bool isLaunched = false;
@@ -29,7 +29,8 @@ public class IntroCassette : MonoBehaviour {
 		if(cartridge == null)
 			Destroy(this);
 
-		StartCoroutine(titleSplash());
+		StartCoroutine(TitleSplash());
+		StartCoroutine(TitleVolume());
 
 	}
 
@@ -44,6 +45,7 @@ public class IntroCassette : MonoBehaviour {
 
 			StartCoroutine(IntroAnimation());
 			StartCoroutine(IntroAudioCues());
+			StartCoroutine(IntroBusLerp());
 			isLaunched = true;
 		}
 		
@@ -52,7 +54,7 @@ public class IntroCassette : MonoBehaviour {
 	    // ALSO TRY AS HARD AS POSSIBLE TO NOT USE ROTATEAROUNDAXIS, AS I HAVE NO WAY OF MANIPULATING THE OBJECT.
     }
 
-	IEnumerator titleSplash() {
+	IEnumerator TitleSplash() {
 
 		title.GetComponent<Image>().DOFade(.9f, 4f).SetDelay(.25f);
 		title.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 0), 4f).SetEase(Ease.OutBack).SetDelay(.25f);
@@ -62,6 +64,21 @@ public class IntroCassette : MonoBehaviour {
 		//title.GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 520), 4f);
 		title.GetComponent<Image>().DOFade(0f, 2f);
 		mainCamera.transform.DOLocalRotate(new Vector3(30, 0, 0), 5f).SetEase(Ease.InBack);
+	}
+	
+	IEnumerator TitleVolume() {
+		audioManager.SetMasterBusVolume(0.0f);
+		audioManager.SetAmbianceBusVolume(0.0f);
+		audioManager.SetIntroRainVolume(introRainTargetVolume);
+		
+		yield return new WaitForSeconds(4.5f);
+
+		while (audioManager.GetMasterBusVolume() < (masterFadeinTargetVolume - 0.01f)) {
+			audioManager.SetMasterBusVolume(Mathf.Lerp(audioManager.GetMasterBusVolume(), masterFadeinTargetVolume, masterFadeinTime * Time.deltaTime));
+		}
+		if (audioManager.GetMasterBusVolume() >= (masterFadeinTargetVolume - 0.01f)) {
+			audioManager.SetMasterBusVolume(masterFadeinTargetVolume);
+		}
 	}
 
 	IEnumerator IntroAnimation() {
@@ -91,10 +108,25 @@ public class IntroCassette : MonoBehaviour {
 	}
 
 	IEnumerator IntroAudioCues() {
-		yield return new WaitForSeconds(_loadAudioDelay);
+		yield return new WaitForSeconds(cassetteLoadDelay);
 
 		cameraRig.GetComponent<MapRotator>().enabled = true;
 		canvas.GetComponent<UIModes>().LaunchMain();
 		cassetteManager.GetComponent<CassetteManagement>().Launch();
+	}
+
+	IEnumerator IntroBusLerp() {
+		yield return new WaitForSeconds(enviroCrossfadeDelay);
+
+		while ((audioManager.GetAmbianceBusVolume() < (enviroFadeinTargetVolume - 0.01f)) && (audioManager.GetIntroRainVolume() > 0.01f)) {
+			audioManager.SetAmbianceBusVolume(Mathf.Lerp(audioManager.GetAmbianceBusVolume(), enviroFadeinTargetVolume, enviroCrossfadeTime * Time.deltaTime));
+			audioManager.SetIntroRainVolume(Mathf.Lerp(audioManager.GetIntroRainVolume(), 0.0f, enviroCrossfadeTime * Time.deltaTime));
+		}
+		if (audioManager.GetAmbianceBusVolume() >= (enviroFadeinTargetVolume - 0.01f)) {
+			audioManager.SetAmbianceBusVolume(enviroFadeinTargetVolume);
+		}
+		if (audioManager.GetIntroRainVolume() <= 0.01f) {
+			audioManager.DestroyIntroRain();
+		}
 	}
 }
