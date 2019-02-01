@@ -5,7 +5,7 @@
             <value>sfx_cartridgeRattle</value>
         </property>
         <property name="outputFormat">
-            <value>0</value>
+            <value>1</value>
         </property>
         <relationship name="folder">
             <destination>{486e9459-7f69-407c-a04c-effeac075eda}</destination>
@@ -62,11 +62,18 @@
     <object class="EventAutomatableProperties" id="{7a54b0a4-ac08-4fd4-8389-5c3bc417fc0d}"/>
     <object class="MarkerTrack" id="{9173597d-9aa4-4ef4-84af-e2510422bf22}"/>
     <object class="GroupTrack" id="{64c39172-b81b-45fa-aa14-042349915117}">
+        <relationship name="modules">
+            <destination>{5a262e6d-6051-474b-bb27-5fa2f6d980ed}</destination>
+        </relationship>
         <relationship name="mixerGroup">
             <destination>{6b02def8-f25d-4e50-9fa2-fb998f9c8988}</destination>
         </relationship>
     </object>
-    <object class="Timeline" id="{4dde39d3-9b41-4d38-839d-6479b9af6bd9}"/>
+    <object class="Timeline" id="{4dde39d3-9b41-4d38-839d-6479b9af6bd9}">
+        <relationship name="modules">
+            <destination>{5a262e6d-6051-474b-bb27-5fa2f6d980ed}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerMaster" id="{b309ce0c-9a25-4684-b727-0e372f734681}">
         <relationship name="effectChain">
             <destination>{aa92e084-612f-4dfe-8beb-4e678fea6752}</destination>
@@ -84,6 +91,20 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{14a2af79-d4eb-4089-a7d0-2a586cfb82b6}"/>
+    <object class="MultiSound" id="{5a262e6d-6051-474b-bb27-5fa2f6d980ed}">
+        <property name="length">
+            <value>0.56108333333333338</value>
+        </property>
+        <relationship name="modulators">
+            <destination>{8039500a-7991-44c8-976d-b0feca16aab5}</destination>
+            <destination>{530a220a-b843-442b-9c7a-c18c33ad204f}</destination>
+        </relationship>
+        <relationship name="sounds">
+            <destination>{896071c1-7961-4199-b379-dd8d2172bdf9}</destination>
+            <destination>{b19feb10-cbb0-4290-9ac3-af2ea6d90e0d}</destination>
+            <destination>{600c6a09-d774-47b9-bd2b-0db640bd7da6}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerGroup" id="{6b02def8-f25d-4e50-9fa2-fb998f9c8988}">
         <property name="name">
             <value>Audio 1</value>
@@ -105,6 +126,37 @@
     </object>
     <object class="MixerBusPanner" id="{e140acce-d732-4f59-aa0b-03585a45ffae}"/>
     <object class="MixerBusFader" id="{ae1800cb-1899-467d-ae6c-ddfb19ce344e}"/>
+    <object class="RandomizerModulator" id="{8039500a-7991-44c8-976d-b0feca16aab5}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>pitch</value>
+        </property>
+        <property name="amount">
+            <value>7</value>
+        </property>
+    </object>
+    <object class="RandomizerModulator" id="{530a220a-b843-442b-9c7a-c18c33ad204f}">
+        <property name="nameOfPropertyBeingModulated">
+            <value>volume</value>
+        </property>
+        <property name="amount">
+            <value>5</value>
+        </property>
+    </object>
+    <object class="SingleSound" id="{896071c1-7961-4199-b379-dd8d2172bdf9}">
+        <relationship name="audioFile">
+            <destination>{cc29e88d-fd21-4f5d-a49a-c1cad13c52d4}</destination>
+        </relationship>
+    </object>
+    <object class="SingleSound" id="{b19feb10-cbb0-4290-9ac3-af2ea6d90e0d}">
+        <relationship name="audioFile">
+            <destination>{00ade7b4-4ed5-4781-a86c-69ee53730237}</destination>
+        </relationship>
+    </object>
+    <object class="SingleSound" id="{600c6a09-d774-47b9-bd2b-0db640bd7da6}">
+        <relationship name="audioFile">
+            <destination>{56fe3811-2903-4f43-a13a-37ffecdf9f40}</destination>
+        </relationship>
+    </object>
     <object class="MixerBusEffectChain" id="{01c8c862-209c-47a8-830a-d0401a75d290}">
         <relationship name="effects">
             <destination>{ff2fb822-ba8e-4f12-9f8e-e1d70c04024f}</destination>

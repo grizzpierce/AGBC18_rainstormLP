@@ -73,8 +73,8 @@ public class interactable : MonoBehaviour {
         }
     }
 
-     void OnMouseDown()
-     {
+    void OnMouseDown()
+    {
         if(!ui.isMenuOpen) {         
             if(!cassetteOverride) {
                 if(!_recentlyPressed) {
@@ -83,21 +83,15 @@ public class interactable : MonoBehaviour {
                         // LAUNCH CARTRIDGE DIALOG IF UNPRESSED BEFORE
                         if(!interactedWith) {
                             _popupManager.Pop(preDialog, _cassetteColor, cassetteFound);
-                            
-                            if (_audioManager != null) {
-                                _audioManager.playOneShot(_audioManager.findTapeInteract);                        
-                            } 
-                            
-                            else {
-                                Debug.Log("Set the Audio Manager in Interactable!");
-                            }
+                            StartCoroutine(TapeDiscoveryAudio());
 
                             interactedWith = true;
                         }
 
                         // LAUNCH SECONDARY DIALOG IF PRESSED
                         else {
-                            _popupManager.Pop(postDialog, new Color(0, 0, 0, 0));               
+                            _popupManager.Pop(postDialog, new Color(0, 0, 0, 0));            
+                            FMODUnity.RuntimeManager.PlayOneShot(postDialogAudio);   
                         }
                     }
                 }
@@ -111,5 +105,13 @@ public class interactable : MonoBehaviour {
             
             _anim.Play("Pressed");
         }
-     }
+    }
+
+    IEnumerator TapeDiscoveryAudio() {
+        FMODUnity.RuntimeManager.PlayOneShot(preDialogAudio);
+
+        yield return new WaitForSeconds(cartridgeDiscoverAudioDelay);
+
+        FMODUnity.RuntimeManager.PlayOneShot(_audioManager.findTapeInteract);
+    }
 }

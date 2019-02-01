@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.01.10.00">
+    <object class="AudioFile" id="{c23add61-a5c4-419d-907d-bc01170ac73a}">
+        <property name="assetPath">
+            <value>Metal_Bar_Drop_Onto_Wooden_Bench_01.wav</value>
+        </property>
+        <property name="frequencyInKHz">
+            <value>44.0999985</value>
+        </property>
+        <property name="channelCount">
+            <value>2</value>
+        </property>
+        <property name="length">
+            <value>1.6253968253968254</value>
+        </property>
+        <relationship name="masterAssetFolder">
+            <destination>{ff88e6c8-6eab-47e1-a8ce-a2d145d2fd0b}</destination>
+        </relationship>
+    </object>
+</objects>

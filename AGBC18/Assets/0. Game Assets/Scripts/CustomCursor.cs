@@ -6,6 +6,8 @@ using DG.Tweening;
 
 public class CustomCursor : MonoBehaviour {
 
+	AudioManager _audioManager;
+
 	RectTransform mainCursor, fxCursor;
 
 	bool isPressed, isPlaying = false;
@@ -17,6 +19,8 @@ public class CustomCursor : MonoBehaviour {
 		Cursor.visible = false;
 		mainCursor = gameObject.GetComponent<RectTransform>();
 		fxCursor = transform.GetChild(0).GetComponent<RectTransform>();
+
+		_audioManager = GameObject.FindGameObjectWithTag("AudioManager").GetComponent<AudioManager>();
 	}
 	
 	// Update is called once per frame
@@ -27,6 +31,8 @@ public class CustomCursor : MonoBehaviour {
 		if(Input.GetMouseButton(0)) {
 			if(!isPressed) {
 				isPressed = true;
+				// TODO: Make system to consume mouse inputs and decide what cursor noise to make
+				// FMODUnity.RuntimeManager.PlayOneShot(_audioManager.badInteract);
 
 				if(!isPlaying) {
 					isPlaying = true;

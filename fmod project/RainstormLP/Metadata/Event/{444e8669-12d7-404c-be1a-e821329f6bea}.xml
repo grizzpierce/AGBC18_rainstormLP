@@ -5,7 +5,7 @@
             <value>sfx_vendingMachine_findTape</value>
         </property>
         <property name="outputFormat">
-            <value>0</value>
+            <value>1</value>
         </property>
         <relationship name="folder">
             <destination>{8c06d635-e240-4638-9785-7f4fba652b3f}</destination>
@@ -62,11 +62,18 @@
     <object class="EventAutomatableProperties" id="{f46a20f4-77d2-4a8f-a91b-1c8c0c4e1df5}"/>
     <object class="MarkerTrack" id="{c970f3f6-0365-45e4-9a10-d0b6050de297}"/>
     <object class="GroupTrack" id="{73572787-4f2e-48dc-9a49-de8458f7709d}">
+        <relationship name="modules">
+            <destination>{9049a4d0-6805-4ba6-8c36-54a8860f43d0}</destination>
+        </relationship>
         <relationship name="mixerGroup">
             <destination>{1a222252-30a5-4693-b09a-28bc872d6ed5}</destination>
         </relationship>
     </object>
-    <object class="Timeline" id="{47ee9021-1f2e-4d3f-b28f-f8e70247d4c4}"/>
+    <object class="Timeline" id="{47ee9021-1f2e-4d3f-b28f-f8e70247d4c4}">
+        <relationship name="modules">
+            <destination>{9049a4d0-6805-4ba6-8c36-54a8860f43d0}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerMaster" id="{bda7285a-4ab3-4065-a4ac-0fc9f4ca0136}">
         <relationship name="effectChain">
             <destination>{84841386-439b-4bc3-8cf6-acbf0ccc71c1}</destination>
@@ -84,6 +91,14 @@
         </relationship>
     </object>
     <object class="MixerBusPanner" id="{9fa05292-811b-4b72-8fc8-f5d6e49f84a4}"/>
+    <object class="SingleSound" id="{9049a4d0-6805-4ba6-8c36-54a8860f43d0}">
+        <property name="length">
+            <value>3.3844671201814061</value>
+        </property>
+        <relationship name="audioFile">
+            <destination>{baec2ac2-a6d9-4063-89c3-a4524c07f2d8}</destination>
+        </relationship>
+    </object>
     <object class="EventMixerGroup" id="{1a222252-30a5-4693-b09a-28bc872d6ed5}">
         <property name="name">
             <value>Audio 1</value>

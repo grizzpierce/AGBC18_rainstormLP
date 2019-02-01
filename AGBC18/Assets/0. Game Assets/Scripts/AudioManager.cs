@@ -72,6 +72,8 @@ public class AudioManager : MonoBehaviour {
     [FMODUnity.EventRef]
     public string dudInteract;
     [FMODUnity.EventRef]
+    public string badInteract;
+    [FMODUnity.EventRef]
     public string textScroll;
     [FMODUnity.EventRef]
     public string rainAmbiance;
