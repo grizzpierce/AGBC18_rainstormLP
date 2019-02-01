@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.25814605, g: 0.2665132, b: 0.65414673, a: 1}
+  m_IndirectSpecularColor: {r: 0.25814605, g: 0.26651317, b: 0.6541467, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -143,7 +143,7 @@ Transform:
   m_Children:
   - {fileID: 1244440865}
   m_Father: {fileID: 70768086}
-  m_RootOrder: 1
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5115067
 MonoBehaviour:
@@ -156,7 +156,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cassetteFound: {fileID: 549539083}
+  cassetteFound: {fileID: 1764492724}
   cassetteOverride: 0
   interactedWith: 0
   preDialog: Ah, the ole' 'Hide-Something-Behind-The-Wobbly-Sign' trick. Oldest trick
@@ -5988,13 +5988,14 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 830631461}
+  - {fileID: 1012209085}
+  - {fileID: 1785561259}
+  - {fileID: 1329134579}
+  - {fileID: 1998668644}
+  - {fileID: 1728483241}
   - {fileID: 919126662}
   - {fileID: 5115066}
-  - {fileID: 1329134579}
-  - {fileID: 1785561259}
-  - {fileID: 1012209085}
-  - {fileID: 1728483241}
-  - {fileID: 830631461}
   m_Father: {fileID: 1152445612}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6031,7 +6032,7 @@ RectTransform:
   m_Children:
   - {fileID: 918575904}
   m_Father: {fileID: 393390069}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6866,7 +6867,7 @@ RectTransform:
   m_Children:
   - {fileID: 1849134643}
   m_Father: {fileID: 393390069}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9683,6 +9684,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 2000583104}
   - {fileID: 782199140}
   - {fileID: 77160631}
   - {fileID: 655672163}
@@ -15354,7 +15356,7 @@ Camera:
   near clip plane: 0.3
   far clip plane: 50
   field of view: 70
-  orthographic: 1
+  orthographic: 0
   orthographic size: 10.5
   m_Depth: -1
   m_CullingMask:
@@ -16676,7 +16678,7 @@ RectTransform:
   m_Children:
   - {fileID: 1215158866}
   m_Father: {fileID: 393390069}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -17532,7 +17534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.2784314}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -22827,7 +22829,7 @@ RectTransform:
   m_Children:
   - {fileID: 719915725}
   m_Father: {fileID: 393390069}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -23115,7 +23117,7 @@ Transform:
   - {fileID: 552889536}
   - {fileID: 35622874}
   m_Father: {fileID: 70768086}
-  m_RootOrder: 6
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &830631462
 Animator:
@@ -23146,11 +23148,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cassetteFound: {fileID: 1764492724}
+  cassetteFound: {fileID: 335046045}
   cassetteOverride: 0
   interactedWith: 0
-  preDialog: You've always wanted to open a manhole before. And now it seems like
-    your curiousity has been rewarded.
+  preDialog: You've always wanted to open a manhole. And now it seems like your curiosity
+    has been rewarded.
   preDialogAudio: 
   cartridgeDiscoverAudioDelay: 0
   postDialog: Oh that's where that sewer smell is coming from.
@@ -24080,7 +24082,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 70768086}
-  m_RootOrder: 0
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &919126663
 MonoBehaviour:
@@ -24093,11 +24095,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cassetteFound: {fileID: 443255214}
+  cassetteFound: {fileID: 1460853254}
   cassetteOverride: 0
   interactedWith: 0
-  preDialog: Woah someone's cellphone? They also dropped a cassette too. I'll try
-    getting it back to them when the rain stops.
+  preDialog: Woah someone's cellphone? I'll try getting it back to them when the rain
+    stops.
   preDialogAudio: 
   cartridgeDiscoverAudioDelay: 0
   postDialog: I should really pick up that cellphone... It's so muddy and gross though...
@@ -24180,7 +24182,7 @@ RectTransform:
   m_Children:
   - {fileID: 1012661170}
   m_Father: {fileID: 393390069}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -25247,7 +25249,7 @@ Transform:
   - {fileID: 724644868}
   - {fileID: 996674028}
   m_Father: {fileID: 70768086}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1012209086
 Animator:
@@ -25290,11 +25292,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cassetteFound: {fileID: 131574015}
+  cassetteFound: {fileID: 443255214}
   cassetteOverride: 0
   interactedWith: 0
-  preDialog: No one ever realizes how perfect traffic cones are for hiding nice, small
-    presents.
+  preDialog: How come nobody ever talks about how perfect traffic cones are for hiding
+    small trinkets.
   preDialogAudio: 
   cartridgeDiscoverAudioDelay: 0
   postDialog: 'Is someone saving a parking spot? Or maybe there''s going to be construction
@@ -25408,7 +25410,7 @@ RectTransform:
   m_Children:
   - {fileID: 1168532222}
   m_Father: {fileID: 393390069}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -33146,7 +33148,7 @@ MonoBehaviour:
   cassetteOverride: 0
   interactedWith: 0
   preDialog: Something rattles behind the vending machine. Maybe a mouse with a sweet
-    tooth? Oh a cassette.
+    tooth?
   preDialogAudio: 
   cartridgeDiscoverAudioDelay: 0
   postDialog: Like usual, you don't have any cash in your wallet.
@@ -33164,7 +33166,7 @@ Transform:
   - {fileID: 1252072800}
   - {fileID: 1635649293}
   m_Father: {fileID: 70768086}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1329134580
 Animator:
@@ -33890,7 +33892,7 @@ RectTransform:
   m_Children:
   - {fileID: 331980038}
   m_Father: {fileID: 393390069}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -34119,7 +34121,7 @@ RectTransform:
   m_Children:
   - {fileID: 574356767}
   m_Father: {fileID: 393390069}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -34838,6 +34840,81 @@ Prefab:
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0e1c7d6c424c54507b730c2be7d62317, type: 3}
   m_IsPrefabAsset: 0
+--- !u!1 &1472216161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1472216162}
+  - component: {fileID: 1472216164}
+  - component: {fileID: 1472216163}
+  m_Layer: 5
+  m_Name: Unknown
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1472216162
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472216161}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2000583104}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0, y: 85}
+  m_SizeDelta: {x: 175, y: 30}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1472216163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472216161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: ef966300297694120811688c961eb997, type: 2}
+    m_FontSize: 21
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 40
+    m_Alignment: 7
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 1
+    m_LineSpacing: 1
+  m_Text: ???
+--- !u!222 &1472216164
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1472216161}
+  m_CullTransparentMesh: 0
 --- !u!1 &1474976391
 GameObject:
   m_ObjectHideFlags: 0
@@ -36514,7 +36591,6 @@ Transform:
   m_Children:
   - {fileID: 775486772}
   - {fileID: 292925058}
-  - {fileID: 1998668644}
   - {fileID: 1883159517}
   - {fileID: 609685165}
   m_Father: {fileID: 1152445612}
@@ -36876,15 +36952,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cassetteFound: {fileID: 1460853254}
+  cassetteFound: {fileID: 131574015}
   cassetteOverride: 0
   interactedWith: 0
-  preDialog: Oh neat, someone left a cassette taped to their concert poster. Maybe
-    you'll stop being a hermit and go to a show?
+  preDialog: There's a really rad poster for your favorite artist, but it's way too
+    soggy now. Cool.
   preDialogAudio: 
   cartridgeDiscoverAudioDelay: 0
-  postDialog: There's a really rad poster for your favorite artist, but it's way too
-    soggy now. Cool.
+  postDialog: Dang, that should be a fun concert. Maybe you'll stop being a hermit
+    and go to a show?
   postDialogAudio: 
 --- !u!95 &1728483243
 Animator:
@@ -37753,7 +37829,7 @@ Transform:
   - {fileID: 393563305}
   - {fileID: 1068906366}
   m_Father: {fileID: 70768086}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1785561260
 MonoBehaviour:
@@ -37766,7 +37842,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cassetteFound: {fileID: 1640135121}
+  cassetteFound: {fileID: 549539083}
   cassetteOverride: 0
   interactedWith: 0
   preDialog: A bit rude for someone to throw out a perfectly fine cassette... Oh no,
@@ -38842,7 +38918,7 @@ Transform:
   m_Children:
   - {fileID: 1409967224}
   m_Father: {fileID: 1680455152}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1883159518
 Animator:
@@ -39798,7 +39874,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 0.39215687}
+  m_Color: {r: 0, g: 0, b: 0, a: 0.3882353}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -39965,8 +40041,8 @@ Transform:
   m_LocalScale: {x: 0.6, y: 0.5, z: 0.5}
   m_Children:
   - {fileID: 390699619}
-  m_Father: {fileID: 1680455152}
-  m_RootOrder: 2
+  m_Father: {fileID: 70768086}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &1998668645
 Animator:
@@ -40009,14 +40085,144 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d22fdcfbb2ce440dab44517f5d662c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cassetteFound: {fileID: 443255214}
-  cassetteOverride: 1
+  cassetteFound: {fileID: 1640135121}
+  cassetteOverride: 0
   interactedWith: 0
   preDialog: Huh, maybe someone thought they could pay the meter with their mixtape?
   preDialogAudio: 
   cartridgeDiscoverAudioDelay: 0
   postDialog: God you hate parking meters.
   postDialogAudio: 
+--- !u!1 &2000583103
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2000583104}
+  - component: {fileID: 2000583110}
+  - component: {fileID: 2000583109}
+  - component: {fileID: 2000583108}
+  - component: {fileID: 2000583107}
+  - component: {fileID: 2000583106}
+  - component: {fileID: 2000583105}
+  m_Layer: 5
+  m_Name: 8
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2000583104
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000583103}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1472216162}
+  m_Father: {fileID: 393390069}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -150, y: 150}
+  m_SizeDelta: {x: 300, y: 300}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2000583105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000583103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecaa4aba7213743e08cd19f553825435, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unknownText: ???
+  startsUnknown: 1
+  textLabel: {fileID: 0}
+--- !u!225 &2000583106
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000583103}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
+--- !u!114 &2000583107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000583103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 0.5}
+  m_EffectDistance: {x: 2, y: -2}
+  m_UseGraphicAlpha: 1
+--- !u!95 &2000583108
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000583103}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ed9dc42e8af544f7d9336ee57c012f41, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &2000583109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000583103}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.29411766, g: 0.29411766, b: 0.29411766, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Texture: {fileID: 8400000, guid: c9cf14d984d9641e4ad74f57ece2bc46, type: 2}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &2000583110
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2000583103}
+  m_CullTransparentMesh: 0
 --- !u!1 &2004111829
 GameObject:
   m_ObjectHideFlags: 0
@@ -40471,7 +40677,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.2784314}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

@@ -36,7 +36,7 @@ public class PerspectiveToggle : MonoBehaviour {
 	void Start () {
 		mainCamera = Camera.main;
 		anim = mainCamera.transform.parent.GetComponent<Animator>();
-		selected = VIEW_STATES.ORTHOGRAPHIC;
+		selected = VIEW_STATES.PERSPECTIVE;
 
 		uiX = perspective.GetComponent<RectTransform>().anchoredPosition.x;
 		uiH = perspective.GetComponent<RectTransform>().sizeDelta.y;
@@ -46,6 +46,8 @@ public class PerspectiveToggle : MonoBehaviour {
 
 		orth_tween = orthographic.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, orthY + 120), 0, false);
 		persp_tween = perspective.GetComponent<RectTransform>().DOAnchorPos(new Vector2(uiX, perY + 120), 0, false);
+
+		perspective.GetComponent<CanvasGroup>().DOFade(1f, 0f);
 
 	}
 	
