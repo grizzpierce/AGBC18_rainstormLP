@@ -12,7 +12,7 @@ public class interactable : MonoBehaviour {
     public CartridgeDataHolder cassetteFound;
 
     public bool cassetteOverride = false;
-    public bool interactedWith = false;
+    public bool _interactedWith = false;
 
 
     [Header("First Interaction")]
@@ -33,7 +33,7 @@ public class interactable : MonoBehaviour {
 
     Animator _anim;
     Color _cassetteColor;
-    UIModes ui;
+    UIModes _ui;
 
 
     PopupManager _popupManager;
@@ -48,7 +48,7 @@ public class interactable : MonoBehaviour {
         if (_popupManager == null) {
             _popupManager = GameObject.FindGameObjectWithTag("PopupManager").GetComponent<PopupManager>();
         }
-        ui = GameObject.FindGameObjectWithTag("GameCanvas").GetComponent<UIModes>();
+        _ui = GameObject.FindGameObjectWithTag("GameCanvas").GetComponent<UIModes>();
 
         if(!cassetteOverride) {
             if(cassetteFound == null) {
@@ -75,35 +75,46 @@ public class interactable : MonoBehaviour {
 
     void OnMouseDown()
     {
-        if(!ui.isMenuOpen) {         
+        // If menu or popup is open, accept no input
+        if(!(_ui.isMenuOpen || _popupManager.IsDisplaying())) {
+            // Is this a cassette container?
             if(!cassetteOverride) {
+                if (!_interactedWith) {
+                    StartCoroutine(TapeDiscoveryAudio());
+                } else {
+                    FMODUnity.RuntimeManager.PlayOneShot(postDialogAudio);
+                }
+
+                // Only display the popup if it has not been recently interacted with
                 if(!_recentlyPressed) {
                     if(_popupManager.GetIfAvailable()) {
 
                         // LAUNCH CARTRIDGE DIALOG IF UNPRESSED BEFORE
-                        if(!interactedWith) {
+                        if(!_interactedWith) {
                             _popupManager.Pop(preDialog, _cassetteColor, cassetteFound);
-                            StartCoroutine(TapeDiscoveryAudio());
+                            _interactedWith = true;
+                            _recentlyPressed = true;
 
-                            interactedWith = true;
                         }
 
                         // LAUNCH SECONDARY DIALOG IF PRESSED
                         else {
-                            _popupManager.Pop(postDialog, new Color(0, 0, 0, 0));            
-                            FMODUnity.RuntimeManager.PlayOneShot(postDialogAudio);   
+                            _popupManager.Pop(postDialog, new Color(0, 0, 0, 0));
                         }
                     }
                 }
-
-                if(interactedWith)
-                    _recentlyPressed = true;
-                    
-
-                _pressTimer = 0;
+            // This is a micro interaction!
+            } else {
+                FMODUnity.RuntimeManager.PlayOneShot(preDialogAudio);
+                if (!_recentlyPressed) {
+                    if (_popupManager.GetIfAvailable()) {
+                        _popupManager.Pop(preDialog, Color.clear);
+                    }
+                }
             }
             
             _anim.Play("Pressed");
+            _pressTimer = 0;
         }
     }
 

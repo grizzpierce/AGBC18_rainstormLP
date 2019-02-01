@@ -32,6 +32,14 @@ public class PopupManager : MonoBehaviour {
 		current = _state;
 		DEBUG_STATE = _state.ToString();
 	}
+
+	public bool IsDisplaying() {
+		if (current == POPUP_STATE.LOADING || current == POPUP_STATE.IDLE || current == POPUP_STATE.CLOSING) {
+			return true;
+		}
+		return false;
+	}
+
 	public bool GetIfAvailable() {
 		if (current == POPUP_STATE.INACTIVE)
 			return true;
