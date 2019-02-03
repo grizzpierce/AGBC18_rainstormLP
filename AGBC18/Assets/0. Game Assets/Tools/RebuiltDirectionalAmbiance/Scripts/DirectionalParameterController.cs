@@ -58,7 +58,7 @@ namespace DirectionalParameterControllerNameSpace {
 			}
 		}
 
-
+/* 
 		void OnDrawGizmos() {
 			UpdateAngleData();
 			UpdateCameraData();
@@ -103,8 +103,7 @@ namespace DirectionalParameterControllerNameSpace {
 			Gizmos.DrawRay(transform.position, _cameraVector);
 		}
 
-
-
+*/
 		void UpdateAngleData() {
 			_orientationAngle = transform.eulerAngles.y % 360f;
 

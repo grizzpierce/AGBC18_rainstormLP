@@ -6,12 +6,14 @@ using DG.Tweening;
 
 public class MenuManager : MonoBehaviour {
 
-	public GameObject curtain, menuButton, closeButton;
+	public GameObject curtain, menuButton, closeButton, settingsView, creditsView, settingsTab, creditsTab;
 
 	private GameObject LAST_PRESSED, NOW_AVAILABLE;
 
+	bool isCurrentViewSettings = true;
+
 	void Start() {
-		GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, -960), 0f, false);
+		GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 960), 0f, false);
 	}
 
 	public void Controller(bool _isOpening) {
@@ -39,6 +41,53 @@ public class MenuManager : MonoBehaviour {
 		*/
 
 
+	public void onTabSelect(bool isSettings) {
+		if(isSettings != isCurrentViewSettings) {
+			isCurrentViewSettings = isSettings;
+			transitionViews(isCurrentViewSettings);
+		}
+	}
+
+	public void onHover(CanvasGroup canvasGroup) {
+		if(!isItSelected(canvasGroup.name)) {		
+			canvasGroup.DOFade(.75f, .25f);	
+		}
+	}
+
+	public void onExit(CanvasGroup canvasGroup) {
+
+		if(!isItSelected(canvasGroup.name)) {		
+			canvasGroup.DOFade(.25f, .25f);	
+		}
+	}
+
+	bool isItSelected(string _name) {
+		if(isCurrentViewSettings && _name == "Settings Tab") {			
+			return true;
+		}
+		else if(!isCurrentViewSettings && _name =="Credits Tab") {
+			return true;
+		}
+
+		return false;
+	}
+
+
+	void transitionViews(bool isSettings) {
+		creditsView.SetActive(!isSettings);
+		settingsView.SetActive(isSettings);
+
+		if(isSettings) {
+			creditsTab.GetComponent<CanvasGroup>().DOFade(.25f, .25f);
+			settingsTab.GetComponent<CanvasGroup>().DOFade(1f, .25f);
+		}
+		else {
+			settingsTab.GetComponent<CanvasGroup>().DOFade(.25f, .25f);
+			creditsTab.GetComponent<CanvasGroup>().DOFade(1f, .25f);			
+		}
+	}
+
+
 	IEnumerator controllerSequence(bool _isOpening) {
 		float _isOpeningVal = (float)(_isOpening ? 1 : 0);
 
@@ -54,7 +103,7 @@ public class MenuManager : MonoBehaviour {
 			GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 0), 1.5f, false);
 		}
 		else {
-			GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, -960), 1.5f, false);		
+			GetComponent<RectTransform>().DOAnchorPos(new Vector2(0, 960), 1.5f, false);		
 		}
 
 		yield return new WaitForSeconds(1f);	
@@ -67,5 +116,4 @@ public class MenuManager : MonoBehaviour {
 		NOW_AVAILABLE.GetComponent<CanvasGroup>().interactable = true;
 		NOW_AVAILABLE.GetComponent<CanvasGroup>().blocksRaycasts = true;
 	}
-
 }

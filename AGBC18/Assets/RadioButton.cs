@@ -6,19 +6,15 @@ using DG.Tweening;
 
 public class RadioButton : MonoBehaviour {
 
-	GameObject selected;
+	GameObject bubble;
+	public bool isSelected = false;
 
-	void Start () {
-		selected = transform.GetChild(1).GetChild(0).gameObject;
-	}
-
-
-
-	public void OnClick() {
-		transform.parent.GetComponent<RainSetting>().setToggle(name);
+	void Awake () {
+		bubble = transform.GetChild(1).GetChild(0).gameObject;
 	}
 
 	public void setSelected(bool _isSelected) {
-		selected.SetActive(_isSelected);
+		bubble.SetActive(_isSelected);
+		isSelected = _isSelected;
 	}
 }
