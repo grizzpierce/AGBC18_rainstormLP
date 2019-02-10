@@ -144,10 +144,10 @@ public class CassetteBar : MonoBehaviour {
 
 		prevClickAction = clickAction;	
 
-		if (Input.mousePosition.x < (Screen.width/2 - (cassetteUISize/2))) {
+		if (Input.mousePosition.x < (Screen.width/2f - ((Screen.width / 960f) * cassetteUISize / 2f))) {
 			clickAction = -1;
 		}
-		else if (Input.mousePosition.x >= (Screen.width/2 - (cassetteUISize/2)) && Input.mousePosition.x <= (Screen.width/2 + (cassetteUISize/2))) {
+		else if (Input.mousePosition.x >= (Screen.width/2f - ((Screen.width / 960f) * cassetteUISize / 2f)) && Input.mousePosition.x <= (Screen.width/2f + ((Screen.width / 960f) * cassetteUISize / 2f))) {
 			clickAction = 0;
 			//DEBUG_CLICKACTION = "CENTER";
 		}
