@@ -13,10 +13,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: 114576159809570444}
-  - {fileID: 114873112615612830}
-  - {fileID: 114482888144625896}
-  - {fileID: 114714985980890106}
-  - {fileID: 114424737404473878}
+  - {fileID: 114305056175069822}
+  - {fileID: 114252017974376506}
+  - {fileID: 114903416815435138}
+  - {fileID: 114983020557942328}
   EditorEvents:
   - {fileID: 114208620201554312}
   - {fileID: 114195332812414680}
@@ -74,9 +74,9 @@ MonoBehaviour:
   - {fileID: 114103124950657262}
   - {fileID: 114504590227635474}
   - {fileID: 114002063141106022}
-  MasterBankRef: {fileID: 114482888144625896}
+  MasterBankRef: {fileID: 114252017974376506}
   StringsBankRef: {fileID: 114576159809570444}
-  stringsBankWriteTime: 636847120320000000
+  stringsBankWriteTime: 637853052243477473
   cacheVersion: 2
 --- !u!114 &114001752878007796
 MonoBehaviour:
@@ -114,7 +114,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/bin/binflip
   guid: 82c28a4c80a91c42b9fb1ce5287c2861
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -197,6 +197,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114008608824780860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114011354925182796
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -242,12 +257,12 @@ MonoBehaviour:
   guid: 754b14a008769c4db467dab9dba75d51
   Banks:
   - {fileID: 114042923139183584}
-  - {fileID: 114714985980890106}
+  - {fileID: 114903416815435138}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114366909882078742}
+  - {fileID: 114033453846915706}
   MinDistance: 0
   MaxDistance: 0
   Length: 135288
@@ -431,6 +446,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114033453846915706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114037326919809422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -446,7 +476,7 @@ MonoBehaviour:
   guid: d4050dc2ffa28e48b595bb20108c8800
   Banks:
   - {fileID: 114662626860574548}
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -843,6 +873,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114080768706463746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114081239219306266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1029,7 +1074,7 @@ MonoBehaviour:
   guid: c16a529ae14cb34ebd1496c2f5a7f2a5
   Banks:
   - {fileID: 114662626860574548}
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1064,6 +1109,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: StreetVolume0to1
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114098803976534282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
   Min: 0
   Max: 1
   Default: 1
@@ -1111,7 +1171,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/flyer/sfx_flyer_rip
   guid: 7c61c99bee2bc2449a379a50eecea860
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1146,6 +1206,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114107222444866320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
   Min: 0
   Max: 1
   Default: 1
@@ -1404,12 +1479,12 @@ MonoBehaviour:
   guid: 5c898eaad5ff5a469bf938518bdb6f91
   Banks:
   - {fileID: 114042923139183584}
-  - {fileID: 114714985980890106}
+  - {fileID: 114903416815435138}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114818259023703830}
+  - {fileID: 114291782501548748}
   MinDistance: 0
   MaxDistance: 0
   Length: 166739
@@ -1762,12 +1837,12 @@ MonoBehaviour:
   guid: a31df04c0bdc59419923f18376665d9e
   Banks:
   - {fileID: 114042923139183584}
-  - {fileID: 114714985980890106}
+  - {fileID: 114903416815435138}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114576932353998416}
+  - {fileID: 114460210351587404}
   MinDistance: 0
   MaxDistance: 0
   Length: 90723
@@ -1790,6 +1865,21 @@ MonoBehaviour:
   - Name: 
     Value: 2711040
   Exists: 1
+--- !u!114 &114177676415240252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114181501179389200
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1823,12 +1913,12 @@ MonoBehaviour:
   guid: 5ac7fd6e476d9d4b8d8a50f53a412bc1
   Banks:
   - {fileID: 114042923139183584}
-  - {fileID: 114714985980890106}
+  - {fileID: 114903416815435138}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114022096183778622}
+  - {fileID: 114996039139051176}
   MinDistance: 0
   MaxDistance: 0
   Length: 98000
@@ -1943,7 +2033,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/parking meter/sfx_parkingMeter_findTape
   guid: 98a39981c1e2534fb217cce37ccafd62
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1966,12 +2056,12 @@ MonoBehaviour:
   guid: 1e74503d4f818641807c425c6a229afc
   Banks:
   - {fileID: 114042923139183584}
-  - {fileID: 114714985980890106}
+  - {fileID: 114903416815435138}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114656580452411160}
+  - {fileID: 114397809306930962}
   MinDistance: 0
   MaxDistance: 0
   Length: 168071
@@ -1989,7 +2079,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/graffiti/sfx_graffiti_micro
   guid: 2435c2dec847964f83b2a0a4922a64bf
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2086,7 +2176,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/bike rack/sfx_bikeRack_noTape
   guid: 6246001eddf3e2449995476bc11028c7
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2173,12 +2263,12 @@ MonoBehaviour:
   guid: 053ed0b91d1bd7469592d1ee5e5bbcd8
   Banks:
   - {fileID: 114042923139183584}
-  - {fileID: 114714985980890106}
+  - {fileID: 114903416815435138}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114637587360571590}
+  - {fileID: 114800796120983990}
   MinDistance: 0
   MaxDistance: 0
   Length: 235000
@@ -2399,12 +2489,12 @@ MonoBehaviour:
   Path: event:/sfx/ambiances/sfx_vendingMachineAmbiance
   guid: c616a6786a93b84d9b219d9efaa73f14
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114082915859555294}
+  - {fileID: 114610903406477764}
   MinDistance: 0
   MaxDistance: 0
   Length: 40000
@@ -2527,6 +2617,25 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &114252017974376506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\jakeg\Documents\Unity\AGBC18_rainstormLP\AGBC18\FMOD_Assets\Desktop\Master
+    Bank.bank
+  lastModified: 637853052243467638
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 7388576
+  Exists: 1
 --- !u!114 &114252166529348836
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2819,6 +2928,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114291782501548748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114295152607540384
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2916,6 +3040,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114305056175069822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\jakeg\Documents\Unity\AGBC18_rainstormLP\AGBC18\FMOD_Assets\Desktop\SimpleAmbiances.bank
+  lastModified: 637853052243487308
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 450
+  Exists: 1
 --- !u!114 &114305559745149150
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3171,6 +3313,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114321601052067400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Elevation_User
+  Min: -2
+  Max: 25
+  Default: 25
 --- !u!114 &114324424357955448
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3185,7 +3342,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/cup/sfx_cup_micro
   guid: ea954e1d53659c4a85270db71f3f003a
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3413,13 +3570,13 @@ MonoBehaviour:
   Path: event:/sfx/ambiances/sfx_drainAmbiance
   guid: 9aad2ddd36f92c4baf7263224c6eaabd
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114133712883603808}
-  - {fileID: 114139351055725918}
+  - {fileID: 114602808788663924}
+  - {fileID: 114177676415240252}
   MinDistance: 0
   MaxDistance: 0
   Length: 20000
@@ -3452,7 +3609,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/wall sign/sfx_wallSign_findTape
   guid: a3a969ccab4cde4bb44ecaa9770c1d3f
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3612,12 +3769,12 @@ MonoBehaviour:
   Path: event:/sfx/ambiances/sfx_rain
   guid: e9e1ded94f58384382b89490f93d2aff
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114659422048955862}
+  - {fileID: 114321601052067400}
   MinDistance: 0
   MaxDistance: 0
   Length: 164000
@@ -3635,7 +3792,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/cartridge/sfx_dudInteract
   guid: b7a7968446409e4ab78e17043d5766f6
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4046,6 +4203,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114397809306930962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114399368530369248
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4075,7 +4247,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/wall sign/sfx_wallSign_noTape
   guid: 90134597bf87ec4a875a58ee81dfcee3
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4097,7 +4269,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/cartridge/sfx_textScroll
   guid: ae0650d59a33424d80146e38b6cf8e0c
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4177,6 +4349,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114407871626192576
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
   Min: 0
   Max: 1
   Default: 1
@@ -4292,6 +4479,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114414128469889206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: StreetVolume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114416417859608422
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4336,7 +4538,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/vending machine/sfx_vendingMachine_findTape
   guid: 69864e44d7124c40be1ae821329f6bea
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4359,7 +4561,7 @@ MonoBehaviour:
   guid: 472594fa5259fd4d80c8f3aa41186d2c
   Banks:
   - {fileID: 114662626860574548}
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -4429,7 +4631,7 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 450
-  Exists: 1
+  Exists: 0
 --- !u!114 &114426478760052656
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4713,6 +4915,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114460210351587404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114461285161738134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4758,7 +4975,7 @@ MonoBehaviour:
   guid: f50d104532535f45999e65fffd4d0b19
   Banks:
   - {fileID: 114662626860574548}
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5013,12 +5230,12 @@ MonoBehaviour:
   Path: event:/sfx/ambiances/sfx_lampAmbiance
   guid: 4fb589a7ea14ca4d97fd67fa745b7b3d
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114342860864558834}
+  - {fileID: 114080768706463746}
   MinDistance: 0
   MaxDistance: 0
   Length: 15000
@@ -5052,12 +5269,12 @@ MonoBehaviour:
   guid: 24e21b1359975246a436a86f8df566b8
   Banks:
   - {fileID: 114042923139183584}
-  - {fileID: 114714985980890106}
+  - {fileID: 114903416815435138}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114265438413201200}
+  - {fileID: 114900646227343906}
   MinDistance: 0
   MaxDistance: 0
   Length: 413500
@@ -5157,7 +5374,7 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 7388576
-  Exists: 1
+  Exists: 0
 --- !u!114 &114485074597548516
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5300,7 +5517,7 @@ MonoBehaviour:
   guid: 6eecec1f73f9d94daf3a7f8a1569d1c6
   Banks:
   - {fileID: 114662626860574548}
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5367,7 +5584,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/manhole/sfx_manholeFlip
   guid: 8be0b07d9f8cb44cb2362d289b6b4e05
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5573,15 +5790,15 @@ MonoBehaviour:
   Path: event:/sfx/ambiances/sfx_streetAmbiance
   guid: b3dabfc928ed9a4fa3c328219cc37a32
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114741458352998802}
-  - {fileID: 114676259590276154}
-  - {fileID: 114666816491110300}
-  - {fileID: 114806360642000894}
+  - {fileID: 114414128469889206}
+  - {fileID: 114733538011452346}
+  - {fileID: 114407871626192576}
+  - {fileID: 114796357217064764}
   MinDistance: 0
   MaxDistance: 0
   Length: 580
@@ -5921,7 +6138,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/cell phone/sfx_cellphone_findTape
   guid: a576bf45b9fff8458c66260a628c9c45
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -6224,8 +6441,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Path: FMOD_Assets/Desktop/Master Bank.strings.bank
-  lastModified: 636847120320000000
+  Path: FMOD_Assets\Desktop\Master Bank.strings.bank
+  lastModified: 637853052243477473
   LoadResult: 0
   FileSizes:
   - Name: 
@@ -6275,12 +6492,12 @@ MonoBehaviour:
   Path: event:/music/track_waterLevel
   guid: 11ba21f027491b439512c14dd8fadd61
   Banks:
-  - {fileID: 114714985980890106}
+  - {fileID: 114903416815435138}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114985360898012362}
+  - {fileID: 114098803976534282}
   MinDistance: 0
   MaxDistance: 0
   Length: 240796
@@ -6455,6 +6672,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114602808788663924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: DrainOffCenter
+  Min: 0
+  Max: 1
+  Default: 0
 --- !u!114 &114603284139122616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6545,6 +6777,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114610903406477764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114614711067561842
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6574,12 +6821,12 @@ MonoBehaviour:
   Path: event:/sfx/ambiances/sfx_grassAmbiance
   guid: 2ce1fdcf746d1041b65e43a4fea05bc6
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114017655798495466}
+  - {fileID: 114008608824780860}
   MinDistance: 0
   MaxDistance: 0
   Length: 5000
@@ -6952,7 +7199,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/lamp/sfx_lamp_micro
   guid: a549d157d0b2c24c8bb6de19bfb71d1e
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -7004,7 +7251,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/cell phone/sfx_cellphone_noTape
   guid: 8d30c023d6154e46bd350058b5a95eb0
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -7241,7 +7488,7 @@ MonoBehaviour:
   guid: 7097507affea514ebdd9e198db528db3
   Banks:
   - {fileID: 114662626860574548}
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -7338,7 +7585,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/bike rack/sfx_bikeRack_findTape
   guid: 2437dd18b33bba4e9ae81b62f908d0ce
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -7633,7 +7880,7 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 22500736
-  Exists: 1
+  Exists: 0
 --- !u!114 &114715726818259046
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7848,6 +8095,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114733538011452346
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: RainVolume0to1
   Min: 0
   Max: 1
   Default: 1
@@ -8468,6 +8730,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+--- !u!114 &114792928133143088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: Volume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114793369692414902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8513,6 +8790,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114796357217064764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: DrivebysVolume0to1
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114799890119794040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8525,6 +8817,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: DrivebysVolume0to1
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114800796120983990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
   Min: 0
   Max: 1
   Default: 1
@@ -8759,7 +9066,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/parking meter/sfx_parkingMeter_noTape
   guid: a13e5547f571574bb6cbf5a749a587f1
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -8797,7 +9104,7 @@ MonoBehaviour:
   guid: d87dc34330f5e04c96f027badba55e72
   Banks:
   - {fileID: 114662626860574548}
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -8849,7 +9156,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/cartridge/sfx_cartridgeLoad
   guid: 42290108c882e2428bfac3078dd4fd7c
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -8901,7 +9208,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/vending machine/sfx_vendingMachine_noTape
   guid: 5e0b5c97d8c5d64cb35b993ea4dd977e
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9122,7 +9429,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/cartridge/sfx_badInteract
   guid: 95a5bb5775adf741a353ae05485232ce
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9244,7 +9551,7 @@ MonoBehaviour:
   FileSizes:
   - Name: 
     Value: 450
-  Exists: 1
+  Exists: 0
 --- !u!114 &114874131939631942
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9274,7 +9581,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/pylon/sfx_pylon_noTape
   guid: b7b3468b74922a439055113d9fce5670
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9521,6 +9828,21 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114900646227343906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
 --- !u!114 &114902458931276972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9581,6 +9903,24 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 1
+--- !u!114 &114903416815435138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\jakeg\Documents\Unity\AGBC18_rainstormLP\AGBC18\FMOD_Assets\Desktop\music.bank
+  lastModified: 637853052244077439
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 22500736
+  Exists: 1
 --- !u!114 &114904756202961446
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9799,12 +10139,12 @@ MonoBehaviour:
   guid: 92bc02294d4cbb4ba0867bdab31f31d9
   Banks:
   - {fileID: 114042923139183584}
-  - {fileID: 114714985980890106}
+  - {fileID: 114903416815435138}
   IsStream: 1
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 114811257402456382}
+  - {fileID: 114107222444866320}
   MinDistance: 0
   MaxDistance: 0
   Length: 146000
@@ -9871,12 +10211,12 @@ MonoBehaviour:
   Path: event:/sfx/ambiances/sfx_cellphone_loop
   guid: e10e9c4bc7b81a40bb047d6918e68741
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 114260304246691058}
+  - {fileID: 114792928133143088}
   MinDistance: 0
   MaxDistance: 0
   Length: 5000
@@ -10017,7 +10357,7 @@ MonoBehaviour:
   Path: event:/sfx/one shots/interaction/pylon/sfx_pylon_findTape
   guid: 8a715bb66afa9e40a98e93770b759f3b
   Banks:
-  - {fileID: 114482888144625896}
+  - {fileID: 114252017974376506}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -10380,6 +10720,24 @@ MonoBehaviour:
   - Name: 
     Value: 19639264
   Exists: 1
+--- !u!114 &114983020557942328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Path: C:\Users\jakeg\Documents\Unity\AGBC18_rainstormLP\AGBC18\FMOD_Assets\Desktop\ComplexAmbiances.bank
+  lastModified: 637853052243300434
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 450
+  Exists: 1
 --- !u!114 &114983046152315784
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10531,6 +10889,21 @@ MonoBehaviour:
   Max: 1
   Default: 0
 --- !u!114 &114991939962814464
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: TapeStart
+  Min: 0
+  Max: 1
+  Default: 1
+--- !u!114 &114996039139051176
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

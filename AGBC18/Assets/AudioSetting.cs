@@ -7,11 +7,12 @@ using DG.Tweening;
 public class AudioSetting : MonoBehaviour {
 	
 	public List<SettingNode> nodes;
-	public int currentVol, prevVol;
-	
-	void Start () {
+	int currentVol, prevVol;
+	public string audioType;
 
+	void Start () {
 		currentVol = transform.childCount;
+		Debug.Log(currentVol);
 
 		for(int i = 0; i < transform.childCount; ++i) {
 			nodes.Add(transform.GetChild(i).GetComponent<SettingNode>());
@@ -23,13 +24,21 @@ public class AudioSetting : MonoBehaviour {
 	prevVol = currentVol;
 	currentVol = _num;
 
-		if(assessVolume()) {
+	switch (assessVolume()) {
+		case 1:
 			Debug.Log("Is Louder");
 			Increase();
-		}
-		else {
+			break;
+		case 2:
 			Debug.Log("Is Quieter");
 			Decrease();
+			break;
+		case 3:
+			Debug.Log("It's equal.");
+			break;
+		default:
+			print("Error.");
+			break;
 		}
 	}
 
@@ -44,21 +53,25 @@ public class AudioSetting : MonoBehaviour {
 	}
 
 	void Decrease() {
-		for(int i = prevVol; i >= currentVol; --i){
+		for(int i = prevVol; i > currentVol; --i){
 			Debug.Log(i);
-			nodes[i].GetComponent<CanvasGroup>().alpha = .5F;
+			nodes[i-1].GetComponent<CanvasGroup>().alpha = .5F;
 		}
 
 		// INSERT FMOD VOLUME DECREASE
 	}
 
-	bool assessVolume() {
+	int assessVolume() {
 		if(currentVol > prevVol) {
-			return true;
+			return 1;
+		}
+
+		else if (currentVol < prevVol){
+			return 2;
 		}
 
 		else {
-			return false;
+			return 3;
 		}
 
 	}
