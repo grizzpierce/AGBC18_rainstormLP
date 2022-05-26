@@ -90,6 +90,15 @@ public class CassetteManagement : MonoBehaviour {
 		}
 	}
 
+    void OnDestroy()
+    {
+        if (playingTrack.isValid())
+        {
+            playingTrack.stop(FMOD.Studio.STOP_MODE.IMMEDIATE);
+            playingTrack.release();
+        }
+    }
+
     IEnumerator TapeChange(GameObject _pressed) {
 
         yield return StartCoroutine(TapeStop());
